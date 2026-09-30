@@ -179,7 +179,7 @@ in this document.
    *  A GRASP-based agent rendezvous mechanism
       {{?I-D.carpenter-anima-grasp-rendezvous}}.
 
-   *  An agent communication framework and registry for network AINetOps
+   *  An agent communication framework and registry for network AIOps
       {{?I-D.fu-nmop-agent-communication-framework}} and a problem
       statement on model grounding and token operations
       {{?I-D.fu-nmop-tokenops-probelem-statement}}, both based on operator
@@ -327,7 +327,7 @@ resources across different network layers, such as IP and optical layers.
    provides a detailed explanation of the various operational benefits
    offered by AINetOps.
 
-   {{fig2}} shows the definition of AINetOPS.
+   {{fig2}} shows the definition of AINetOps.
 
 ~~~~
     |------------|    |--------------|     |-----------------------|
@@ -343,7 +343,7 @@ resources across different network layers, such as IP and optical layers.
                (e.g., time series PM, Alarm, Topology, Log,
                 OAM data, product content/documentation etc.)
 ~~~~
-{: #fig2 title="Definition of AINetOp" artwork-align="center"}
+{: #fig2 title="Definition of AINetOps" artwork-align="center"}
 
 # Operational Benefits Provided by AINetOps
 
@@ -370,13 +370,13 @@ related to "Root Cause Analysis" Section 5.2.1
    Capacity Planning" Section 5.3.5
 
 * Section 5.4 "Network Operational Insights".  This area can be
-grouped into "Operational Insights Requiring No Further Analysis "
-Section 5.4.1 and "Operational Insights Requiring Further Analysis
-" Section 5.4.2
+grouped into "Operational Insights Requiring No Further Analysis"
+Section 5.4.1 and "Operational Insights Requiring Further Analysis"
+Section 5.4.2
 
 * Section 5.5 "Network Configuration Management"
 
-* Section 5.6 "IP/Optical Multi-Layer Planning"
+* Section 5.6 "IP/Optical Multi-layer Planning"
 
 * Section 5.7 "Cross-Layer and Multi-Layer Optimization"
 
@@ -573,7 +573,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    layers.  This holistic view allows for the detection of complex
    issues that span multiple layers, such as optical signal impairments
    that could degrade IP data transmission quality.  By correlating data
-   from both layers, AINetOps solution can provide insights into how
+   from both layers, an AINetOps solution can provide insights into how
    changes in the optical layer might affect IP performance and vice
    versa.  This enables operators to take preemptive actions, such as
    optimizing signal paths or adjusting routing protocols, to maintain
@@ -637,7 +637,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
 
 ### Trending and Forecasting
 
-   "Trending and Forecasting" operational benefit is distinct but is
+   The "Trending and Forecasting" operational benefit is distinct but is
    related to "Anomaly Detection" Section 5.3.2.  Trending and
    forecasting in the context of single-layer or multi-layer IP optical
    networks are pivotal components of predictive analytics, providing
@@ -886,7 +886,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    and optical layers are operating harmoniously, leading to optimal
    performance and cost efficiency.  In essence, Network Operational
    Insights empower operators with the knowledge needed to maintain a
-   high-performing, resilient, and future-proof network infrastructure
+   high-performing, resilient, and future-proof network infrastructure.
 
 ## Traffic Optimization
 
@@ -921,7 +921,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    networks to be more resilient, responsive, and capable of delivering
    consistent high-quality service.
 
-   Note that "Traffic Optimization" AINetOps operational benefit is
+   Note that the "Traffic Optimization" AINetOps operational benefit is
    closely related to "Predictive Analytics" covered in Section 5.3.
 
 ## Closed-Loop Automation
@@ -1024,7 +1024,7 @@ recommending corrective actions.
 ## Multi-Agent Interworking
 
 As seen in the use cases above, the usage of agents introduces various challenges,
-spanning from the definition of APIs that can be used by the various agent to the
+spanning from the definition of APIs that can be used by the various agents to the
 interworking with already existing components of the Network Management and Control stack.
 New challenges arise when we move from a single agent to a multi-agent architecture.
 When multiple agents are deployed we need to consider how they discover each other,
@@ -1034,9 +1034,9 @@ The discovery aspect could be relatively simple in the short term, when few agen
 be deployed in the network and it could be possible to manually configure each agent
 with the identifiers and capabilities of the other agents to interact with. With the evolution
 of AI based architectures with more and more agents being part of the architecture,
-mechanisms to advertise their presence and more important their capabilities will be required.
+mechanisms to advertise their presence and more importantly their capabilities will be required.
 
-The second aspect to consider is the interworking between them. As of today the way we
+The second aspect to consider is the interworking between them. As of today, the way we
 interact with agents is mostly based on LLMs, but would that be the best way for
 interacting between them as well? Probably a more machine oriented type of language,
 encoding and protocols would have better performance.
@@ -1092,6 +1092,10 @@ For every use case described, the following dimensions are examined to provide a
    across multiple layers of the network.  This could include problems
    where an issue in the optical layer affects the IP layer.
 
+   In both reactive and active assurance, network faults have already
+   occurred.  These faults may include impairments such as optical fiber
+   cuts, IP packet drops, IP link latency issues, or Threshold Crossing
+   Alarms (TCA), among others.
 
 As illustrated in {{figure-reactive-assurance}}, Reactive Assurance assumes
 that a fault occurs in the IP/Optical network (Step A) and is subsequently
@@ -1139,7 +1143,6 @@ actions in a closed-loop fashion, ensuring automated network recovery.
 ~~~~
 {: #figure-reactive-assurance title="Multi-layer Reactive Assurance Using Gen-AI"}
 
-  In both reactive and active assurance, network faults have already occurred. These faults may include impairments such as optical fiber cuts, IP packet drops, IP link latency issues, or Threshold Crossing Alarms (TCA), among others.
 
   The active assurance and troubleshooting process is illustrated in {{figure-active-assurance}}. In contrast to {{figure-reactive-assurance}}, active assurance assumes that a fault occurs in the IP/Optical network (Step A) and is subsequently detected automatically by higher-layer controllers (Step B). These controllers may employ detection methods that include monitoring alarms, analyzing performance telemetry data, or processing customer reports indicating service disruptions. To initiate troubleshooting, the detection logic launches the AINetOps-Assistant, which serves as the front-end interface for AINetOps (Step C). Steps D and E are identical to those depicted in {{figure-reactive-assurance}}.
 
