@@ -27,15 +27,15 @@ author:
   organization: Lancaster University
   email: d.king@lancaster.ac.uk
 -
+  fullname: Cheng Li
+  organization: Huawei
+  email: c.l@huawei.com
+-
   fullname: Qin Wu
   organization: Huawei
   email: bill.wu@huawei.com
 
 contributor:
--
-  fullname: Cheng Li
-  organization: Huawei
-  email: c.l@huawei.com
 -
   fullname: Daniele Ceccarelli
   organization: Cisco
