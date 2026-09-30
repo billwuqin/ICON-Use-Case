@@ -6,6 +6,7 @@ Network Working Group                                           R. Rokui
 Internet-Draft                                                     Ciena
 Intended status: Informational                                   D. King
 Expires: 3 April 2027                               Lancaster University
+                                                                   C. Li
                                                                    Q. Wu
                                                                   Huawei
                                                        30 September 2026
@@ -2832,11 +2833,6 @@ Acknowledgments
 
 Contributors
 
-   Cheng Li
-   Huawei
-   Email: c.l@huawei.com
-
-
    Daniele Ceccarelli
    Cisco
    Email: dceccare@cisco.com
@@ -2882,6 +2878,11 @@ Authors' Addresses
    Daniel King
    Lancaster University
    Email: d.king@lancaster.ac.uk
+
+
+   Cheng Li
+   Huawei
+   Email: c.l@huawei.com
 
 
    Qin Wu
