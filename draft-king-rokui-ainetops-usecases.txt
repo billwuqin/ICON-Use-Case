@@ -121,7 +121,7 @@ Table of Contents
      6.12. Multi-layer Network Planning
      6.13. Causality Discovery
      6.14. Network Clean Up
-     6.15. Multi Agent Interworking
+     6.15. Multi-Agent Interworking
      6.16. Network Traffic Management
        6.16.1.  Short term approaches
        6.16.2.  Inference
@@ -1761,9 +1761,9 @@ Table of Contents
 
    More to be added.
 
-6.15.  Multi Agent Interworking
+6.15.  Multi-Agent Interworking
 
-   As briefly introduced in chapter 5, effectively deploying multiple AI
+   As briefly introduced in Section 5, effectively deploying multiple AI
    agents for network management introduces significant interworking
    challenges that must be addressed for successful and reliable
    operation.  These challenges span several key areas:
@@ -1773,7 +1773,7 @@ Table of Contents
        coordinate their actions.  This includes sharing information
        about network state, learned models, and planned interventions.
        A lack of standardized protocols and data models can lead to the
-       need to deploy expensive and time consuming adaptation layers.
+       need to deploy expensive and time-consuming adaptation layers.
        It is also extremely important to determine the appropriate
        communication frequency and granularity to avoid overloading the
        communication network between them while keeping a sufficient
@@ -1839,7 +1839,7 @@ Table of Contents
 
    *  Architecture
 
-      Multi agent architecture can be extremely complex, but Figure 8
+      Multi-agent architecture can be extremely complex, but Figure 8
       tries to capture the main interworking issues of this scenario.
       An example with an arbitrary number of agents (N) connecting to
       different components of the management and control stack (SDN
@@ -1906,7 +1906,9 @@ Table of Contents
 
               Figure 9: Multi-agent hierarchical architecture
 
-   More to be added.
+   As noted in Section 5.13, the discovery and inter-agent communication
+   aspects of this use case should be coordinated with the IETF DAWN and
+   AGENTPROTO activities.
 
 6.16.  Network Traffic Management
 

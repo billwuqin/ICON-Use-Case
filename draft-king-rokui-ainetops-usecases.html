@@ -1333,7 +1333,7 @@ protocols to support AINetOps-driven network management.<a href="#section-abstra
                 <p id="section-toc.1-1.6.2.14.1"><a href="#section-6.14" class="auto internal xref">6.14</a>. <a href="#name-network-clean-up" class="internal xref">Network Clean Up</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.15">
-                <p id="section-toc.1-1.6.2.15.1"><a href="#section-6.15" class="auto internal xref">6.15</a>. <a href="#name-multi-agent-interworking-2" class="internal xref">Multi Agent Interworking</a></p>
+                <p id="section-toc.1-1.6.2.15.1"><a href="#section-6.15" class="auto internal xref">6.15</a>. <a href="#name-multi-agent-interworking-2" class="internal xref">Multi-Agent Interworking</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.16">
                 <p id="section-toc.1-1.6.2.16.1"><a href="#section-6.16" class="auto internal xref">6.16</a>. <a href="#name-network-traffic-management" class="internal xref">Network Traffic Management</a></p>
@@ -3099,9 +3099,9 @@ To be added.<a href="#section-6.12-5.5.2" class="pilcrow">¶</a></p>
 <div id="multi-agent-interworking-1">
 <section id="section-6.15">
         <h3 id="name-multi-agent-interworking-2">
-<a href="#section-6.15" class="section-number selfRef">6.15. </a><a href="#name-multi-agent-interworking-2" class="section-name selfRef">Multi Agent Interworking</a>
+<a href="#section-6.15" class="section-number selfRef">6.15. </a><a href="#name-multi-agent-interworking-2" class="section-name selfRef">Multi-Agent Interworking</a>
         </h3>
-<p id="section-6.15-1">As briefly introduced in chapter 5, effectively deploying multiple AI agents for network management
+<p id="section-6.15-1">As briefly introduced in Section 5, effectively deploying multiple AI agents for network management
 introduces significant interworking challenges that must be addressed for successful and reliable
 operation. These challenges span several key areas:<a href="#section-6.15-1" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-6.15-2">
@@ -3109,7 +3109,7 @@ operation. These challenges span several key areas:<a href="#section-6.15-1" cla
             <p id="section-6.15-2.1.1">Communication and Coordination:  Multiple agents operating in a shared network environment
   need to communicate effectively to coordinate their actions.  This includes sharing information
   about network state, learned models, and planned interventions.  A lack of standardized
-  protocols and data models can lead to the need to deploy expensive and time consuming adaptation
+  protocols and data models can lead to the need to deploy expensive and time-consuming adaptation
   layers.  It is also extremely important to determine the appropriate communication frequency
   and granularity to avoid overloading the communication network between them while keeping
   a sufficient level of details to avoid suboptimal or even harmful decisions due to incomplete information.<a href="#section-6.15-2.1.1" class="pilcrow">¶</a></p>
@@ -3158,7 +3158,7 @@ Addressing these interworking challenges is essential for realizing the full pot
 <li class="normal" id="section-6.15-3.1">
             <p id="section-6.15-3.1.1">Architecture<a href="#section-6.15-3.1.1" class="pilcrow">¶</a></p>
 <p id="section-6.15-3.1.2">
-Multi agent architecture can be extremely complex, but <a href="#_figure-multi-agent" class="auto internal xref">Figure 8</a> tries to capture the main interworking issues of this scenario. An example with an arbitrary number of agents (N) connecting to different components of the management and control stack (SDN controllers, observability function, assurance function, and others) is provided.<a href="#section-6.15-3.1.2" class="pilcrow">¶</a></p>
+Multi-agent architecture can be extremely complex, but <a href="#_figure-multi-agent" class="auto internal xref">Figure 8</a> tries to capture the main interworking issues of this scenario. An example with an arbitrary number of agents (N) connecting to different components of the management and control stack (SDN controllers, observability function, assurance function, and others) is provided.<a href="#section-6.15-3.1.2" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <span id="name-multi-agent-architecture"></span><div id="_figure-multi-agent">
@@ -3233,7 +3233,9 @@ Multi agent architecture can be extremely complex, but <a href="#_figure-multi-a
 <a href="#name-multi-agent-hierarchical-ar" class="selfRef">Multi-agent hierarchical architecture</a>
           </figcaption></figure>
 </div>
-<p id="section-6.15-7">More to be added.<a href="#section-6.15-7" class="pilcrow">¶</a></p>
+<p id="section-6.15-7">As noted in Section 5.13, the discovery and inter-agent communication
+aspects of this use case should be coordinated with the IETF DAWN and
+AGENTPROTO activities.<a href="#section-6.15-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="network-traffic-management">
