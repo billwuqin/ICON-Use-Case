@@ -309,7 +309,7 @@ resources across different network layers, such as IP and optical layers.
    address potential issues before they impact users, thereby ensuring
    more resilient and reliable network operations.
 
-   This draft introduces the term “Operational Benefit”, which
+   This draft introduces the term "Operational Benefit", which
    encompasses the comprehensive suite of tools and methodologies that
    facilitate the efficient management, debugging, troubleshooting,
    monitoring, configuration, and optimization of IP Optical networks.
