@@ -1231,7 +1231,7 @@ actions in a closed-loop fashion, ensuring automated network recovery.
 
    Network anomaly detection is a critical component of modern network security and management, aimed at identifying deviations from normal network behavior that may indicate potential threats or operational issues. With the increasing complexity of networks and the growing    sophistication of cyber threats, traditional rule-based detection methods are often insufficient. The integration of Artificial Intelligence (AI) and Machine Learning (ML) techniques offers a more dynamic and adaptive approach to detecting anomalies in real-time. This section outlines the architecture, interfaces, protocols, data models, and alignment with IETF standards necessary to implement an effective AI-driven network anomaly detection system. The design and implementation of such systems may use some relevant technologies, such as RFC 8345 (YANG Data Model for Network Topologies), RFC 6241 (NETCONF Protocol), and RFC 8528 (YANG Schema Mount).
 
-   Machine learning would provide a key function in network anomaly detection as it can be seamlessly integrated into the architecture, via the "Analysis Layer" described in the figure above. By leveraging ML techniques, it would be possible to identify deviations from normal behavior, uncovering anomalies that might be imperceptible to human network engineers.
+   Machine learning would provide a key function in network anomaly detection as it can be seamlessly integrated into the architecture, via the "Analysis Layer" described in the figure below. By leveraging ML techniques, it would be possible to identify deviations from normal behavior, uncovering anomalies that might be imperceptible to human network engineers.
 
    An ML technique using unsupervised learning is particularly well-suited for network anomaly detection, as the network infrastructure is typically dynamic and evolving by nature. While machine learning requires large volumes of high-quality data and substantial computational resources for training, its benefits outweigh these challenges. Machine learning models offer generalizability, robustness, and reduced dependence on manual fine-tuning. More importantly, they enable the detection of complex and previously unseen anomaly patterns, enhancing network security, reliability, and operational efficiency.
 
@@ -1369,18 +1369,34 @@ actions in a closed-loop fashion, ensuring automated network recovery.
 
 ## Cognitive Search On Internal Operator Data
 
-   The operation of IP and optical networks comprises a wide range of management, monitoring and optimization tasks, including equipment configuration (switches, routers, OTNs, etc.), implementation of network policies, fault detection, troubleshooting, and capacity planning. The execution of such tasks usually requires access,  comprehension and analysis of specific documentation containing information about network topologies, hardware inventory, vendor specifications, and pre-defined procedures.
+   The operation of IP and optical networks comprises a wide range of management, monitoring and optimization
+   tasks, including equipment configuration (switches, routers, OTNs, etc.), implementation of network policies,
+   fault detection, troubleshooting, and capacity planning. The execution of such tasks usually requires access,
+   comprehension and analysis of specific documentation containing information about network topologies, hardware
+   inventory, vendor specifications, and pre-defined procedures.
 
-   Given the capacity of LLMs to understand natural language, including technical jargon, and their ability to process large amounts of information in short times, they can be used to build useful tools that support the network operational work, by executing comprehensive cognitive searches through the different documentation available to the operational teams, providing fast and concrete answers to technical enquiries, and making the access to such information a more efficient and interactive process.
+   Given the capacity of LLMs to understand natural language, including technical jargon, and their ability to
+   process large amounts of information in short times, they can be used to build useful tools that support the
+   network operational work, by executing comprehensive cognitive searches through the different documentation
+   available to the operational teams, providing fast and concrete answers to technical enquiries, and making
+   the access to such information a more efficient and interactive process.
 
-   To provision an LLM with such knowledge requires either a fine-tuning training job, that retrains an existing LLM, or the implementation of a RAG based architecture, where the information coming from the documentation is stored in a knowledge base and provided as context to the LLM. For this scenario, the RAG based approach has some specific advantages like lower computational cost, faster deployment, no need of retraining when the documentation is updated, and easier scalability.
+   To provision an LLM with such knowledge requires either a fine-tuning training job, that retrains an existing
+   LLM, or the implementation of a RAG based architecture, where the information coming from the documentation is
+   stored in a knowledge base and provided as context to the LLM. For this scenario, the RAG based approach has
+   some specific advantages like lower computational cost, faster deployment, no need for retraining when the
+   documentation is updated, and easier scalability.
 
-   Therefore, it is often the default approach for this type of solutions. Next section provides an architectural overview of how a RAG based system can be implemented to provide cognitive  search for network operations.
+   Therefore, it is often the default approach for this type of solutions. The next section provides an architectural
+   overview of how a RAG based system can be implemented to provide cognitive  search for network operations.
 
 
 * Architecture
 
-   In a RAG based architecture, a knowledge base is created by using an embedding model capable of splitting and transforming the content of different documents into numerical representations (vectors), and storing them in a database, also known as Vector DataBase. The general process executed by the system every time a query is made by a user can be summarized in the following steps:
+In a RAG based architecture, a knowledge base is created by using an embedding model capable of splitting and
+transforming the content of different documents into numerical representations (vectors), and storing them in
+a database, also known as Vector DataBase. The general process executed by the system every time a query is
+made by a user can be summarized in the following steps:
 
    1. Retrieval: The query made by the user is transformed by the embedding model and used to search and retrieve relevant information from the Vector Database.
    2. Augmentation: The information retrieved from the Vector Database is used to augment the query made by the user, adding context that might be unknown to the LLM.
@@ -1617,15 +1633,15 @@ AGENTPROTO activities.
 
 ## Network Traffic Management
 
-Flow placement, traffic engineering/steering along with network resource defragmentation are among important aspects of network operations that can benefit from artificial intelligence.
+Flow placement, traffic engineering/steering along with network resource defragmentation are among the important aspects of network operations that can benefit from artificial intelligence.
 
 Network routing protocols automate flow placement for best-effort traffic.  Traffic engineering and steering are commonly based on statistical analysis and historical trends of network traffic. They are mostly implemented via configurations and tunnel setups, often employing scripts for automation purposes.
 
-While there are some proactive approach to network resource defragmentation, reactive methods are still quite common.  There are short-term approaches and longer-term views on employing AI to address traffic management.
+While there are some proactive approaches to network resource defragmentation, reactive methods are still quite common.  There are short-term approaches and longer-term views on employing AI to address traffic management.
 
 ### Short term approaches
 
-   In the short-term, AI models train on operator's network traffic patterns and employ a set of APIs to connect to network configuration equipment in order to add, remove, and modify configurations and perform different traffic management related tasks. Model training can be either off-line or on-line.
+   In the short-term, AI models train on an operator's network traffic patterns and employ a set of APIs to connect to network configuration equipment in order to add, remove, and modify configurations and perform different traffic management related tasks. Model training can be either off-line or on-line.
 
    Initially, AI models perform their inference tasks exclusively based on their training on historical network traffic patterns, and topology changes in a centralized manner.  In more advanced approaches, the models not only train on network traffic patterns, and network topology changes, but also  learn how to interpret and digest external events. This added capability allows the AI models to be more effective in performing their traffic management tasks.
 
@@ -1685,7 +1701,7 @@ While there are some proactive approach to network resource defragmentation, rea
 
       The training process therefore requires a mechanism to extract important features from the stream of incoming real-time network data and outside world events. These extracted features are then fed to the training process for adjusting model's parameters in a dynamic manner.
 
-      IETF/IRTF can work to standardize the mechanisms to identify important feature and implement the above-mentioned required real-time data delivery and feature extraction.
+      IETF/IRTF can work to standardize the mechanisms to identify important features and implement the above-mentioned required real-time data delivery and feature extraction.
 
 ~~~~
   +---------+     External Events
@@ -1757,13 +1773,27 @@ While there are some proactive approach to network resource defragmentation, rea
 
 
 ### Longer term view
-   Over time, the full integration of AI models and network elements will transform networks from their current state into agent-based or Agentic networks. In a distributed version of Agentic networks, each node is accompanied by an AI agent. Once trained, these agents work together to address flow placement, traffic steering/engineering, and other network related tasks such as traffic management, network resource defragmentation, and even routing.
 
-   While being different from networks managed by a set of interworking multi agents, the Agentic networks face some of the same challenges outlined in the multi agent interworking section of the document. However, in Agentic networks, distributed training of the agents and proper knowledge sharing between them can enhance their collective training performance and can potentially alleviate some of these difficulties.
+Over time, the full integration of AI models and network elements will transform networks
+from their current state into agent-based or Agentic networks. In a distributed version of
+Agentic networks, each node is accompanied by an AI agent. Once trained, these agents work
+together to address flow placement, traffic steering/engineering, and other network related
+tasks such as traffic management, network resource defragmentation, and even routing.
 
-   In these networks, AI agents trained on local traffic patterns and external events will exchange knowledge and network state information through a set of protocols in a distributed manner in order to address network related tasks. Agentic networks will potentially offer highly automated, streamlined, and tunnel-less traffic management that is currently available only for best-effort traffic.
+While being different from networks managed by a set of interworking multi-agents, the Agentic
+networks face some of the same challenges outlined in the multi-agent interworking section of
+the document. However, in Agentic networks, distributed training of the agents and proper
+knowledge sharing between them can enhance their collective training performance and can
+potentially alleviate some of these difficulties.
 
-   In addition to the potential standardization opportunities outlined in the previous section, IETF/IRTF can also play a role in defining and standardizing the following:
+   In these networks, AI agents trained on local traffic patterns and external events will
+   exchange knowledge and network state information through a set of protocols in a
+   distributed manner in order to address network-related tasks. Agentic networks will
+   potentially offer highly automated, streamlined, and tunnel-less traffic management
+   that is currently available only for best-effort traffic.
+
+   In addition to the potential standardization opportunities outlined in the previous section,
+   IETF/IRTF can also play a role in defining and standardizing the following:
 
    * Training
 
@@ -2167,7 +2197,7 @@ Legend:
    the Network Research Group (COINRG) and Network Function Virtualization
    Research Group (NFVRG) address compute placement, applicable to VNFs.
    The Traffic Engineering Architecture and Signaling (TEAS) working
-   groups efforts (e.g., RFC 8453 for ACTN) enable green-energy-aware
+   group's efforts (e.g., RFC 8453 for ACTN) enable green-energy-aware
    routing. Extensions to YANG (NETMOD), PCEP (PCE), and telemetry
    standards (OPSAWG) could standardize this, leveraging {{ai_drive_resilience_testing}}
    and {{energy_efficiency_optimization}} frameworks.
