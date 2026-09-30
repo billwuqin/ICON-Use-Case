@@ -179,7 +179,7 @@ in this document.
    *  A GRASP-based agent rendezvous mechanism
       {{?I-D.carpenter-anima-grasp-rendezvous}}.
 
-   *  An agent communication framework and registry for network AIOps
+   *  An agent communication framework and registry for network AINetOps
       {{?I-D.fu-nmop-agent-communication-framework}} and a problem
       statement on model grounding and token operations
       {{?I-D.fu-nmop-tokenops-probelem-statement}}, both based on operator
@@ -665,7 +665,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    packet error rates.  By anticipating these issues, network operators
    can implement preemptive measures, such as rerouting traffic or
    adjusting signal parameters, to maintain seamless service.  The
-   integration of trending and forecasting through AIOps thus enhances
+   integration of trending and forecasting through AINetOps thus enhances
    the resilience and efficiency of IP optical networks, ensuring
    superior performance and reliability.
 
@@ -700,7 +700,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    approach ensures that both layers of the network are maintained
    optimally, preventing cascading failures and maintaining high service
    quality.  Through the integration of predictive maintenance with
-   AIOps, IP optical networks can achieve greater reliability,
+   AINetOps, IP optical networks can achieve greater reliability,
    efficiency, and cost-effectiveness, ensuring uninterrupted service
    delivery to end-users.
 
@@ -1098,7 +1098,7 @@ that a fault occurs in the IP/Optical network (Step A) and is subsequently
 detected by the operator through various means (Step B). Detection methods
 may include alarm monitoring, performance telemetry data analysis, or customer
 reports indicating service disruptions. To initiate troubleshooting, the operator
-can launch the AIOps-Assistant, which acts as the front-end interface for
+can launch the AINetOps-Assistant, which acts as the front-end interface for
 AINetOps (Step C). The assistant then utilizes the backend assurance and
 troubleshooting mechanisms, leveraging a Gen-AI multi-agent framework. In
 Step D, a dynamic workflow is executed to diagnose the issue and identify
@@ -1117,7 +1117,7 @@ actions in a closed-loop fashion, ensuring automated network recovery.
                           v                      | (D)
                   |---------------|              |
                   |   P-PNC(s),   |        |-----------|
-                  |   O-PNC(s),   |        |   AIOps   |
+                  |   O-PNC(s),   |        |   AINetOps   |
                   |   MDSC        |        | Assistant |
                   |---------------|        |-----------|
                           ^                      ^
@@ -1132,7 +1132,7 @@ actions in a closed-loop fashion, ensuring automated network recovery.
   (A) A fault happened in the network
       (e.g., Fiber cut, IP packet drop, TCA crossing etc.)
   (B) Operator is aware of the network issue
-  (C) To start troubleshooting, Operator starts AIOps-Assistant
+  (C) To start troubleshooting, Operator starts AINetOps-Assistant
   (D) Start troubleshooting using Gen-AI multi-agent dynamic workflow
   (E) Optional remedial actions
 
@@ -1141,7 +1141,7 @@ actions in a closed-loop fashion, ensuring automated network recovery.
 
   In both reactive and active assurance, network faults have already occurred. These faults may include impairments such as optical fiber cuts, IP packet drops, IP link latency issues, or Threshold Crossing Alarms (TCA), among others.
 
-  The active assurance and troubleshooting process is illustrated in {{figure-active-assurance}}. In contrast to {{figure-reactive-assurance}}, active assurance assumes that a fault occurs in the IP/Optical network (Step A) and is subsequently detected automatically by higher-layer controllers (Step B). These controllers may employ detection methods that include monitoring alarms, analyzing performance telemetry data, or processing customer reports indicating service disruptions. To initiate troubleshooting, the detection logic launches the AIOps-Assistant, which serves as the front-end interface for AINetOps (Step C). Steps D and E are identical to those depicted in {{figure-reactive-assurance}}.
+  The active assurance and troubleshooting process is illustrated in {{figure-active-assurance}}. In contrast to {{figure-reactive-assurance}}, active assurance assumes that a fault occurs in the IP/Optical network (Step A) and is subsequently detected automatically by higher-layer controllers (Step B). These controllers may employ detection methods that include monitoring alarms, analyzing performance telemetry data, or processing customer reports indicating service disruptions. To initiate troubleshooting, the detection logic launches the AINetOps-Assistant, which serves as the front-end interface for AINetOps (Step C). Steps D and E are identical to those depicted in {{figure-reactive-assurance}}.
 
 ~~~~
 
@@ -1154,7 +1154,7 @@ actions in a closed-loop fashion, ensuring automated network recovery.
                           v                      | (D)
                   |---------------|              |
                   |   P-PNC(s),   |  (C)   |-----------|
-              (B) |   O-PNC(s),   | -----> |   AIOps   |
+              (B) |   O-PNC(s),   | -----> |   AINetOps   |
                   |   MDSC        |        | Assistant |
                   |---------------|        |-----------|
                           ^
@@ -1169,7 +1169,7 @@ actions in a closed-loop fashion, ensuring automated network recovery.
   (A) A fault happened in the network
       (e.g., Fiber cut, IP packet drop, TCA crossing etc.)
   (B) The higher layer Controller notifies Operator
-  (C) To start troubleshooting, AIOps-Assistant starts automatically
+  (C) To start troubleshooting, AINetOps-Assistant starts automatically
   (D) Start troubleshooting using Gen-AI multi-agent dynamic workflow
   (E) Optional remedial actions
 
@@ -1186,7 +1186,7 @@ actions in a closed-loop fashion, ensuring automated network recovery.
 
    As illustrated in {{figure-proactive-assurance}}, achieving proactive assurance involves running multiple processes that continuously monitor network performance. These processes collect and analyze a wide array of network telemetry data, including performance monitoring (PM) data, alarms, logs, network topology, and inventory details (Step A). By employing various techniques including advanced AI/ML algorithms, these processes provide real-time trending and forecasting insights, identifying patterns and anomalies that could indicate potential degradation (Step B).
 
-   When these background processes detect any signs of deterioration or anomalous behavior, they trigger the AIOps-Assistant for further investigation (Step C). The AIOps-Assistant then leverages a Gen-AI multi-agent framework to initiate the assurance and troubleshooting procedures. In Step D, a dynamic workflow is executed to thoroughly diagnose the emerging issue and identify potential root causes. Optionally, at Step E, the Gen-AI dynamic workflow can recommend remedial actions to resolve the identified issues. These recommendations can be implemented in a closed-loop fashion, ensuring automated network recovery and continuous improvement of network performance. This proactive approach not only mitigates the risk of unexpected network faults but also optimizes operational efficiency by addressing issues before they escalate into service-impacting events.
+   When these background processes detect any signs of deterioration or anomalous behavior, they trigger the AINetOps-Assistant for further investigation (Step C). The AINetOps-Assistant then leverages a Gen-AI multi-agent framework to initiate the assurance and troubleshooting procedures. In Step D, a dynamic workflow is executed to thoroughly diagnose the emerging issue and identify potential root causes. Optionally, at Step E, the Gen-AI dynamic workflow can recommend remedial actions to resolve the identified issues. These recommendations can be implemented in a closed-loop fashion, ensuring automated network recovery and continuous improvement of network performance. This proactive approach not only mitigates the risk of unexpected network faults but also optimizes operational efficiency by addressing issues before they escalate into service-impacting events.
 
    Furthermore, by integrating advanced analytics with automated corrective measures, proactive assurance enhances overall network resilience. It enables network operators to maintain a high quality of service and reliability, even in complex and dynamic network environments.
 
@@ -1201,7 +1201,7 @@ actions in a closed-loop fashion, ensuring automated network recovery.
              v                                        | (D)
       |---------------|                               |
       |   P-PNC(s),   |  (B)   |-----------| (C)  |------------|
-  (A) |   O-PNC(s),   | <----> | Monitoring| ---->| AIOps      |
+  (A) |   O-PNC(s),   | <----> | Monitoring| ---->| AINetOps      |
       |   MDSC        |        | Processes |      | Assistant  |
       |---------------|        |-----------|      |------------|
               ^
@@ -1215,7 +1215,7 @@ actions in a closed-loop fashion, ensuring automated network recovery.
   Legend:
   (A) Collect the IP/Optical telemetry data, inventory, logs etc.
   (B) Processes which monitor the network
-  (C) Upon detection of potential issue, start AIOps-Assistant
+  (C) Upon detection of potential issue, start AINetOps-Assistant
   (D) Start troubleshooting using Gen-AI multi-agent dynamic workflow
   (E) Optional remedial actions
 
@@ -1932,7 +1932,7 @@ Legend:
    like supervised learning for fault prediction and reinforcement
    learning for recovery optimization. Fault injection tests are
    scheduled (e.g., off-peak) or triggered on-demand, with operator
-   oversight via an AIOps-Assistant interface (similar to 6.8). Post-test
+   oversight via an AINetOps-Assistant interface (similar to 6.8). Post-test
    analysis generates reports on resilience gaps, updates network
    policies (e.g., QoS, routing), and refines the AI model's training
    dataset. Closed-loop automation may execute recovery actions
@@ -2023,7 +2023,7 @@ Legend:
    patterns, and cost data, using reinforcement learning for policy
    optimization and time-series analysis for demand forecasting.
    Optimization runs continuously or on a schedule, with operator oversight
-   via an AIOps-Assistant (similar to 6.8). Post-optimization, the AI
+   via an AINetOps-Assistant (similar to 6.8). Post-optimization, the AI
    evaluates energy savings against performance impacts, updating policies
    and retraining as needed. Closed-loop automation applies adjustments,
    validated by telemetry, following the workflow principles in {{ai_drive_resilience_testing}}.
@@ -2148,7 +2148,7 @@ Legend:
    energy source data, using reinforcement learning to optimize green
    energy use and predictive models for renewable availability.
    Optimization runs continuously, shifting VNFs to green PoDs/datacenters
-   or adjusting traffic when viable, with operator oversight via an AIOps-
+   or adjusting traffic when viable, with operator oversight via an AINetOps-
    Assistant (similar to 6.8). Post-optimization, the AI assesses
    sustainability gains against performance, updating policies and
    retraining. Closed-loop automation adjusts configurations, validated by
@@ -2258,7 +2258,7 @@ Legend:
 
    The process begins with AI training on historical configuration data,
    security logs, and regulatory requirements. Policy enforcement runs
-   continuously, with operator oversight via an AIOps-Assistant (similar
+   continuously, with operator oversight via an AINetOps-Assistant (similar
    to 6.8). Post-audit, the AI generates compliance reports, updates
    policies, and retrains as needed. Closed-loop automation applies
    corrective actions, validated by telemetry.
@@ -2374,7 +2374,7 @@ Legend:
 
    The process begins with AI training on historical traffic data, slice
    configurations, and SLA requirements. Optimization runs continuously,
-   with operator oversight via an AIOps-Assistant (similar to 6.8).
+   with operator oversight via an AINetOps-Assistant (similar to 6.8).
    Post-optimization, the AI evaluates slice performance, updates
    configurations, and retrains as needed. Closed-loop automation
    applies corrective actions, validated by telemetry.
@@ -2461,7 +2461,7 @@ To be added.
 
       Observability, evaluation, intervention, and control components
       attach to the agents introduced in the use cases above (e.g., the
-      AIOps-Assistant front-end and the Gen-AI multi-agent dynamic
+      AINetOps-Assistant front-end and the Gen-AI multi-agent dynamic
       workflows).  Agent behavior is captured as trajectory records:
       structured traces of the reasoning sequence, actions, and
       observations an agent follows to reach its conclusion.  A human
