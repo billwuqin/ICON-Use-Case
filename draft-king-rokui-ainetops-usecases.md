@@ -1496,16 +1496,16 @@ More to be added.
 
    More to be added.
 
-## Multi Agent Interworking
+## Multi-Agent Interworking
 
-As briefly introduced in chapter 5, effectively deploying multiple AI agents for network management
+As briefly introduced in Section 5, effectively deploying multiple AI agents for network management
 introduces significant interworking challenges that must be addressed for successful and reliable
 operation. These challenges span several key areas:
 
 1. Communication and Coordination:  Multiple agents operating in a shared network environment
   need to communicate effectively to coordinate their actions.  This includes sharing information
   about network state, learned models, and planned interventions.  A lack of standardized
-  protocols and data models can lead to the need to deploy expensive and time consuming adaptation
+  protocols and data models can lead to the need to deploy expensive and time-consuming adaptation
   layers.  It is also extremely important to determine the appropriate communication frequency
   and granularity to avoid overloading the communication network between them while keeping
   a sufficient level of details to avoid suboptimal or even harmful decisions due to incomplete information.
@@ -1547,7 +1547,7 @@ operation. These challenges span several key areas:
 
 * Architecture
 
-   Multi agent architecture can be extremely complex, but {{figure-multi-agent}} tries to capture the main interworking issues of this scenario. An example with an arbitrary number of agents (N) connecting to different components of the management and control stack (SDN controllers, observability function, assurance function, and others) is provided.
+   Multi-agent architecture can be extremely complex, but {{figure-multi-agent}} tries to capture the main interworking issues of this scenario. An example with an arbitrary number of agents (N) connecting to different components of the management and control stack (SDN controllers, observability function, assurance function, and others) is provided.
 
 ~~~~
 
@@ -1611,7 +1611,9 @@ operation. These challenges span several key areas:
 ~~~~
 {: #figure-h-agent title="Multi-agent hierarchical architecture"}
 
-   More to be added.
+As noted in Section 5.13, the discovery and inter-agent communication
+aspects of this use case should be coordinated with the IETF DAWN and
+AGENTPROTO activities.
 
 ## Network Traffic Management
 
