@@ -1028,7 +1028,7 @@ spanning from the definition of APIs that can be used by the various agent to th
 interworking with already existing components of the Network Management and Control stack.
 New challenges arise when we move from a single agent to a multi-agent architecture.
 When multiple agents are deployed we need to consider how they discover each other,
-how they interwork with the discovered agents and how they are kept in synch.
+how they interwork with the discovered agents and how they are kept in sync.
 
 The discovery aspect could be relatively simple in the short term, when few agents will
 be deployed in the network and it could be possible to manually configure each agent
@@ -1226,9 +1226,9 @@ actions in a closed-loop fashion, ensuring automated network recovery.
 
 ## Network Anomaly Detection
 
-   Network anomaly detection is a critical component of modern network security and management, aimed at identifying deviations from normal network behavior that may indicate potential threats or operational issues. With the increasing complexity of networks and the growing    sophistication of cyber threats, traditional rule-based detection methods are often insufficient. The integration of Artificial Intelligence (AI) and Machine Learning (ML) techniques offers a more dynamic and adaptive approach to detecting anomalies in real-time. This section outlines the architecture, interfaces, protocols, data models, and alignment with IETF standards necessary to implement an effective AI-driven network anomaly detection system. The design and implementation of such systems may use some relevant technologies, such as RFC 8345 (YANG Data Model for Network Topologies), RFC 6241 (NETCONF Protocol), and RFC 8529 (YANG Schema Mount).
+   Network anomaly detection is a critical component of modern network security and management, aimed at identifying deviations from normal network behavior that may indicate potential threats or operational issues. With the increasing complexity of networks and the growing    sophistication of cyber threats, traditional rule-based detection methods are often insufficient. The integration of Artificial Intelligence (AI) and Machine Learning (ML) techniques offers a more dynamic and adaptive approach to detecting anomalies in real-time. This section outlines the architecture, interfaces, protocols, data models, and alignment with IETF standards necessary to implement an effective AI-driven network anomaly detection system. The design and implementation of such systems may use some relevant technologies, such as RFC 8345 (YANG Data Model for Network Topologies), RFC 6241 (NETCONF Protocol), and RFC 8528 (YANG Schema Mount).
 
-   Machine learning would provide a key function in network anomaly detection as it can be seamlessly integrated into the architecture, via the “Analysis Layer” described in the figure above. By leveraging ML techniques, it would be possible to identify deviations from normal behavior, uncovering anomalies that might be imperceptible to human network engineers.
+   Machine learning would provide a key function in network anomaly detection as it can be seamlessly integrated into the architecture, via the "Analysis Layer" described in the figure above. By leveraging ML techniques, it would be possible to identify deviations from normal behavior, uncovering anomalies that might be imperceptible to human network engineers.
 
    An ML technique using unsupervised learning is particularly well-suited for network anomaly detection, as the network infrastructure is typically dynamic and evolving by nature. While machine learning requires large volumes of high-quality data and substantial computational resources for training, its benefits outweigh these challenges. Machine learning models offer generalizability, robustness, and reduced dependence on manual fine-tuning. More importantly, they enable the detection of complex and previously unseen anomaly patterns, enhancing network security, reliability, and operational efficiency.
 
@@ -1345,7 +1345,7 @@ actions in a closed-loop fashion, ensuring automated network recovery.
 
    * NETMOD (Network Modeling): For leveraging YANG data models {{!RFC7950}}, {{!RFC8345}} and NETCONF/RESTCONF protocols {{!RFC8040}}.
    * MILE (Managed Incident Lightweight Exchange, concluded): For standardizing the exchange of security incident information, as outlined in {{!RFC8329}}.
-   * DOTS (DDoS Open Threat Signaling ,concluded): For coordinating responses to distributed denial-of-service attacks, as defined in {{!RFC8811}}.
+   * DOTS (DDoS Open Threat Signaling, concluded): For coordinating responses to distributed denial-of-service attacks, as defined in {{!RFC8811}}.
    * Awaiting to add more WGs, BGP-LS, PCE, etc.
 
    Collaboration with these groups ensures that the anomaly detection system integrates seamlessly with existing IETF frameworks and contributes to the broader goal of network security and management.
@@ -1360,7 +1360,7 @@ actions in a closed-loop fashion, ensuring automated network recovery.
 
 ## Generate Node Configuration
 
-   Generate node config with certain customer requirement (e.g., certain QoS, policy, ACL, tunnels, …)
+   Generate node config with certain customer requirement (e.g., certain QoS, policy, ACL, tunnels, ...)
 
    More to be added.
 
@@ -1377,11 +1377,11 @@ actions in a closed-loop fashion, ensuring automated network recovery.
 
 * Architecture
 
-   In a RAG based architecture, a knowledge base is created by using an embedding model capable of splitting and transforming the content of different documents into numerical representations (vectors), and storing them in a data base, also known as Vector Data Base. The general process executed by the system every time a query is made by a user can be summarized in the following steps:
+   In a RAG based architecture, a knowledge base is created by using an embedding model capable of splitting and transforming the content of different documents into numerical representations (vectors), and storing them in a database, also known as Vector DataBase. The general process executed by the system every time a query is made by a user can be summarized in the following steps:
 
-   1. Retrieval: The query made by the user is transformed by the embedding model and used to search and retrieve relevant information from the Vector Data Base.
-   2. Augmentation: The information retrieved from the Vector Data Base is used to augment the query made by the user, adding context that might be unknown to the LLM.
-   3. Generation: The augmented query is sent to the LLM, which then generates and answer in natural language that is finally delivered to the user.
+   1. Retrieval: The query made by the user is transformed by the embedding model and used to search and retrieve relevant information from the Vector Database.
+   2. Augmentation: The information retrieved from the Vector Database is used to augment the query made by the user, adding context that might be unknown to the LLM.
+   3. Generation: The augmented query is sent to the LLM, which then generates an answer in natural language that is finally delivered to the user.
 
 ~~~~
 
@@ -1445,7 +1445,7 @@ More to be added.
 
 ## Multi-layer Network Planning
 
-   Several innovations have been developed at the IETF for multi-layer network (MLN) planning. This activity is involves coordinating and optimizing multiple network layers, such as IP, optical, and transport layers, to improve efficiency, resilience, and scalability. The Internet Engineering Task Force (IETF) has developed several technologies and standards to facilitate multi-layer network planning, including protocols for path computation, topology exchange, and resource optimization.
+   Several innovations have been developed at the IETF for multi-layer network (MLN) planning. This activity involves coordinating and optimizing multiple network layers, such as IP, optical, and transport layers, to improve efficiency, resilience, and scalability. The Internet Engineering Task Force (IETF) has developed several technologies and standards to facilitate multi-layer network planning, including protocols for path computation, topology exchange, and resource optimization.
 
    The components and interfaces for MLN planning include:
 
@@ -1475,7 +1475,7 @@ More to be added.
 
    The YANG data modeling language is a cornerstone for MLN planning. It provides a structured way to represent network elements, configurations, and operational states, enabling programmatic control and integration across multiple network layers. Several IETF YANG models provide network topology, traffic engineering, optical transport, and service abstraction.
 
-   A core YANG model for MLN planning is the Network Topology Model {{!RFC8345}}, which provides a generic framework for representing network nodes, links, and supporting attributes. This model would facilitate an AI-enabled planning system to define multi-layer relationships, such as the mapping between optical, ethernet, and IP layers, enabling a holistic approach to MLN planning.
+   A core YANG model for MLN planning is the Network Topology Model {{!RFC8345}}, which provides a generic framework for representing network nodes, links, and supporting attributes. This model would facilitate an AI-enabled planning system to define multi-layer relationships, such as the mapping between optical, Ethernet, and IP layers, enabling a holistic approach to MLN planning.
 
 * Alignment with IETF
 
@@ -1535,7 +1535,7 @@ operation. These challenges span several key areas:
 5. Scalability and Management:  As the number of agents and the complexity of the network increase,
   managing the interactions between agents becomes increasingly challenging.  Scalable architectures
   and management frameworks are needed to handle the growing communication overhead, coordination complexity,
-  and resource requirements. One possible option to overcome this problem could be leveraging on a
+  and resource requirements. One possible option to overcome this problem could be leveraging a
   hierarchical agent structure. As previously introduced, in order to allow for scalability, it is also
   important to foresee advertisement protocols/extensions to let the agents learn about their counterparts
   and their capabilities.
@@ -1544,7 +1544,7 @@ operation. These challenges span several key areas:
 
 * Architecture
 
-   Multi agent architecture can be extremely complex, but figure  {{figure-multi-agent}} tries to capture the main interwokring issues of this scenario. An example with an arbitrary number of agents (N) connecting to different components of the management and control stack (SDN controllers, observability function, assurance function, and others) is provided.
+   Multi agent architecture can be extremely complex, but {{figure-multi-agent}} tries to capture the main interworking issues of this scenario. An example with an arbitrary number of agents (N) connecting to different components of the management and control stack (SDN controllers, observability function, assurance function, and others) is provided.
 
 ~~~~
 
@@ -1680,7 +1680,7 @@ While there are some proactive approach to network resource defragmentation, rea
 
       The training process therefore requires a mechanism to extract important features from the stream of incoming real-time network data and outside world events. These extracted features are then fed to the training process for adjusting model's parameters in a dynamic manner.
 
-      IETF/IRTF can work to standardize the mechanisms to identify important feature and implement the above mentioned required real-time data delivery and feature extraction.
+      IETF/IRTF can work to standardize the mechanisms to identify important feature and implement the above-mentioned required real-time data delivery and feature extraction.
 
 ~~~~
   +---------+     External Events
@@ -1752,13 +1752,13 @@ While there are some proactive approach to network resource defragmentation, rea
 
 
 ### Longer term view
-   Over time, the full integration of AI models and network elements will transform networks from their current state into agent-based or Agentic networks. In a distributed version of Agentic networks, each node is accompanied by an AI agents. Once trained, these agents work together to address flow placement, traffic steering/engineering, and other network related tasks such as traffic management, network resource defragmentation, and even routing.
+   Over time, the full integration of AI models and network elements will transform networks from their current state into agent-based or Agentic networks. In a distributed version of Agentic networks, each node is accompanied by an AI agent. Once trained, these agents work together to address flow placement, traffic steering/engineering, and other network related tasks such as traffic management, network resource defragmentation, and even routing.
 
-   While being different from networks managed by a set of interworking multi agents , the Agentic networks face some of the same challenges outlined in the multi agent interworking section of the document. However, in Agentic networks, distributed training of the agents and proper knowledge sharing between them can enhance their collective training performance and can potentially alleviate some of these difficulties.
+   While being different from networks managed by a set of interworking multi agents, the Agentic networks face some of the same challenges outlined in the multi agent interworking section of the document. However, in Agentic networks, distributed training of the agents and proper knowledge sharing between them can enhance their collective training performance and can potentially alleviate some of these difficulties.
 
    In these networks, AI agents trained on local traffic patterns and external events will exchange knowledge and network state information through a set of protocols in a distributed manner in order to address network related tasks. Agentic networks will potentially offer highly automated, streamlined, and tunnel-less traffic management that is currently available only for best-effort traffic.
 
-   In addition to the potential standardization opportunities outlined in the previous section, IETF/IRTF can alo play a role in defining and standardizing the followings:
+   In addition to the potential standardization opportunities outlined in the previous section, IETF/IRTF can also play a role in defining and standardizing the following:
 
    * Training
 
@@ -1823,7 +1823,7 @@ This use case leverages AI to design and execute fault injection
    scenarios that test the resilience of IP/optical networks under
    simulated failure conditions. By proactively introducing controlled
    disruptions-such as packet drops, latency spikes, or optical signal
-   degradation-AI assesses the network's ability to detect, respond,
+   degradation-AI assesses the network's ability to detect, respond to,
    and recover from faults. This approach enhances network robustness
    by identifying weaknesses and validating automated recovery
    mechanisms before real failures occur, addressing both single-layer
@@ -2339,7 +2339,7 @@ Legend:
    (RAN, Core, Transport)
 
 ~~~~
-{: #architecture_for_ai_derive_5g_ns title="Corrected Architecture for AI-Driven Network Slicing Optimization"}
+{: #architecture_for_ai_derive_5g_ns title="Architecture for AI-Driven Network Slicing Optimization"}
 
 * Interfaces and APIs
 
