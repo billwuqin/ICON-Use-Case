@@ -1395,7 +1395,7 @@ actions in a closed-loop fashion, ensuring automated network recovery.
 
 In a RAG based architecture, a knowledge base is created by using an embedding model capable of splitting and
 transforming the content of different documents into numerical representations (vectors), and storing them in
-a database, also known as Vector DataBase. The general process executed by the system every time a query is
+a database, also known as a Vector Database. The general process executed by the system every time a query is
 made by a user can be summarized in the following steps:
 
    1. Retrieval: The query made by the user is transformed by the embedding model and used to search and retrieve relevant information from the Vector Database.
@@ -1699,7 +1699,7 @@ While there are some proactive approaches to network resource defragmentation, r
 
       A traffic management AI model under online training uses the same input sources as it does in offline training. However, unlike offline training, the data here is not stored in a repository but streamed into the training process. As such, the ground truth for model performance evaluation in online training is derived from observation of actual real time world events and network behavior, rather than stored data.
 
-      The training process therefore requires a mechanism to extract important features from the stream of incoming real-time network data and outside world events. These extracted features are then fed to the training process for adjusting model's parameters in a dynamic manner.
+      The training process therefore requires a mechanism to extract important features from the stream of incoming real-time network data and outside world events. These extracted features are then fed to the training process for adjusting the model's parameters in a dynamic manner.
 
       IETF/IRTF can work to standardize the mechanisms to identify important features and implement the above-mentioned required real-time data delivery and feature extraction.
 
@@ -1777,7 +1777,7 @@ While there are some proactive approaches to network resource defragmentation, r
 Over time, the full integration of AI models and network elements will transform networks
 from their current state into agent-based or Agentic networks. In a distributed version of
 Agentic networks, each node is accompanied by an AI agent. Once trained, these agents work
-together to address flow placement, traffic steering/engineering, and other network related
+together to address flow placement, traffic steering/engineering, and other network-related
 tasks such as traffic management, network resource defragmentation, and even routing.
 
 While being different from networks managed by a set of interworking multi-agents, the Agentic
@@ -2183,8 +2183,8 @@ Legend:
    energy source data, using reinforcement learning to optimize green
    energy use and predictive models for renewable availability.
    Optimization runs continuously, shifting VNFs to green PoDs/datacenters
-   or adjusting traffic when viable, with operator oversight via an AINetOps-
-   Assistant (similar to 6.8). Post-optimization, the AI assesses
+   or adjusting traffic when viable, with operator oversight via an
+   AIOps-Assistant (similar to 6.8). Post-optimization, the AI assesses
    sustainability gains against performance, updating policies and
    retraining. Closed-loop automation adjusts configurations, validated by
    telemetry, following {{energy_efficiency_optimization}} workflow.
