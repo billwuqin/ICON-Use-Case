@@ -1346,7 +1346,7 @@ Table of Contents
 
    Machine learning would provide a key function in network anomaly
    detection as it can be seamlessly integrated into the architecture,
-   via the "Analysis Layer" described in the figure above.  By
+   via the "Analysis Layer" described in the figure below.  By
    leveraging ML techniques, it would be possible to identify deviations
    from normal behavior, uncovering anomalies that might be
    imperceptible to human network engineers.
@@ -1579,34 +1579,34 @@ Table of Contents
    documentation is stored in a knowledge base and provided as context
    to the LLM.  For this scenario, the RAG based approach has some
    specific advantages like lower computational cost, faster deployment,
-   no need of retraining when the documentation is updated, and easier
+   no need for retraining when the documentation is updated, and easier
    scalability.
 
    Therefore, it is often the default approach for this type of
-   solutions.  Next section provides an architectural overview of how a
-   RAG based system can be implemented to provide cognitive search for
-   network operations.
+   solutions.  The next section provides an architectural overview of
+   how a RAG based system can be implemented to provide cognitive search
+   for network operations.
 
    *  Architecture
 
-      In a RAG based architecture, a knowledge base is created by using
-      an embedding model capable of splitting and transforming the
-      content of different documents into numerical representations
-      (vectors), and storing them in a database, also known as Vector
-      DataBase.  The general process executed by the system every time a
-      query is made by a user can be summarized in the following steps:
+   In a RAG based architecture, a knowledge base is created by using an
+   embedding model capable of splitting and transforming the content of
+   different documents into numerical representations (vectors), and
+   storing them in a database, also known as Vector DataBase.  The
+   general process executed by the system every time a query is made by
+   a user can be summarized in the following steps:
 
-      1.  Retrieval: The query made by the user is transformed by the
-          embedding model and used to search and retrieve relevant
-          information from the Vector Database.
+   1.  Retrieval: The query made by the user is transformed by the
+       embedding model and used to search and retrieve relevant
+       information from the Vector Database.
 
-      2.  Augmentation: The information retrieved from the Vector
-          Database is used to augment the query made by the user, adding
-          context that might be unknown to the LLM.
+   2.  Augmentation: The information retrieved from the Vector Database
+       is used to augment the query made by the user, adding context
+       that might be unknown to the LLM.
 
-      3.  Generation: The augmented query is sent to the LLM, which then
-          generates an answer in natural language that is finally
-          delivered to the user.
+   3.  Generation: The augmented query is sent to the LLM, which then
+       generates an answer in natural language that is finally delivered
+       to the user.
 
     |-----------|                                           |---------|
     |           |<----------------Response------------------|         |
@@ -1913,7 +1913,7 @@ Table of Contents
 6.16.  Network Traffic Management
 
    Flow placement, traffic engineering/steering along with network
-   resource defragmentation are among important aspects of network
+   resource defragmentation are among the important aspects of network
    operations that can benefit from artificial intelligence.
 
    Network routing protocols automate flow placement for best-effort
@@ -1922,14 +1922,14 @@ Table of Contents
    are mostly implemented via configurations and tunnel setups, often
    employing scripts for automation purposes.
 
-   While there are some proactive approach to network resource
+   While there are some proactive approaches to network resource
    defragmentation, reactive methods are still quite common.  There are
    short-term approaches and longer-term views on employing AI to
    address traffic management.
 
 6.16.1.  Short term approaches
 
-   In the short-term, AI models train on operator's network traffic
+   In the short-term, AI models train on an operator's network traffic
    patterns and employ a set of APIs to connect to network configuration
    equipment in order to add, remove, and modify configurations and
    perform different traffic management related tasks.  Model training
@@ -2022,8 +2022,8 @@ Table of Contents
       dynamic manner.
 
       IETF/IRTF can work to standardize the mechanisms to identify
-      important feature and implement the above-mentioned required real-
-      time data delivery and feature extraction.
+      important features and implement the above-mentioned required
+      real-time data delivery and feature extraction.
 
      +---------+     External Events
      | Outside |-------------------------------------| (A)+(B)
@@ -2104,8 +2104,8 @@ Table of Contents
    resource defragmentation, and even routing.
 
    While being different from networks managed by a set of interworking
-   multi agents, the Agentic networks face some of the same challenges
-   outlined in the multi agent interworking section of the document.
+   multi-agents, the Agentic networks face some of the same challenges
+   outlined in the multi-agent interworking section of the document.
    However, in Agentic networks, distributed training of the agents and
    proper knowledge sharing between them can enhance their collective
    training performance and can potentially alleviate some of these
@@ -2114,7 +2114,7 @@ Table of Contents
    In these networks, AI agents trained on local traffic patterns and
    external events will exchange knowledge and network state information
    through a set of protocols in a distributed manner in order to
-   address network related tasks.  Agentic networks will potentially
+   address network-related tasks.  Agentic networks will potentially
    offer highly automated, streamlined, and tunnel-less traffic
    management that is currently available only for best-effort traffic.
 
@@ -2538,7 +2538,7 @@ Table of Contents
       Computing in the Network Research Group (COINRG) and Network
       Function Virtualization Research Group (NFVRG) address compute
       placement, applicable to VNFs.  The Traffic Engineering
-      Architecture and Signaling (TEAS) working groups efforts (e.g.,
+      Architecture and Signaling (TEAS) working group's efforts (e.g.,
       RFC 8453 for ACTN) enable green-energy-aware routing.  Extensions
       to YANG (NETMOD), PCEP (PCE), and telemetry standards (OPSAWG)
       could standardize this, leveraging Section 6.17 and Section 6.18
