@@ -9,8 +9,8 @@ number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: "RTG"
+# area: AREA
+# workgroup: "RTG"
 keyword:
  - AI
  - ML
@@ -18,7 +18,7 @@ keyword:
  - Use Cases
 
 author:
-- 
+-
   fullname: Reza Rokui
   organization: Ciena
   email: rrokui@ciena.com
@@ -26,13 +26,13 @@ author:
   fullname: Daniel King
   organization: Lancaster University
   email: d.king@lancaster.ac.uk
-- 
+-
   fullname: Qin Wu
   organization: Huawei
   email: bill.wu@huawei.com
 
 contributor:
-- 
+-
   fullname: Cheng Li
   organization: Huawei
   email: c.l@huawei.com
@@ -129,10 +129,10 @@ these use cases, the requirements, and their implications.
 
 ## Background
 
-Efficient and coordinated use of resources is paramount for maintaining 
-optimal performance and reliability of many network environments. The applicability 
+Efficient and coordinated use of resources is paramount for maintaining
+optimal performance and reliability of many network environments. The applicability
 of Artificial Intelligence is well-established, and the use cases are outlined
-in this document. 
+in this document.
 
 Editors note: Future versions of this document will include prior
 IRTF and IETF work.
@@ -143,17 +143,17 @@ IRTF and IETF work.
 
 The following terms are used in this document:
 
-* AI: 
+* AI:
 : Artificial Intelligence aims to create systems capable of performing
 tasks that typically require human intelligence, such as understanding
 natural language, recognizing patterns, and making decisions.
 
-* ML: 
+* ML:
 : Machine Learning is a subset of AI that involves training algorithms on
 large datasets to enable them to learn patterns and make predictions or
 decisions without being explicitly programmed.
 
-* Gen-AI: 
+* Gen-AI:
 : Generative-AI is a subset of ML techniques that creates new content, such
 as text, images, or audio, by learning from existing data.
 
@@ -161,16 +161,16 @@ as text, images, or audio, by learning from existing data.
 : Natural Language Processing is a field of AI that focuses on the
 interaction between computers and humans through natural language.
 
-* AINetOps: 
+* AINetOps:
 : Artificial Intelligence for Network Operations refers to the application
 of AI, ML, and generative-AI techniques to enhance and automate network operations.
 
-* Closed-Loop Optimization: 
-: Automated feedback-driven processes for continuously improving network 
+* Closed-Loop Optimization:
+: Automated feedback-driven processes for continuously improving network
 performance and reliability.
 
-* Multi-Layer Optimization: 
-: Addressing cross-layer dependencies and optimizing 
+* Multi-Layer Optimization:
+: Addressing cross-layer dependencies and optimizing
 resources across different network layers, such as IP and optical layers.
 
 * P-PNC: Packet Provisioning Network Controllers
@@ -315,7 +315,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
 * Section 5.10 "Network Maintenance and Cleanup"
 
 * Section 5.11 "Network API Construction"
-  
+
 * Section 5.12 "AI-Driven Security Monitoring"
 
 * Section 5.13 "Multi Agent Interworking"
@@ -359,7 +359,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    are transforming network management by augmenting human capabilities
    with advanced technology, leading to smarter and more proactive
    network operations.
-   
+
 ## Network active and reactive assurance
 
    Network active and reactive assurance and troubleshooting, both at the single-
@@ -669,16 +669,16 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    decisions to optimize resource allocation and improve overall
    efficiency.  This insight is particularly valuable in multi-layer IP/
    Optical networks, where the interplay between different network
-   layers can be complex. {{!RFC5557}} provides examples of the PCE 
-   being using to optimize resource allocation. 
-   
+   layers can be complex. {{!RFC5557}} provides examples of the PCE
+   being using to optimize resource allocation.
+
    By leveraging these insights, operators can
    ensure that both the IP and optical layers are operating
    harmoniously, leading to optimal performance and cost efficiency.  In
    essence, Network Operational Insights empower operators with the
    knowledge needed to maintain a high-performing, resilient, and
    future-proof network infrastructure.
-   
+
    The network operational insight can be grouped into two categories.
    By categorizing network operational insights into these two
    categories, operators can better prioritize their efforts and
@@ -955,20 +955,20 @@ As seen in the use cases above, the usage of agents introduces various challenge
 spanning from the definition of APIs that can be used by the various agent to the
 interworking with already existing components of the Network Management and Control stack.
 New challenges arise when we move from a single agent to a multi-agent architecture.
-When multiple agents are deployed we need to consider how they discover each other, 
-how they interwork with the discovered agents and how they are kept in synch. 
+When multiple agents are deployed we need to consider how they discover each other,
+how they interwork with the discovered agents and how they are kept in synch.
 
 The discovery aspect could be relatively simple in the short term, when few agents will
 be deployed in the network and it could be possible to manually configure each agent
-with the identifiers and capabilities of the other agents to interact with. With the evolution 
-of AI based architectures with more and more agents being part of the architecture, 
+with the identifiers and capabilities of the other agents to interact with. With the evolution
+of AI based architectures with more and more agents being part of the architecture,
 mechanisms to advertise their presence and more important their capabilities will be required.
 
-The second aspect to consider is the interworking between them. As of today the way we 
+The second aspect to consider is the interworking between them. As of today the way we
 interact with agents is mostly based on LLM, but would that be the best way for
 interacting between them as well? Probably a more machine oriented type of language,
 encoding and protocols would have better performances.
-   
+
 # AINetOps Scenarios and Use-cases
 
 {Editor's note: This is a work in progress. More use cases will be added, and existing ones will be revised.}
@@ -1008,36 +1008,36 @@ For every use case described, the following dimensions are examined to provide a
    troubleshooting, on the other hand, requires a more integrated
    approach, as it involves identifying and resolving issues that span
    across multiple layers of the network.  This could include problems
-   where an issue in the optical layer affects the IP layer. 
-   
+   where an issue in the optical layer affects the IP layer.
+
    In both reactive and active assurance, network faults have already occurred. These faults may include impairments such as optical fiber cuts, IP packet drops, IP link latency issues, or Threshold Crossing Alarms (TCA), among others.
-   
+
    As illustrated in {{figure-reactive-assurance}}, reactive assurance assumes that a fault occurs in the IP/Optical network (Step A) and is subsequently detected by the operator through various means (Step B). Detection methods may include alarm monitoring, performance telemetry data analysis, or customer reports indicating service disruptions. To initiate troubleshooting, the operator can launch the AIOps-Assistant, which acts as the front-end interface for AINetOps (Step C). The assistant then utilizes the backend assurance and troubleshooting mechanisms, leveraging a Gen-AI multi-agent framework. In Step D, a dynamic workflow is executed to diagnose the issue and identify potential root causes. Optionally, at Step E, the Gen-AI dynamic workflow can recommend remedial actions to resolve the issue and implement these actions in a closed-loop fashion, ensuring automated network recovery.
 
-~~~~         
+~~~~
 
                                          |-------------------|
                                          |  Gen-AI based     |
                       (E) |--------------|  Multi-Agent      |
                           |              |  Dynamic workflow |
-                          |              |-------------------|     
+                          |              |-------------------|
                           |                      ^
-                          v                      | (D)    
+                          v                      | (D)
                   |---------------|              |
-                  |   P-PNC(s),   |        |-----------|    
+                  |   P-PNC(s),   |        |-----------|
                   |   O-PNC(s),   |        |   AIOps   |
                   |   MDSC        |        | Assistant |
-                  |---------------|        |-----------|  
+                  |---------------|        |-----------|
                           ^                      ^
                           | (A)                  | (C)
                +----------|----------+           |
                |                     |          (B)
-               |  IP/Optical Network |          
+               |  IP/Optical Network |
                |                     |
                +---------------------+
 
   Legend:
-  (A) A fault happened in the network 
+  (A) A fault happened in the network
       (e.g., Fiber cut, IP packet drop, TCA crossing etc.)
   (B) Operator is aware of the network issue
   (C) To start troubleshooting, Operator starts AIOps-Assistant
@@ -1046,22 +1046,22 @@ For every use case described, the following dimensions are examined to provide a
 
 ~~~~
 {: #figure-reactive-assurance title="Multi-layer Reactive Assurance Using Gen-AI"}
-  
-  In both reactive and active assurance, network faults have already occurred. These faults may include impairments such as optical fiber cuts, IP packet drops, IP link latency issues, or Threshold Crossing Alarms (TCA), among others. 
-  
+
+  In both reactive and active assurance, network faults have already occurred. These faults may include impairments such as optical fiber cuts, IP packet drops, IP link latency issues, or Threshold Crossing Alarms (TCA), among others.
+
   The active assurance and troubleshooting process is illustrated in {{figure-active-assurance}}. In contrast to {{figure-reactive-assurance}}, active assurance assumes that a fault occurs in the IP/Optical network (Step A) and is subsequently detected automatically by higher-layer controllers (Step B). These controllers may employ detection methods that include monitoring alarms, analyzing performance telemetry data, or processing customer reports indicating service disruptions. To initiate troubleshooting, the detection logic launches the AIOps-Assistant, which serves as the front-end interface for AINetOps (Step C). Steps D and E are identical to those depicted in {{figure-reactive-assurance}}.
 
-~~~~         
+~~~~
 
                                          |-------------------|
                                          |  Gen-AI based     |
                       (E) |--------------|  Multi-Agent      |
                           |              |  Dynamic workflow |
-                          |              |-------------------|     
+                          |              |-------------------|
                           |                      ^
-                          v                      | (D)    
+                          v                      | (D)
                   |---------------|              |
-                  |   P-PNC(s),   |  (C)   |-----------|    
+                  |   P-PNC(s),   |  (C)   |-----------|
               (B) |   O-PNC(s),   | -----> |   AIOps   |
                   |   MDSC        |        | Assistant |
                   |---------------|        |-----------|
@@ -1069,12 +1069,12 @@ For every use case described, the following dimensions are examined to provide a
                           | (A)
                +----------|----------+
                |                     |
-               |  IP/Optical Network |          
+               |  IP/Optical Network |
                |                     |
                +---------------------+
 
   Legend:
-  (A) A fault happened in the network 
+  (A) A fault happened in the network
       (e.g., Fiber cut, IP packet drop, TCA crossing etc.)
   (B) The higher layer Controller notifies Operator
   (C) To start troubleshooting, AIOps-Assistant starts automatically
@@ -1091,39 +1091,39 @@ For every use case described, the following dimensions are examined to provide a
 ## Network Pro-active Assurance
 
    Unlike reactive and active assurance, proactive assurance does not wait for a fault to occur in the IP/Optical network. Instead, the network is continuously monitored through a series of trending and forecasting processes designed to detect early signs of deterioration that may eventually lead to faults.
-    
+
    As illustrated in {{figure-proactive-assurance}}, achieving proactive assurance involves running multiple processes that continuously monitor network performance. These processes collect and analyze a wide array of network telemetry data, including performance monitoring (PM) data, alarms, logs, network topology, and inventory details (Step A). By employing various techniques including advanced AI/ML algorithms, these processes provide real-time trending and forecasting insights, identifying patterns and anomalies that could indicate potential degradation (Step B).
-    
+
    When these background processes detect any signs of deterioration or anomalous behavior, they trigger the AIOps-Assistant for further investigation (Step C). The AIOps-Assistant then leverages a Gen-AI multi-agent framework to initiate the assurance and troubleshooting procedures. In Step D, a dynamic workflow is executed to thoroughly diagnose the emerging issue and identify potential root causes. Optionally, at Step E, the Gen-AI dynamic workflow can recommend remedial actions to resolve the identified issues. These recommendations can be implemented in a closed-loop fashion, ensuring automated network recovery and continuous improvement of network performance. This proactive approach not only mitigates the risk of unexpected network faults but also optimizes operational efficiency by addressing issues before they escalate into service-impacting events.
-    
+
    Furthermore, by integrating advanced analytics with automated corrective measures, proactive assurance enhances overall network resilience. It enables network operators to maintain a high quality of service and reliability, even in complex and dynamic network environments.
 
-~~~~         
+~~~~
 
                                             |-------------------|
                                             |  Gen-AI based     |
          (E) |------------------------------|  Multi-Agent      |
              |                              |  Dynamic workflow |
-             |                              |-------------------|   
+             |                              |-------------------|
              |                                        ^
-             v                                        | (D)    
+             v                                        | (D)
       |---------------|                               |
       |   P-PNC(s),   |  (B)   |-----------| (C)  |------------|
   (A) |   O-PNC(s),   | <----> | Monitoring| ---->| AIOps      |
       |   MDSC        |        | Processes |      | Assistant  |
       |---------------|        |-----------|      |------------|
               ^
-              | 
+              |
     +---------|-----------+
     |                     |
-    |  IP/Optical Network |          
+    |  IP/Optical Network |
     |                     |
     +---------------------+
 
   Legend:
   (A) Collect the IP/Optical telemetry data, inventory, logs etc.
   (B) Processes which monitor the network
-  (C) Upon detection of potential issue, start AIOps-Assistant 
+  (C) Upon detection of potential issue, start AIOps-Assistant
   (D) Start troubleshooting using Gen-AI multi-agent dynamic workflow
   (E) Optional remedial actions
 
@@ -1138,13 +1138,13 @@ For every use case described, the following dimensions are examined to provide a
 
    Machine learning would provide a key function in network anomaly detection as it can be seamlessly integrated into the architecture, via the “Analysis Layer” described in the figure above. By leveraging ML techniques, it would be possible to identify deviations from normal behavior, uncovering anomalies that might be imperceptible to human network engineers.
 
-   An ML technique using unsupervised learning is particularly well-suited for network anomaly detection, as the network infrastructure is typically dynamic and evolving by nature. While machine learning requires large volumes of high-quality data and substantial computational resources for training, its benefits outweigh these challenges. Machine learning models offer generalizability, robustness, and reduced dependence on manual fine-tuning. More importantly, they enable the detection of complex and previously unseen anomaly patterns, enhancing network security, reliability, and operational efficiency. 
+   An ML technique using unsupervised learning is particularly well-suited for network anomaly detection, as the network infrastructure is typically dynamic and evolving by nature. While machine learning requires large volumes of high-quality data and substantial computational resources for training, its benefits outweigh these challenges. Machine learning models offer generalizability, robustness, and reduced dependence on manual fine-tuning. More importantly, they enable the detection of complex and previously unseen anomaly patterns, enhancing network security, reliability, and operational efficiency.
 
 * Architecture
 
    The architecture for network anomaly detection using AI typically involves a distributed system where data collection, analysis, and    response mechanisms are decoupled but interconnected. The system comprises the following key components:
 
-   o Data Collection Layer: Responsible for gathering network traffic data from various sources such as routers, switches, and endpoints. 
+   o Data Collection Layer: Responsible for gathering network traffic data from various sources such as routers, switches, and endpoints.
      This layer may leverage protocols like IPFIX (RFC 7011) for flow data export.
 
    o Analysis Layer: Utilizes machine learning (ML) models to detect anomalies in the collected data. This layer may include both real-time and batch processing capabilities.
@@ -1173,18 +1173,18 @@ For every use case described, the following dimensions are examined to provide a
                                |       |resolve incidents, etc
                       monitor  |       |
                                |       v
-                        +-------------------+     
-                        |  Network Devices  |       
-                        | (Routers, Switches|      
-                        | Endpoints, etc.)  |      
-                        +-------------------+   
+                        +-------------------+
+                        |  Network Devices  |
+                        | (Routers, Switches|
+                        | Endpoints, etc.)  |
+                        +-------------------+
 ~~~
 {: #fig_NAD title="Architecture of network anomaly detection system"}
 
 * Interfaces and APIs
 
    To facilitate interoperability and integration with existing network management systems, the following interfaces and APIs are recommended:
-   
+
    * Northbound API: Provides a standardized interface for external systems to query anomaly detection results and receive alerts.This API should align with RESTCONF {{!RFC8040}} for consistency with IETF standards.
    * Southbound API: Allows the anomaly detection system to interact with network devices for data collection and response actions. This API may use NETCONF {{!RFC6241}} or RESTCONF {{!RFC8040}} for device management.
    * Model Management API: Enables the deployment, updating, and monitoring of AI models used in the analysis layer. This API should support secure communication as defined in {{!RFC8446}} (TLS 1.3).
@@ -1198,9 +1198,9 @@ For every use case described, the following dimensions are examined to provide a
     +-----------------------------------------------------------+
     |                       External Systems                    |
     +-----------------------------------------------------------+
-       ^                          ^ 
+       ^                          ^
        |  Northbound API          | Model Management API
-       |                          |   
+       |                          |
        |                 +-------------------+
        |                 |                   |
        |                 |    Analysis       |
@@ -1216,13 +1216,13 @@ For every use case described, the following dimensions are examined to provide a
    |                   |       |       |       |                 |
    +-------------------+       |       |       +-----------------+
                                |       |
-             Southbound API    |       | Southbound API 
+             Southbound API    |       | Southbound API
   (NETCONF, IPFIX,BGP-LS, etc) |       v (NETCONF, PCEP, BGP, etc)
-                        +-------------------+     
-                        |  Network Devices  |       
-                        | (Routers, Switches|      
-                        | Endpoints, etc.)  |      
-                        +-------------------+   
+                        +-------------------+
+                        |  Network Devices  |
+                        | (Routers, Switches|
+                        | Endpoints, etc.)  |
+                        +-------------------+
 ~~~
 {: #fig_NAD_Intf title="Interfaces of network anomaly detection system"}
 
@@ -1230,7 +1230,7 @@ For every use case described, the following dimensions are examined to provide a
 * Protocols
 
    The following protocols are suggested for communication between the components of the anomaly detection system:
-   
+
    * NETCONF/RESTCONF: For configuring and managing network devices and retrieving operational data, as defined in {{!RFC6241}} and {{!RFC8040}}.
    * gRPC/HTTP2: For high-performance communication between the analysis layer and other components, leveraging HTTP/2 {{!RFC7540}}) for efficient data transfer.
    * MQTT: For lightweight, publish-subscribe messaging between distributed components, particularly in IoT environments, as specified in {{!RFC7252}} (CoAP) or MQTT 5.0 (OASIS Standard).
@@ -1240,7 +1240,7 @@ For every use case described, the following dimensions are examined to provide a
 * Data Models
 
    Data models for network anomaly detection should be designed to capture both the structure and semantics of network traffic data. The following models are recommended:
-   
+
    * YANG Data Models: For representing network configuration and state data in a structured format, as defined in {{!RFC7950}} and extended by {{!RFC8345}} for network topologies.
    * JSON/XML Schemas: For defining the format of data exchanged between components via APIs, consistent with {{!RFC8259}} (JSON) and {{!RFC7303}} (XML).
    * Feature Vectors: For representing the input data to AI models, which may include packet headers, flow statistics, and behavioral patterns. These vectors should align with the IPFIX Information Model {{!RFC7012}} for flow data representation.
@@ -1250,7 +1250,7 @@ For every use case described, the following dimensions are examined to provide a
 * Alignment with IETF
 
    The development of AI-based network anomaly detection systems should align with existing IETF standards and working groups, such as:
-   
+
    * NETMOD (Network Modeling): For leveraging YANG data models {{!RFC7950}}, {{!RFC8345}} and NETCONF/RESTCONF protocols {{!RFC8040}}.
    * MILE (Managed Incident Lightweight Exchange, concluded): For standardizing the exchange of security incident information, as outlined in {{!RFC8329}}.
    * DOTS (DDoS Open Threat Signaling ,concluded): For coordinating responses to distributed denial-of-service attacks, as defined in {{!RFC8811}}.
@@ -1274,11 +1274,11 @@ For every use case described, the following dimensions are examined to provide a
 
 ## Cognitive Search On Internal Operator Data
 
-   The operation of IP and optical networks comprises a wide range of management, monitoring and optimization tasks, including equipment configuration (switches, routers, OTNs, etc.), implementation of network policies, fault detection, troubleshooting, and capacity planning. The execution of such tasks usually requires access,  comprehension and analysis of specific documentation containing information about network topologies, hardware inventory, vendor specifications, and pre-defined procedures. 
+   The operation of IP and optical networks comprises a wide range of management, monitoring and optimization tasks, including equipment configuration (switches, routers, OTNs, etc.), implementation of network policies, fault detection, troubleshooting, and capacity planning. The execution of such tasks usually requires access,  comprehension and analysis of specific documentation containing information about network topologies, hardware inventory, vendor specifications, and pre-defined procedures.
 
    Given the capacity of LLMs to understand natural language, including technical jargon, and their ability to process large amounts of information in short times, they can be used to build useful tools that support the network operational work, by executing comprehensive cognitive searches through the different documentation available to the operational teams, providing fast and concrete answers to technical enquiries, and making the access to such information a more efficient and interactive process.
 
-   To provision an LLM with such knowledge requires either a fine-tuning training job, that retrains an existing LLM, or the implementation of a RAG based architecture, where the information coming from the documentation is stored in a knowledge base and provided as context to the LLM. For this scenario, the RAG based approach has some specific advantages like lower computational cost, faster deployment, no need of retraining when the documentation is updated, and easier scalability. 
+   To provision an LLM with such knowledge requires either a fine-tuning training job, that retrains an existing LLM, or the implementation of a RAG based architecture, where the information coming from the documentation is stored in a knowledge base and provided as context to the LLM. For this scenario, the RAG based approach has some specific advantages like lower computational cost, faster deployment, no need of retraining when the documentation is updated, and easier scalability.
 
    Therefore, it is often the default approach for this type of solutions. Next section provides an architectural overview of how a RAG based system can be implemented to provide cognitive  search for network operations.
 
@@ -1291,39 +1291,39 @@ For every use case described, the following dimensions are examined to provide a
    2. Augmentation: The information retrieved from the Vector Data Base is used to augment the query made by the user, adding context that might be unknown to the LLM.
    3. Generation: The augmented query is sent to the LLM, which then generates and answer in natural language that is finally delivered to the user.
 
-~~~~  
-  
- |-----------|                                           |---------|   
+~~~~
+
+ |-----------|                                           |---------|
  |           |<----------------Response------------------|         |
  |  Network  |                                           |         |
- |  Operator |                       |--------------|    |         | 
+ |  Operator |                       |--------------|    |         |
  |           |---Query-------------->|   Query +    |    |         |
  |-----------|            |          |   Context +  |--->|   LLM   |
                           |          |   Prompt     |    |         |
                           |          |--------------|    |         |
                           |                  ^           |---------|
-                          |                  |            
-                          v                  |            
-               |---------------|        |----------|      
-               |   Embedding   | -----> |  Vector  |    
+                          |                  |
+                          v                  |
+               |---------------|        |----------|
+               |   Embedding   | -----> |  Vector  |
                |     Model     |        |    DB    |
                |---------------|        |----------|
-                           ^              
+                           ^
                            |
                            |
           |----------------|------------------|
-          |                |                  | 
+          |                |                  |
  |++++++++|++++++++++++++++|++++++++++++++++++|+++++++++++|
  |        |                |                  |           |
  |   |----------|    |----------------|    |----------|   |
  |   | Network  |    |    Method of   |    |  Vendor  |   |
- |   | Topology |    |  Procedure MOP |    |   docs   |   |    
+ |   | Topology |    |  Procedure MOP |    |   docs   |   |
  |   |----------|    |----------------|    |----------|   |
  |                                                        |
  |  Internal Operator documentation                       |
  |++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 
-~~~~  
+~~~~
 
    As previously mentioned, the documents stored in the Vector Database for this specific use case correspond to various types of Network Operation Documentation. Thus, this system serves as a powerful tool, offering quick and efficient access to complex information across different areas of the Network Operations landscape, including network infrastructure, Standard Operating Procedures, security documentation, incident reports, and more.
 
@@ -1356,18 +1356,18 @@ More to be added.
    Several innovations have been developed at the IETF for multi-layer network (MLN) planning. This activity is involves coordinating and optimizing multiple network layers, such as IP, optical, and transport layers, to improve efficiency, resilience, and scalability. The Internet Engineering Task Force (IETF) has developed several technologies and standards to facilitate multi-layer network planning, including protocols for path computation, topology exchange, and resource optimization.
 
    The components and interfaces for MLN planning include:
-   
+
    * Path Computation Element (PCE)
    * Generalized Multi-Protocol Label Switching (GMPLS)
    * Traffic Engineering Database (TED) and Topology Exchange
    * Abstraction and Control of Traffic Engineered Networks (ACTN)
    * YANG Models for Network Topologies and Node Inventory
 
-   These enabling technologies are discussed in the following sub-sections. 
+   These enabling technologies are discussed in the following sub-sections.
 
 * Architecture
 
-   The Abstraction and Control of Traffic Engineered Networks (ACTN) ACTN {{!RFC8453}} architecture provides a framework for virtualized network resource control and abstraction, enabling efficient multi-layer coordination between packet and optical networks. It defines key functional components like the Multi-Domain Coordinator (MDSC), which facilitates policy-based control and end-to-end service planning and provisioning. 
+   The Abstraction and Control of Traffic Engineered Networks (ACTN) ACTN {{!RFC8453}} architecture provides a framework for virtualized network resource control and abstraction, enabling efficient multi-layer coordination between packet and optical networks. It defines key functional components like the Multi-Domain Coordinator (MDSC), which facilitates policy-based control and end-to-end service planning and provisioning.
 
 * Interfaces and APIs
 
@@ -1412,7 +1412,7 @@ More to be added.
   layers.  It is also extremely important to determine the appropriate communication frequency
   and granularity to avoid overloading the communication network between them while keeping
   a sufficient level of details to avoid suboptimal or even harmful decisions due to incomplete information.
-  
+
 2. Conflict Resolution and Decision Fusion:  When multiple agents are responsible for overlapping
   or interdependent network functions, conflicts in their decisions are inevitable.  For example,
   one agent might decide to reroute traffic to alleviate congestion, while another agent
@@ -1444,22 +1444,22 @@ More to be added.
   and resource requirements. One possible option to overcome this problem could be leveraging on a
   hierarchical agent structure. As previously introduced, in order to allow for scalability, it is also
   important to foresee advertisement protocols/extensions to let the agents learn about their counterparts
-  and their capabilities. 
+  and their capabilities.
 
    Addressing these interworking challenges is essential for realizing the full potential of AI agents in network management. Developing standardized protocols, robust coordination mechanisms, and scalable management frameworks will pave the way for autonomous networks.
 
 * Architecture
 
-   Multi agent architecture can be extremely complex, but figure  {{figure-multi-agent}} tries to capture the main interwokring issues of this scenario. An example with an arbitrary number of agents (N) connecting to different components of the management and control stack (SDN controllers, observability function, assurance function, and others) is provided. 
+   Multi agent architecture can be extremely complex, but figure  {{figure-multi-agent}} tries to capture the main interwokring issues of this scenario. An example with an arbitrary number of agents (N) connecting to different components of the management and control stack (SDN controllers, observability function, assurance function, and others) is provided.
 
-~~~~         
- 
+~~~~
+
       |------------|         (A)           |------------|
       |  Agent #1  | <-------------------->|  Agent #N  |
       |------------|                       |------------|
-            |   |                           |  ^      |  
-            |   +------------------+    --- +  |      +--+                    
-            v                      |    |      |         |     
+            |   |                           |  ^      |
+            |   +------------------+    --- +  |      +--+
+            v                      |    |      |         |
       |---------------|            v    V      |         V
       |   P-PNC(s),   |      |--------------|  |      |------------|
       |   O-PNC(s),   |      | Observability|  |  ... | Assurance  |
@@ -1469,7 +1469,7 @@ More to be added.
               |                                v
     +---------|------------------------------------------------+
     |                                                          |
-    |                      IP/Optical Network                  |          
+    |                      IP/Optical Network                  |
     |                                                          |
     +----------------------------------------------------------+
 
@@ -1481,20 +1481,20 @@ More to be added.
 
    Alternatively, a hierarchical solution can be foreseen, with an agent (H-Agent) specifically designed for coordinating agents, or an agent designated to play the role of H-Agent in addition to its duties, as shown in {{figure-h-agent}}:
 
-~~~~         
+~~~~
                         |------------|
-                        |  H-Agent   | 
-                        |------------| 
+                        |  H-Agent   |
+                        |------------|
                   (A)      |     |    (A)
-            +--------------+     +----------------+               
+            +--------------+     +----------------+
             |                                     |
             V                                     V
       |------------|                       |------------|
       |  Agent #1  |                       |  Agent #N  |
       |------------|                       |------------|
-            |   |                           |  ^      |  
-            |   +------------------+    --- +  |      +--+                    
-            v                      |    |      |         |     
+            |   |                           |  ^      |
+            |   +------------------+    --- +  |      +--+
+            v                      |    |      |         |
       |---------------|            v    V      |         V
       |   P-PNC(s),   |      |--------------|  |      |------------|
       |   O-PNC(s),   |      | Observability|  |  ... | Assurance  |
@@ -1504,12 +1504,12 @@ More to be added.
               |                                v
     +---------|------------------------------------------------+
     |                                                          |
-    |                      IP/Optical Network                  |          
+    |                      IP/Optical Network                  |
     |                                                          |
     +----------------------------------------------------------+
 
   Legend:
-  (A) H-Agent to Agent communication 
+  (A) H-Agent to Agent communication
 
 ~~~~
 {: #figure-h-agent title="Multi-agent hierarchical architecture"}
@@ -1522,34 +1522,34 @@ Flow placement, traffic engineering/steering along with network resource defragm
 
 Network routing protocols automate flow placement for best-effort traffic.  Traffic engineering and steering are commonly based on statistical analysis and historical trends of network traffic. They are mostly implemented via configurations and tunnel setups, often employing scripts for automation purposes.
 
-While there are some proactive approach to network resource defragmentation, reactive methods are still quite common.  There are short-term approaches and longer-term views on employing AI to address traffic management. 
+While there are some proactive approach to network resource defragmentation, reactive methods are still quite common.  There are short-term approaches and longer-term views on employing AI to address traffic management.
 
 ### Short term approaches
-   
+
    In the short-term, AI models train on operator's network traffic patterns and employ a set of APIs to connect to network configuration equipment in order to add, remove, and modify configurations and perform different traffic management related tasks. Model training can be either off-line or on-line.
 
    Initially, AI models perform their inference tasks exclusively based on their training on historical network traffic patterns, and topology changes in a centralized manner.  In more advanced approaches, the models not only train on network traffic patterns, and network topology changes, but also  learn how to interpret and digest external events. This added capability allows the AI models to be more effective in performing their traffic management tasks.
 
-   Generally speaking, IETF/IRTF can work on describing and providing synthetic networks along with synthetic traffic that can be used to train AI models. Furthermore, IETF/IRTF can also define and provide expected reasonable traffic flows. 
+   Generally speaking, IETF/IRTF can work on describing and providing synthetic networks along with synthetic traffic that can be used to train AI models. Furthermore, IETF/IRTF can also define and provide expected reasonable traffic flows.
 
    * Offline training
 
       During off-line training, external events, network monitoring information (available via protocols such as SNMP), historical data from traffic engineering  databases, network topology changes, and other traffic-related data from the operator's network are collected over time. This data is then used later  during the training and model performance evaluation process.
 
       There is potential to define a set of APIs to collect information or enable a query mechanism to pull the required training data, particularly for external events.
-      
+
       Selecting the important features from the entire dataset is another crucial aspect of training.
-      
+
       IETF/IRTF can certainly play a role in both of the above-mentioned cases.
 
 ~~~~
 
-   +---------+     External Events                 
+   +---------+     External Events
    | Outside |----------------------------|   (A)+(B)
    |  world  |                            |
    +---------+                            |
                                           |
-                                          V 
+                                          V
    +-----------+              +--------------------------+
    |  Network  |..............|    Dataset Repository    |
    +-----------+              |    ------------------    |
@@ -1564,76 +1564,76 @@ While there are some proactive approach to network resource defragmentation, rea
                                            | (B)
                                            |
                                            V
-                                 +------------------+   
+                                 +------------------+
                                  |  AI model        |
                                  |  under training  |
-                                 +------------------+          
+                                 +------------------+
 
   Legend:
   --- Potential IETF defined and standardized interface.
   (A) Extracting and storing outside world events data.
   (B) Important features for training model for traffic management
 
-~~~~ 
-{: #figure-off-line title="AI assisted traffic management: Offline training"} 
+~~~~
+{: #figure-off-line title="AI assisted traffic management: Offline training"}
 
 
    * Online training
 
-      Online training takes a more real-time approach. Here model training is based on processing data incrementally as it becomes available. This method is particularly suitable for scenarios such as network traffic management which require real-time learning and adaptation to changes. 
-      
+      Online training takes a more real-time approach. Here model training is based on processing data incrementally as it becomes available. This method is particularly suitable for scenarios such as network traffic management which require real-time learning and adaptation to changes.
+
       A traffic management AI model under online training uses the same input sources as it does in offline training. However, unlike offline training, the data here is not stored in a repository but streamed into the training process. As such, the ground truth for model performance evaluation in online training is derived from observation of actual real time world events and network behavior, rather than stored data.
-      
+
       The training process therefore requires a mechanism to extract important features from the stream of incoming real-time network data and outside world events. These extracted features are then fed to the training process for adjusting model's parameters in a dynamic manner.
-      
+
       IETF/IRTF can work to standardize the mechanisms to identify important feature and implement the above mentioned required real-time data delivery and feature extraction.
 
 ~~~~
-  +---------+     External Events          
+  +---------+     External Events
   | Outside |-------------------------------------| (A)+(B)
   |  world  |                                     |
   +---------+                                     |
                                                   |
                                                   V
-                                            +------------+   
+                                            +------------+
   +-----------+          (A) + (B)          |  AI model  |
   |  Network  |---------------------------->|   under    |
   +-----------+                             |  training  |
                                             +------------+
-                real-time stream of                                          
-                Network monitoring info             
-                         +           
-                Topology changes    
-                         +            
-                Historical data    
-                from TE-DB, etc.   
-                                      
+                real-time stream of
+                Network monitoring info
+                         +
+                Topology changes
+                         +
+                Historical data
+                from TE-DB, etc.
+
 
   Legend:
   --- Potential IETF defined and standardized interface.
   (A) Extracting and storing outside world events data.
   (B) Important features for training model for traffic management
 
-~~~~ 
-{: #figure-online-line title="AI assisted traffic management: On-line training"} 
+~~~~
+{: #figure-online-line title="AI assisted traffic management: On-line training"}
 
 ### Inference
    Inference phase for traffic management requires an interface to translate AI model's output to a set of network operation tasks and configuration commands. With this information readily available, existing protocols such as NETCONF can be employed to manage the network.
 
 ~~~~
 
-+---------+        External Events            
++---------+        External Events
 | Outside |-------------------------------------| (A)+(B)
 |  world  |                                     |
 +---------+                                     |
                                                 |
                                                 V
-                                          +------------+   
+                                          +------------+
 +-----------+          (A) + (B)          |  AI model  |
 |  Network  |---------------------------->|     in     |
 +-----------+                             |  operation |
       ^                                   +------------+
-      .         real-time stream of             |                             
+      .         real-time stream of             |
       .         Network monitoring info         | (C)
       .                  +                      V
       .         Topology changes          +------------+
@@ -1644,7 +1644,7 @@ While there are some proactive approach to network resource defragmentation, rea
       .                                   +------------+
       .                                         .
       . .........................................
-                   Configuration commands 
+                   Configuration commands
 
 
   Legend:
@@ -1653,31 +1653,31 @@ While there are some proactive approach to network resource defragmentation, rea
   (B) Important features for training model for traffic management
   (C) Standardized output of the AI model delivered for translation
 
-~~~~ 
+~~~~
 {: #figure-Inference title="AI assisted traffic management: Inference"}
 
 
 ### Longer term view
    Over time, the full integration of AI models and network elements will transform networks from their current state into agent-based or Agentic networks. In a distributed version of Agentic networks, each node is accompanied by an AI agents. Once trained, these agents work together to address flow placement, traffic steering/engineering, and other network related tasks such as traffic management, network resource defragmentation, and even routing.
-   
-   While being different from networks managed by a set of interworking multi agents , the Agentic networks face some of the same challenges outlined in the multi agent interworking section of the document. However, in Agentic networks, distributed training of the agents and proper knowledge sharing between them can enhance their collective training performance and can potentially alleviate some of these difficulties. 
-   
+
+   While being different from networks managed by a set of interworking multi agents , the Agentic networks face some of the same challenges outlined in the multi agent interworking section of the document. However, in Agentic networks, distributed training of the agents and proper knowledge sharing between them can enhance their collective training performance and can potentially alleviate some of these difficulties.
+
    In these networks, AI agents trained on local traffic patterns and external events will exchange knowledge and network state information through a set of protocols in a distributed manner in order to address network related tasks. Agentic networks will potentially offer highly automated, streamlined, and tunnel-less traffic management that is currently available only for best-effort traffic.
-   
-   In addition to the potential standardization opportunities outlined in the previous section, IETF/IRTF can alo play a role in defining and standardizing the followings: 
-   
+
+   In addition to the potential standardization opportunities outlined in the previous section, IETF/IRTF can alo play a role in defining and standardizing the followings:
+
    * Training
 
       - Mechanisms for distributed training and knowledge sharing
       - Mechanisms for feeding traffic and overall network state information to agents for training purposes.
-      - Mechanisms for feeding external events information to agents during training. 
+      - Mechanisms for feeding external events information to agents during training.
 
    * Inference
 
       - Mechanisms for distributing agents' decisions and inference results.
       - Mechanisms for feeding traffic and overall network state information to agents during inference phase.
-      - Mechanisms for feeding external events information to agents during inference phase. 
-      
+      - Mechanisms for feeding external events information to agents during inference phase.
+
    * There is also potentially a need to define mechanisms to identify flow requirements to the agents during network operations.
 
 The following figure depicts an example of an Agentic network.
@@ -1696,19 +1696,19 @@ The following figure depicts an example of an Agentic network.
     |-->|  AI Agent  |  |-->|  AI Agent  |      |-->|  AI Agent  |
     |   |------------|  |   +------------+ ...  |   +------------+
     |   |            |  |   |            |      |   |            |
-    |   |   Node-1   |  |   |   Node-2   |      |   |   Node-n   | 
+    |   |   Node-1   |  |   |   Node-2   |      |   |   Node-n   |
     |   +------------+  |   +------------+      |   +------------+
     |                   |                       |
     |                   |                       |
     |-------------------------------------------|
                        (A) + (B)
 
- Legend: 
+ Legend:
   --- Potential IETF defined and standardized interfaces
   (A) APIs/Interfaces/Protocols for distributing training
       and knowledge sharing.
   (B) APIs/Interfaces/Protocols for distributing agents'
-      decisions and inference results.  
+      decisions and inference results.
   (C) APIs/Interfaces/Protocols for feeding regionally
       observed traffic and network state info. to agents
       for training and inference.
@@ -1729,9 +1729,9 @@ This use case leverages AI to design and execute fault injection
    scenarios that test the resilience of IP/optical networks under
    simulated failure conditions. By proactively introducing controlled
    disruptions-such as packet drops, latency spikes, or optical signal
-   degradation-AI assesses the network's ability to detect, respond, 
-   and recover from faults. This approach enhances network robustness 
-   by identifying weaknesses and validating automated recovery 
+   degradation-AI assesses the network's ability to detect, respond,
+   and recover from faults. This approach enhances network robustness
+   by identifying weaknesses and validating automated recovery
    mechanisms before real failures occur, addressing both single-layer
    (IP or optical) and multi-layer (IP over optical) scenarios.
 
@@ -1789,10 +1789,10 @@ Legend:
   (A) Fault injection commands (e.g., disable link, drop packets,
       degrade signal)
   (B) Telemetry feedback (e.g., latency, packet loss, BER)
-  (C) Recovery actions (e.g., reroute traffic, adjust optical 
+  (C) Recovery actions (e.g., reroute traffic, adjust optical
       parameters)
 
-~~~~ 
+~~~~
 {: #architecture_for_ai_derive_resilience title="Architecture for AI-Driven Resilience Testing"}
 
 * Interfaces and APIs
@@ -1890,7 +1890,7 @@ Legend:
    (A) represents energy optimization commands (e.g., power down ports,
    adjust signal gain), (B) denotes telemetry feedback (e.g., power usage,
    traffic load), and (C) indicates configuration updates (e.g., reroute
-   traffic, schedule operations).  
+   traffic, schedule operations).
 
 * Interfaces and APIs
 
@@ -2001,19 +2001,19 @@ Legend:
                  |-----------------------------|
                  |                             |
                  |   NFVi PoDs / Datacenters   |
-                 |              &              | 
+                 |              &              |
                  |   IP/Optical Network        |
                  |                             |
                  |-----------------------------|
 
  Legend:
-   (A) Optimization commands (e.g., instantiate VNF on green PoD, 
+   (A) Optimization commands (e.g., instantiate VNF on green PoD,
        reroute traffic)
    (B) Telemetry feedback (e.g., latency, energy source, compute load)
    (C) Configuration updates (e.g., shift VNFs, adjust network paths)
    NFVO: Network Function Virtualization Orchestrator
 
-~~~~ 
+~~~~
 {: #architecture_for_ai_derive_green title="Architecture for AI-Driven Green Energy Optimization"}
 
 * Interfaces and APIs
@@ -2129,7 +2129,7 @@ Legend:
   (B) Telemetry feedback (e.g., configuration changes, security logs)
   (C) Compliance reports and alerts
 
-~~~~ 
+~~~~
 {: #architecture_for_ai_derive_policy_enforcement title="Architecture for AI-Driven Policy Enforcement and Compliance Auditing"}
 
 * Interfaces and APIs
@@ -2214,7 +2214,7 @@ Legend:
 ~~~~
 
                  |------------------------------|
-                 |                              | 
+                 |                              |
                  |   AI-based Network Slicing   |
                  |   Optimization Engine        |
                  |                              |
@@ -2236,15 +2236,15 @@ Legend:
              |---------------------------------------|
 
 Legend:
-   (A) Optimization commands (e.g., adjust slice resources, 
+   (A) Optimization commands (e.g., adjust slice resources,
        reroute traffic)
-   (B) Telemetry feedback (e.g., slice performance, 
+   (B) Telemetry feedback (e.g., slice performance,
        resource utilization)
    (C) SLA compliance reports and alerts
-   NSSMF: Network Slice Subnet Management Function 
+   NSSMF: Network Slice Subnet Management Function
    (RAN, Core, Transport)
 
-~~~~ 
+~~~~
 {: #architecture_for_ai_derive_5g_ns title="Corrected Architecture for AI-Driven Network Slicing Optimization"}
 
 * Interfaces and APIs
@@ -2327,7 +2327,7 @@ To be added.
 # Security Considerations
 
 To be discussed in future versions of this document.
-   
+
 --- back
 
 # IANA Considerations
@@ -2337,5 +2337,5 @@ This document has no IANA actions.
 # Acknowledgments
 {:numbered="false"}
 
-This work has benefited from several discussions at the IETF and the 
+This work has benefited from several discussions at the IETF and the
 AI4NETWORK Side Meetings.
