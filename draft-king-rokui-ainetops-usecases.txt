@@ -370,11 +370,11 @@ Table of Contents
    ultimately enhancing service delivery and reducing operational costs.
    The integration of these operational benefits is crucial for
    maintaining seamless network operations and achieving strategic
-   business objectives
+   business objectives.
 
    Section 5 expands the operational benefits shown in Figure 2 and
    provides a detailed explanation of the various operational benefits
-   offered by AINetOp.
+   offered by AINetOps.
 
    Figure 2 shows the definition of AINetOPS.
 
@@ -1092,7 +1092,7 @@ Table of Contents
    of today the way we interact with agents is mostly based on LLMs, but
    would that be the best way for interacting between them as well?
    Probably a more machine oriented type of language, encoding and
-   protocols would have better performances.
+   protocols would have better performance.
 
    Note that agent discovery and inter-agent communication are the
    subject of dedicated IETF activities: the DAWN (Discovery of Agents,
@@ -1123,18 +1123,18 @@ Table of Contents
 
    *  Architecture: The high-level architecture necessary to support the
       use case, including control-plane and data-plane interactions, as
-      well as integration points for AI-driven systems
+      well as integration points for AI-driven systems.
 
    *  Interfaces and APIs: The key interfaces between AI systems and
       network elements, including management APIs (e.g., NETCONF,
-      RESTCONF, gNMI) and telemetry interfaces
+      RESTCONF, gNMI) and telemetry interfaces.
 
    *  Protocols: IETF protocols involved in enabling the use case, and
       potential extensions to existing protocols to accommodate AI-
       driven operations.
 
    *  Data Models: The data models required to represent network state,
-      telemetry, policies, and configurations
+      telemetry, policies, and configurations.
 
    *  Processes and Procedures: Workflow considerations for integrating
       AI systems into existing operational practices, including
