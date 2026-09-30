@@ -70,7 +70,11 @@ contributor:
 normative:
 
 informative:
----
+
+ ICON:
+   title:  Observability, Intervention and Control of Network Management Agent
+   target: https://github.com/billwuqin/Agent-Observability-Intervention-Control
+   date: 2026
 
 --- abstract
 
@@ -137,6 +141,64 @@ in this document.
 
 Editors note: Future versions of this document will include prior
 IRTF and IETF work.
+
+## Prior and Related IETF and IRTF Work
+
+   The IETF has already standardized an autonomic networking
+   architecture that is directly relevant to AINetOps.  The Autonomic
+   Service Agent (ASA) model, the Autonomic Control Plane, and the GRASP
+   protocol {{?RFC8990}} were designed for autonomous, policy-driven agents
+   operating in network infrastructure; AI-based agents can be viewed as
+   a more capable instantiation of that model rather than a departure
+   from it.
+
+   In the IRTF, the Network Management Research Group (NMRG) has
+   examined the research challenges of coupling AI with network
+   management {{?I-D.irtf-nmrg-ai-challenges}} and has proposed a framework
+   for LLM-assisted network management with a human-in-the-loop
+   {{?I-D.irtf-nmrg-llm-nm}}.
+
+   A number of related individual drafts are active in this space:
+
+   *  A governance framework for AI-mediated autonomous network device
+      management {{?I-D.smith-opsawg-ai-network-governance}}.
+
+   *  An AI-based Network Management Agent (NMA) concept and
+      architecture {{?I-D.zhao-nmop-network-management-agent}}, with a
+      companion YANG data model for its Agent-to-User (A2U) interface
+      {{?I-D.zhao-nmop-nma-a2u-yang}}.
+
+   *  Applicability and gap analyses of NETCONF/RESTCONF for AI-driven
+      operations, and proposed Model Context Protocol (MCP) extensions
+      for network equipment management
+      {{?I-D.zeng-opsawg-applicability-mcp-a2a}},
+      {{?I-D.zeng-opsawg-llm-netconf-gap}},
+      {{?I-D.zw-opsawg-mcp-network-mgmt}}.
+
+   *  A canonical semantic representation intended to bridge YANG data
+      models and the semantic framing needed by LLM-based agents
+      {{?I-D.feng-netmod-naim}}.
+
+   *  A GRASP-based agent rendezvous mechanism
+      {{?I-D.carpenter-anima-grasp-rendezvous}}.
+
+   *  An agent communication framework and registry for network AIOps
+      {{?I-D.fu-nmop-agent-communication-framework}} and a problem
+      statement on model grounding and token operations
+      {{?I-D.fu-nmop-tokenops-probelem-statement}}, both based on operator
+      deployment experience.
+
+   In addition, the ICON (Observability, Intervention and Control of
+   Network Management Agent) effort [ICON] is exploring how network
+   management agents can be continuously monitored, intervened upon, and
+   controlled when they misbehave, including trajectory records of agent
+   behavior, human oversight, and standardized intervention and recovery
+   mechanisms.  Section 7 discusses these considerations as they apply
+   across the use cases in this document.
+
+   Discussion of the integration of AI/ML into network operations using
+   IETF technologies takes place on the AINETOPS non-working-group
+   mailing list (ainetops@ietf.org).
 
 # Conventions and Definitions
 
