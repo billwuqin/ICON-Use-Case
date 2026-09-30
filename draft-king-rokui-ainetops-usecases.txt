@@ -74,6 +74,7 @@ Table of Contents
 
    1.  Introduction
      1.1.  Background
+     1.2.  Prior and Related IETF and IRTF Work
    2.  Conventions and Definitions
    3.  AI, ML, Deep Learning and Gen-AI
    4.  Definition of AINetOps
@@ -131,7 +132,9 @@ Table of Contents
      6.21. AI-Driven Network Slicing Optimization
      6.22. Other Use Cases
    7.  Security Considerations
-   8.  Normative References
+   8.  References
+     8.1.  Normative References
+     8.2.  Informative References
    Appendix A.  IANA Considerations
    Acknowledgments
    Contributors
@@ -183,6 +186,64 @@ Table of Contents
 
    Editors note: Future versions of this document will include prior
    IRTF and IETF work.
+
+1.2.  Prior and Related IETF and IRTF Work
+
+   The IETF has already standardized an autonomic networking
+   architecture that is directly relevant to AINetOps.  The Autonomic
+   Service Agent (ASA) model, the Autonomic Control Plane, and the GRASP
+   protocol [RFC8990] were designed for autonomous, policy-driven agents
+   operating in network infrastructure; AI-based agents can be viewed as
+   a more capable instantiation of that model rather than a departure
+   from it.
+
+   In the IRTF, the Network Management Research Group (NMRG) has
+   examined the research challenges of coupling AI with network
+   management [I-D.irtf-nmrg-ai-challenges] and has proposed a framework
+   for LLM-assisted network management with a human-in-the-loop
+   [I-D.irtf-nmrg-llm-nm].
+
+   A number of related individual drafts are active in this space:
+
+   *  A governance framework for AI-mediated autonomous network device
+      management [I-D.smith-opsawg-ai-network-governance].
+
+   *  An AI-based Network Management Agent (NMA) concept and
+      architecture [I-D.zhao-nmop-network-management-agent], with a
+      companion YANG data model for its Agent-to-User (A2U) interface
+      [I-D.zhao-nmop-nma-a2u-yang].
+
+   *  Applicability and gap analyses of NETCONF/RESTCONF for AI-driven
+      operations, and proposed Model Context Protocol (MCP) extensions
+      for network equipment management
+      [I-D.zeng-opsawg-applicability-mcp-a2a],
+      [I-D.zeng-opsawg-llm-netconf-gap],
+      [I-D.zw-opsawg-mcp-network-mgmt].
+
+   *  A canonical semantic representation intended to bridge YANG data
+      models and the semantic framing needed by LLM-based agents
+      [I-D.feng-netmod-naim].
+
+   *  A GRASP-based agent rendezvous mechanism
+      [I-D.carpenter-anima-grasp-rendezvous].
+
+   *  An agent communication framework and registry for network AIOps
+      [I-D.fu-nmop-agent-communication-framework] and a problem
+      statement on model grounding and token operations
+      [I-D.fu-nmop-tokenops-probelem-statement], both based on operator
+      deployment experience.
+
+   In addition, the ICON (Observability, Intervention and Control of
+   Network Management Agent) effort [ICON] is exploring how network
+   management agents can be continuously monitored, intervened upon, and
+   controlled when they misbehave, including trajectory records of agent
+   behavior, human oversight, and standardized intervention and recovery
+   mechanisms.  Section 7 discusses these considerations as they apply
+   across the use cases in this document.
+
+   Discussion of the integration of AI/ML into network operations using
+   IETF technologies takes place on the AINETOPS non-working-group
+   mailing list (ainetops@ietf.org).
 
 2.  Conventions and Definitions
 
@@ -2722,7 +2783,9 @@ Table of Contents
 
    To be discussed in future versions of this document.
 
-8.  Normative References
+8.  References
+
+8.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -2821,6 +2884,110 @@ Table of Contents
               Teague, N., and R. Compton, "DDoS Open Threat Signaling
               (DOTS) Architecture", RFC 8811, DOI 10.17487/RFC8811,
               August 2020, <https://www.rfc-editor.org/rfc/rfc8811>.
+
+8.2.  Informative References
+
+   [I-D.carpenter-anima-grasp-rendezvous]
+              Carpenter, B. E., "Using GRASP as an Agent Rendezvous
+              Mechanism", Work in Progress, Internet-Draft, draft-
+              carpenter-anima-grasp-rendezvous-01, 26 July 2026,
+              <https://datatracker.ietf.org/doc/html/draft-carpenter-
+              anima-grasp-rendezvous-01>.
+
+   [I-D.feng-netmod-naim]
+              Feng, C., "NAIM: A Canonical Semantic Representation for
+              AI-Assisted YANG Modeling and Validation", Work in
+              Progress, Internet-Draft, draft-feng-netmod-naim-01, 18
+              July 2026, <https://datatracker.ietf.org/doc/html/draft-
+              feng-netmod-naim-01>.
+
+   [I-D.fu-nmop-agent-communication-framework]
+              Fu, Y., Qiong, S., Song, X., and C. Xie, "Agent
+              Communication Framework for Network AIOps", Work in
+              Progress, Internet-Draft, draft-fu-nmop-agent-
+              communication-framework-00, 24 January 2026,
+              <https://datatracker.ietf.org/doc/html/draft-fu-nmop-
+              agent-communication-framework-00>.
+
+   [I-D.fu-nmop-tokenops-probelem-statement]
+              Fu, Y., Qiong, S., Song, X., and C. Xie, "Token Operation
+              Problem Statement", Work in Progress, Internet-Draft,
+              draft-fu-nmop-tokenops-probelem-statement-00, 6 July 2026,
+              <https://datatracker.ietf.org/doc/html/draft-fu-nmop-
+              tokenops-probelem-statement-00>.
+
+   [I-D.irtf-nmrg-ai-challenges]
+              François, J., Clemm, A., Papadimitriou, D., Fernandes, S.,
+              and S. Schneider, "Research Challenges in Coupling
+              Artificial Intelligence and Network Management", Work in
+              Progress, Internet-Draft, draft-irtf-nmrg-ai-challenges-
+              06, 6 July 2026, <https://datatracker.ietf.org/doc/html/
+              draft-irtf-nmrg-ai-challenges-06>.
+
+   [I-D.irtf-nmrg-llm-nm]
+              Cui, Y., Xing, M., and L. Zhang, "A Framework for LLM-
+              Assisted Network Management with Human-in-the-Loop", Work
+              in Progress, Internet-Draft, draft-irtf-nmrg-llm-nm-00, 13
+              March 2025, <https://datatracker.ietf.org/doc/html/draft-
+              irtf-nmrg-llm-nm-00>.
+
+   [I-D.smith-opsawg-ai-network-governance]
+              Smith, A. and N. Pai, "Governance Framework for AI-
+              Mediated Autonomous Network Device Management", Work in
+              Progress, Internet-Draft, draft-smith-opsawg-ai-network-
+              governance-01, 27 September 2026,
+              <https://datatracker.ietf.org/doc/html/draft-smith-opsawg-
+              ai-network-governance-01>.
+
+   [I-D.zeng-opsawg-applicability-mcp-a2a]
+              Zeng, G., Mao, J., Liu, B., Geng, N., Shang, X., Gao, Q.,
+              and Z. Li, "When NETCONF Is Not Enough: Applicability of
+              MCP and A2A for Advanced Network Management Scenarios",
+              Work in Progress, Internet-Draft, draft-zeng-opsawg-
+              applicability-mcp-a2a-00, 2 November 2025,
+              <https://datatracker.ietf.org/doc/html/draft-zeng-opsawg-
+              applicability-mcp-a2a-00>.
+
+   [I-D.zeng-opsawg-llm-netconf-gap]
+              Zeng, G., Mao, J., Liu, B., Geng, N., Shang, X., Gao, Q.,
+              and Z. Li, "Gap Analysis of Network Configuration
+              Protocols in LLM-Driven Intent-Based Networking", Work in
+              Progress, Internet-Draft, draft-zeng-opsawg-llm-netconf-
+              gap-00, 2 November 2025,
+              <https://datatracker.ietf.org/doc/html/draft-zeng-opsawg-
+              llm-netconf-gap-00>.
+
+   [I-D.zhao-nmop-network-management-agent]
+              XingZhao, Wang, M., Wu, B., Ceccarelli, D., Zheng, H., and
+              J. Zhou, "AI based Network Management Agent(NMA): Concepts
+              and Architecture", Work in Progress, Internet-Draft,
+              draft-zhao-nmop-network-management-agent-05, 5 July 2026,
+              <https://datatracker.ietf.org/doc/html/draft-zhao-nmop-
+              network-management-agent-05>.
+
+   [I-D.zhao-nmop-nma-a2u-yang]
+              XingZhao, Wang, M., Ceccarelli, D., and Y. Xu, "Framework
+              and YANG Data Model for the NMA A2U Interface", Work in
+              Progress, Internet-Draft, draft-zhao-nmop-nma-a2u-yang-00,
+              6 July 2026, <https://datatracker.ietf.org/doc/html/draft-
+              zhao-nmop-nma-a2u-yang-00>.
+
+   [I-D.zw-opsawg-mcp-network-mgmt]
+              Zeng, G., Mao, J., Liu, B., Shang, X., Gao, Q., Li, Z.,
+              and Q. Wu, "Model Context Protocol (MCP) Extensions for
+              Network Equipment Management", Work in Progress, Internet-
+              Draft, draft-zw-opsawg-mcp-network-mgmt-00, 2 November
+              2025, <https://datatracker.ietf.org/doc/html/draft-zw-
+              opsawg-mcp-network-mgmt-00>.
+
+   [ICON]     "Observability, Intervention and Control of Network
+              Management Agent", 2026, <https://github.com/billwuqin/
+              Agent-Observability-Intervention-Control>.
+
+   [RFC8990]  Bormann, C., Carpenter, B., Ed., and B. Liu, Ed., "GeneRic
+              Autonomic Signaling Protocol (GRASP)", RFC 8990,
+              DOI 10.17487/RFC8990, May 2021,
+              <https://www.rfc-editor.org/rfc/rfc8990>.
 
 Appendix A.  IANA Considerations
 

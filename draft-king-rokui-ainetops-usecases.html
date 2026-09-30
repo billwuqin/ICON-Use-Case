@@ -1182,10 +1182,13 @@ protocols to support AINetOps-driven network management.<a href="#section-abstra
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.1">
                 <p id="section-toc.1-1.1.2.1.1" class="keepWithNext"><a href="#section-1.1" class="auto internal xref">1.1</a>.  <a href="#name-background" class="internal xref">Background</a></p>
 </li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.2">
+                <p id="section-toc.1-1.1.2.2.1" class="keepWithNext"><a href="#section-1.2" class="auto internal xref">1.2</a>.  <a href="#name-prior-and-related-ietf-and-" class="internal xref">Prior and Related IETF and IRTF Work</a></p>
+</li>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
-            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-conventions-and-definitions" class="internal xref">Conventions and Definitions</a></p>
+            <p id="section-toc.1-1.2.1"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-conventions-and-definitions" class="internal xref">Conventions and Definitions</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
             <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-ai-ml-deep-learning-and-gen" class="internal xref">AI, ML, Deep Learning and Gen-AI</a></p>
@@ -1367,7 +1370,15 @@ protocols to support AINetOps-driven network management.<a href="#section-abstra
             <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
-            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-references" class="internal xref">References</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8.2.1">
+                <p id="section-toc.1-1.8.2.1.1"><a href="#section-8.1" class="auto internal xref">8.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8.2.2">
+                <p id="section-toc.1-1.8.2.2.1"><a href="#section-8.2" class="auto internal xref">8.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
             <p id="section-toc.1-1.9.1"><a href="#appendix-A" class="auto internal xref">Appendix A</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
@@ -1431,6 +1442,72 @@ of Artificial Intelligence is well-established, and the use cases are outlined
 in this document.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
 <p id="section-1.1-2">Editors note: Future versions of this document will include prior
 IRTF and IETF work.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="prior-and-related-ietf-and-irtf-work">
+<section id="section-1.2">
+        <h3 id="name-prior-and-related-ietf-and-">
+<a href="#section-1.2" class="section-number selfRef">1.2. </a><a href="#name-prior-and-related-ietf-and-" class="section-name selfRef">Prior and Related IETF and IRTF Work</a>
+        </h3>
+<p id="section-1.2-1">The IETF has already standardized an autonomic networking
+   architecture that is directly relevant to AINetOps.  The Autonomic
+   Service Agent (ASA) model, the Autonomic Control Plane, and the GRASP
+   protocol <span>[<a href="#RFC8990" class="cite xref">RFC8990</a>]</span> were designed for autonomous, policy-driven agents
+   operating in network infrastructure; AI-based agents can be viewed as
+   a more capable instantiation of that model rather than a departure
+   from it.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
+<p id="section-1.2-2">In the IRTF, the Network Management Research Group (NMRG) has
+   examined the research challenges of coupling AI with network
+   management <span>[<a href="#I-D.irtf-nmrg-ai-challenges" class="cite xref">I-D.irtf-nmrg-ai-challenges</a>]</span> and has proposed a framework
+   for LLM-assisted network management with a human-in-the-loop
+   <span>[<a href="#I-D.irtf-nmrg-llm-nm" class="cite xref">I-D.irtf-nmrg-llm-nm</a>]</span>.<a href="#section-1.2-2" class="pilcrow">¶</a></p>
+<p id="section-1.2-3">A number of related individual drafts are active in this space:<a href="#section-1.2-3" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1.2-4.1">
+            <p id="section-1.2-4.1.1">A governance framework for AI-mediated autonomous network device
+management <span>[<a href="#I-D.smith-opsawg-ai-network-governance" class="cite xref">I-D.smith-opsawg-ai-network-governance</a>]</span>.<a href="#section-1.2-4.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-1.2-4.2">
+            <p id="section-1.2-4.2.1">An AI-based Network Management Agent (NMA) concept and
+architecture <span>[<a href="#I-D.zhao-nmop-network-management-agent" class="cite xref">I-D.zhao-nmop-network-management-agent</a>]</span>, with a
+companion YANG data model for its Agent-to-User (A2U) interface
+<span>[<a href="#I-D.zhao-nmop-nma-a2u-yang" class="cite xref">I-D.zhao-nmop-nma-a2u-yang</a>]</span>.<a href="#section-1.2-4.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-1.2-4.3">
+            <p id="section-1.2-4.3.1">Applicability and gap analyses of NETCONF/RESTCONF for AI-driven
+operations, and proposed Model Context Protocol (MCP) extensions
+for network equipment management
+<span>[<a href="#I-D.zeng-opsawg-applicability-mcp-a2a" class="cite xref">I-D.zeng-opsawg-applicability-mcp-a2a</a>]</span>,
+<span>[<a href="#I-D.zeng-opsawg-llm-netconf-gap" class="cite xref">I-D.zeng-opsawg-llm-netconf-gap</a>]</span>,
+<span>[<a href="#I-D.zw-opsawg-mcp-network-mgmt" class="cite xref">I-D.zw-opsawg-mcp-network-mgmt</a>]</span>.<a href="#section-1.2-4.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-1.2-4.4">
+            <p id="section-1.2-4.4.1">A canonical semantic representation intended to bridge YANG data
+models and the semantic framing needed by LLM-based agents
+<span>[<a href="#I-D.feng-netmod-naim" class="cite xref">I-D.feng-netmod-naim</a>]</span>.<a href="#section-1.2-4.4.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-1.2-4.5">
+            <p id="section-1.2-4.5.1">A GRASP-based agent rendezvous mechanism
+<span>[<a href="#I-D.carpenter-anima-grasp-rendezvous" class="cite xref">I-D.carpenter-anima-grasp-rendezvous</a>]</span>.<a href="#section-1.2-4.5.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-1.2-4.6">
+            <p id="section-1.2-4.6.1">An agent communication framework and registry for network AIOps
+<span>[<a href="#I-D.fu-nmop-agent-communication-framework" class="cite xref">I-D.fu-nmop-agent-communication-framework</a>]</span> and a problem
+statement on model grounding and token operations
+<span>[<a href="#I-D.fu-nmop-tokenops-probelem-statement" class="cite xref">I-D.fu-nmop-tokenops-probelem-statement</a>]</span>, both based on operator
+deployment experience.<a href="#section-1.2-4.6.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-1.2-5">In addition, the ICON (Observability, Intervention and Control of
+   Network Management Agent) effort <span>[<a href="#ICON" class="cite xref">ICON</a>]</span> is exploring how network
+   management agents can be continuously monitored, intervened upon, and
+   controlled when they misbehave, including trajectory records of agent
+   behavior, human oversight, and standardized intervention and recovery
+   mechanisms.  Section 7 discusses these considerations as they apply
+   across the use cases in this document.<a href="#section-1.2-5" class="pilcrow">¶</a></p>
+<p id="section-1.2-6">Discussion of the integration of AI/ML into network operations using
+   IETF technologies takes place on the AINETOPS non-working-group
+   mailing list (ainetops@ietf.org).<a href="#section-1.2-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -4078,93 +4155,165 @@ This use case aligns with 3GPP efforts in network slicing and IETF
 <p id="section-7-1">To be discussed in future versions of this document.<a href="#section-7-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="sec-normative-references">
+<div id="sec-combined-references">
 <section id="section-8">
-      <h2 id="name-normative-references">
-<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+      <h2 id="name-references">
+<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
+<div id="sec-normative-references">
+<section id="section-8.1">
+        <h3 id="name-normative-references">
+<a href="#section-8.1" class="section-number selfRef">8.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+        </h3>
 <dl class="references">
 <dt id="RFC2119">[RFC2119]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC4655">[RFC4655]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Farrel, A.</span>, <span class="refAuthor">Vasseur, J.-P.</span>, and <span class="refAuthor">J. Ash</span>, <span class="refTitle">"A Path Computation Element (PCE)-Based Architecture"</span>, <span class="seriesInfo">RFC 4655</span>, <span class="seriesInfo">DOI 10.17487/RFC4655</span>, <time datetime="2006-08" class="refDate">August 2006</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc4655">https://www.rfc-editor.org/rfc/rfc4655</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC5557">[RFC5557]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Lee, Y.</span>, <span class="refAuthor">Le Roux, JL.</span>, <span class="refAuthor">King, D.</span>, and <span class="refAuthor">E. Oki</span>, <span class="refTitle">"Path Computation Element Communication Protocol (PCEP) Requirements and Protocol Extensions in Support of Global Concurrent Optimization"</span>, <span class="seriesInfo">RFC 5557</span>, <span class="seriesInfo">DOI 10.17487/RFC5557</span>, <time datetime="2009-07" class="refDate">July 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5557">https://www.rfc-editor.org/rfc/rfc5557</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6241">[RFC6241]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Enns, R., Ed.</span>, <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refAuthor">Schoenwaelder, J., Ed.</span>, and <span class="refAuthor">A. Bierman, Ed.</span>, <span class="refTitle">"Network Configuration Protocol (NETCONF)"</span>, <span class="seriesInfo">RFC 6241</span>, <span class="seriesInfo">DOI 10.17487/RFC6241</span>, <time datetime="2011-06" class="refDate">June 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6241">https://www.rfc-editor.org/rfc/rfc6241</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6805">[RFC6805]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">King, D., Ed.</span> and <span class="refAuthor">A. Farrel, Ed.</span>, <span class="refTitle">"The Application of the Path Computation Element Architecture to the Determination of a Sequence of Domains in MPLS and GMPLS"</span>, <span class="seriesInfo">RFC 6805</span>, <span class="seriesInfo">DOI 10.17487/RFC6805</span>, <time datetime="2012-11" class="refDate">November 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6805">https://www.rfc-editor.org/rfc/rfc6805</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC7012">[RFC7012]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Claise, B., Ed.</span> and <span class="refAuthor">B. Trammell, Ed.</span>, <span class="refTitle">"Information Model for IP Flow Information Export (IPFIX)"</span>, <span class="seriesInfo">RFC 7012</span>, <span class="seriesInfo">DOI 10.17487/RFC7012</span>, <time datetime="2013-09" class="refDate">September 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7012">https://www.rfc-editor.org/rfc/rfc7012</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC7252">[RFC7252]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Shelby, Z.</span>, <span class="refAuthor">Hartke, K.</span>, and <span class="refAuthor">C. Bormann</span>, <span class="refTitle">"The Constrained Application Protocol (CoAP)"</span>, <span class="seriesInfo">RFC 7252</span>, <span class="seriesInfo">DOI 10.17487/RFC7252</span>, <time datetime="2014-06" class="refDate">June 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7252">https://www.rfc-editor.org/rfc/rfc7252</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC7303">[RFC7303]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Thompson, H.</span> and <span class="refAuthor">C. Lilley</span>, <span class="refTitle">"XML Media Types"</span>, <span class="seriesInfo">RFC 7303</span>, <span class="seriesInfo">DOI 10.17487/RFC7303</span>, <time datetime="2014-07" class="refDate">July 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7303">https://www.rfc-editor.org/rfc/rfc7303</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC7540">[RFC7540]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Belshe, M.</span>, <span class="refAuthor">Peon, R.</span>, and <span class="refAuthor">M. Thomson, Ed.</span>, <span class="refTitle">"Hypertext Transfer Protocol Version 2 (HTTP/2)"</span>, <span class="seriesInfo">RFC 7540</span>, <span class="seriesInfo">DOI 10.17487/RFC7540</span>, <time datetime="2015-05" class="refDate">May 2015</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7540">https://www.rfc-editor.org/rfc/rfc7540</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC7950">[RFC7950]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refTitle">"The YANG 1.1 Data Modeling Language"</span>, <span class="seriesInfo">RFC 7950</span>, <span class="seriesInfo">DOI 10.17487/RFC7950</span>, <time datetime="2016-08" class="refDate">August 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7950">https://www.rfc-editor.org/rfc/rfc7950</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8040">[RFC8040]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Bjorklund, M.</span>, and <span class="refAuthor">K. Watsen</span>, <span class="refTitle">"RESTCONF Protocol"</span>, <span class="seriesInfo">RFC 8040</span>, <span class="seriesInfo">DOI 10.17487/RFC8040</span>, <time datetime="2017-01" class="refDate">January 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8040">https://www.rfc-editor.org/rfc/rfc8040</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8051">[RFC8051]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Zhang, X., Ed.</span> and <span class="refAuthor">I. Minei, Ed.</span>, <span class="refTitle">"Applicability of a Stateful Path Computation Element (PCE)"</span>, <span class="seriesInfo">RFC 8051</span>, <span class="seriesInfo">DOI 10.17487/RFC8051</span>, <time datetime="2017-01" class="refDate">January 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8051">https://www.rfc-editor.org/rfc/rfc8051</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8174">[RFC8174]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8231">[RFC8231]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Crabbe, E.</span>, <span class="refAuthor">Minei, I.</span>, <span class="refAuthor">Medved, J.</span>, and <span class="refAuthor">R. Varga</span>, <span class="refTitle">"Path Computation Element Communication Protocol (PCEP) Extensions for Stateful PCE"</span>, <span class="seriesInfo">RFC 8231</span>, <span class="seriesInfo">DOI 10.17487/RFC8231</span>, <time datetime="2017-09" class="refDate">September 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8231">https://www.rfc-editor.org/rfc/rfc8231</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8259">[RFC8259]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bray, T., Ed.</span>, <span class="refTitle">"The JavaScript Object Notation (JSON) Data Interchange Format"</span>, <span class="seriesInfo">STD 90</span>, <span class="seriesInfo">RFC 8259</span>, <span class="seriesInfo">DOI 10.17487/RFC8259</span>, <time datetime="2017-12" class="refDate">December 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8259">https://www.rfc-editor.org/rfc/rfc8259</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8329">[RFC8329]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Lopez, D.</span>, <span class="refAuthor">Lopez, E.</span>, <span class="refAuthor">Dunbar, L.</span>, <span class="refAuthor">Strassner, J.</span>, and <span class="refAuthor">R. Kumar</span>, <span class="refTitle">"Framework for Interface to Network Security Functions"</span>, <span class="seriesInfo">RFC 8329</span>, <span class="seriesInfo">DOI 10.17487/RFC8329</span>, <time datetime="2018-02" class="refDate">February 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8329">https://www.rfc-editor.org/rfc/rfc8329</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8345">[RFC8345]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Clemm, A.</span>, <span class="refAuthor">Medved, J.</span>, <span class="refAuthor">Varga, R.</span>, <span class="refAuthor">Bahadur, N.</span>, <span class="refAuthor">Ananthakrishnan, H.</span>, and <span class="refAuthor">X. Liu</span>, <span class="refTitle">"A YANG Data Model for Network Topologies"</span>, <span class="seriesInfo">RFC 8345</span>, <span class="seriesInfo">DOI 10.17487/RFC8345</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8345">https://www.rfc-editor.org/rfc/rfc8345</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8446">[RFC8446]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Rescorla, E.</span>, <span class="refTitle">"The Transport Layer Security (TLS) Protocol Version 1.3"</span>, <span class="seriesInfo">RFC 8446</span>, <span class="seriesInfo">DOI 10.17487/RFC8446</span>, <time datetime="2018-08" class="refDate">August 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8446">https://www.rfc-editor.org/rfc/rfc8446</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8453">[RFC8453]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Ceccarelli, D., Ed.</span> and <span class="refAuthor">Y. Lee, Ed.</span>, <span class="refTitle">"Framework for Abstraction and Control of TE Networks (ACTN)"</span>, <span class="seriesInfo">RFC 8453</span>, <span class="seriesInfo">DOI 10.17487/RFC8453</span>, <time datetime="2018-08" class="refDate">August 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8453">https://www.rfc-editor.org/rfc/rfc8453</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8811">[RFC8811]</dt>
-    <dd>
+      <dd>
 <span class="refAuthor">Mortensen, A., Ed.</span>, <span class="refAuthor">Reddy.K, T., Ed.</span>, <span class="refAuthor">Andreasen, F.</span>, <span class="refAuthor">Teague, N.</span>, and <span class="refAuthor">R. Compton</span>, <span class="refTitle">"DDoS Open Threat Signaling (DOTS) Architecture"</span>, <span class="seriesInfo">RFC 8811</span>, <span class="seriesInfo">DOI 10.17487/RFC8811</span>, <time datetime="2020-08" class="refDate">August 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8811">https://www.rfc-editor.org/rfc/rfc8811</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
+</section>
+</div>
+<div id="sec-informative-references">
+<section id="section-8.2">
+        <h3 id="name-informative-references">
+<a href="#section-8.2" class="section-number selfRef">8.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+        </h3>
+<dl class="references">
+<dt id="I-D.carpenter-anima-grasp-rendezvous">[I-D.carpenter-anima-grasp-rendezvous]</dt>
+        <dd>
+<span class="refAuthor">Carpenter, B. E.</span>, <span class="refTitle">"Using GRASP as an Agent Rendezvous Mechanism"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-carpenter-anima-grasp-rendezvous-01</span>, <time datetime="2026-07-26" class="refDate">26 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-carpenter-anima-grasp-rendezvous-01">https://datatracker.ietf.org/doc/html/draft-carpenter-anima-grasp-rendezvous-01</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.feng-netmod-naim">[I-D.feng-netmod-naim]</dt>
+        <dd>
+<span class="refAuthor">Feng, C.</span>, <span class="refTitle">"NAIM: A Canonical Semantic Representation for AI-Assisted YANG Modeling and Validation"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-feng-netmod-naim-01</span>, <time datetime="2026-07-18" class="refDate">18 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-feng-netmod-naim-01">https://datatracker.ietf.org/doc/html/draft-feng-netmod-naim-01</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.fu-nmop-agent-communication-framework">[I-D.fu-nmop-agent-communication-framework]</dt>
+        <dd>
+<span class="refAuthor">Fu, Y.</span>, <span class="refAuthor">Qiong, S.</span>, <span class="refAuthor">Song, X.</span>, and <span class="refAuthor">C. Xie</span>, <span class="refTitle">"Agent Communication Framework for Network AIOps"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-fu-nmop-agent-communication-framework-00</span>, <time datetime="2026-01-24" class="refDate">24 January 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-fu-nmop-agent-communication-framework-00">https://datatracker.ietf.org/doc/html/draft-fu-nmop-agent-communication-framework-00</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.fu-nmop-tokenops-probelem-statement">[I-D.fu-nmop-tokenops-probelem-statement]</dt>
+        <dd>
+<span class="refAuthor">Fu, Y.</span>, <span class="refAuthor">Qiong, S.</span>, <span class="refAuthor">Song, X.</span>, and <span class="refAuthor">C. Xie</span>, <span class="refTitle">"Token Operation Problem Statement"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-fu-nmop-tokenops-probelem-statement-00</span>, <time datetime="2026-07-06" class="refDate">6 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-fu-nmop-tokenops-probelem-statement-00">https://datatracker.ietf.org/doc/html/draft-fu-nmop-tokenops-probelem-statement-00</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.irtf-nmrg-ai-challenges">[I-D.irtf-nmrg-ai-challenges]</dt>
+        <dd>
+<span class="refAuthor">François, J.</span>, <span class="refAuthor">Clemm, A.</span>, <span class="refAuthor">Papadimitriou, D.</span>, <span class="refAuthor">Fernandes, S.</span>, and <span class="refAuthor">S. Schneider</span>, <span class="refTitle">"Research Challenges in Coupling Artificial Intelligence and Network Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-irtf-nmrg-ai-challenges-06</span>, <time datetime="2026-07-06" class="refDate">6 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-irtf-nmrg-ai-challenges-06">https://datatracker.ietf.org/doc/html/draft-irtf-nmrg-ai-challenges-06</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.irtf-nmrg-llm-nm">[I-D.irtf-nmrg-llm-nm]</dt>
+        <dd>
+<span class="refAuthor">Cui, Y.</span>, <span class="refAuthor">Xing, M.</span>, and <span class="refAuthor">L. Zhang</span>, <span class="refTitle">"A Framework for LLM-Assisted Network Management with Human-in-the-Loop"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-irtf-nmrg-llm-nm-00</span>, <time datetime="2025-03-13" class="refDate">13 March 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-irtf-nmrg-llm-nm-00">https://datatracker.ietf.org/doc/html/draft-irtf-nmrg-llm-nm-00</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.smith-opsawg-ai-network-governance">[I-D.smith-opsawg-ai-network-governance]</dt>
+        <dd>
+<span class="refAuthor">Smith, A.</span> and <span class="refAuthor">N. Pai</span>, <span class="refTitle">"Governance Framework for AI-Mediated Autonomous Network Device Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-smith-opsawg-ai-network-governance-01</span>, <time datetime="2026-09-27" class="refDate">27 September 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-smith-opsawg-ai-network-governance-01">https://datatracker.ietf.org/doc/html/draft-smith-opsawg-ai-network-governance-01</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.zeng-opsawg-applicability-mcp-a2a">[I-D.zeng-opsawg-applicability-mcp-a2a]</dt>
+        <dd>
+<span class="refAuthor">Zeng, G.</span>, <span class="refAuthor">Mao, J.</span>, <span class="refAuthor">Liu, B.</span>, <span class="refAuthor">Geng, N.</span>, <span class="refAuthor">Shang, X.</span>, <span class="refAuthor">Gao, Q.</span>, and <span class="refAuthor">Z. Li</span>, <span class="refTitle">"When NETCONF Is Not Enough: Applicability of MCP and A2A for Advanced Network Management Scenarios"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-zeng-opsawg-applicability-mcp-a2a-00</span>, <time datetime="2025-11-02" class="refDate">2 November 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-zeng-opsawg-applicability-mcp-a2a-00">https://datatracker.ietf.org/doc/html/draft-zeng-opsawg-applicability-mcp-a2a-00</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.zeng-opsawg-llm-netconf-gap">[I-D.zeng-opsawg-llm-netconf-gap]</dt>
+        <dd>
+<span class="refAuthor">Zeng, G.</span>, <span class="refAuthor">Mao, J.</span>, <span class="refAuthor">Liu, B.</span>, <span class="refAuthor">Geng, N.</span>, <span class="refAuthor">Shang, X.</span>, <span class="refAuthor">Gao, Q.</span>, and <span class="refAuthor">Z. Li</span>, <span class="refTitle">"Gap Analysis of Network Configuration Protocols in LLM-Driven Intent-Based Networking"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-zeng-opsawg-llm-netconf-gap-00</span>, <time datetime="2025-11-02" class="refDate">2 November 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-zeng-opsawg-llm-netconf-gap-00">https://datatracker.ietf.org/doc/html/draft-zeng-opsawg-llm-netconf-gap-00</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.zhao-nmop-network-management-agent">[I-D.zhao-nmop-network-management-agent]</dt>
+        <dd>
+<span class="refAuthor">XingZhao</span>, <span class="refAuthor">Wang, M.</span>, <span class="refAuthor">Wu, B.</span>, <span class="refAuthor">Ceccarelli, D.</span>, <span class="refAuthor">Zheng, H.</span>, and <span class="refAuthor">J. Zhou</span>, <span class="refTitle">"AI based Network Management Agent(NMA): Concepts and Architecture"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-zhao-nmop-network-management-agent-05</span>, <time datetime="2026-07-05" class="refDate">5 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-zhao-nmop-network-management-agent-05">https://datatracker.ietf.org/doc/html/draft-zhao-nmop-network-management-agent-05</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.zhao-nmop-nma-a2u-yang">[I-D.zhao-nmop-nma-a2u-yang]</dt>
+        <dd>
+<span class="refAuthor">XingZhao</span>, <span class="refAuthor">Wang, M.</span>, <span class="refAuthor">Ceccarelli, D.</span>, and <span class="refAuthor">Y. Xu</span>, <span class="refTitle">"Framework and YANG Data Model for the NMA A2U Interface"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-zhao-nmop-nma-a2u-yang-00</span>, <time datetime="2026-07-06" class="refDate">6 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-zhao-nmop-nma-a2u-yang-00">https://datatracker.ietf.org/doc/html/draft-zhao-nmop-nma-a2u-yang-00</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.zw-opsawg-mcp-network-mgmt">[I-D.zw-opsawg-mcp-network-mgmt]</dt>
+        <dd>
+<span class="refAuthor">Zeng, G.</span>, <span class="refAuthor">Mao, J.</span>, <span class="refAuthor">Liu, B.</span>, <span class="refAuthor">Shang, X.</span>, <span class="refAuthor">Gao, Q.</span>, <span class="refAuthor">Li, Z.</span>, and <span class="refAuthor">Q. Wu</span>, <span class="refTitle">"Model Context Protocol (MCP) Extensions for Network Equipment Management"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-zw-opsawg-mcp-network-mgmt-00</span>, <time datetime="2025-11-02" class="refDate">2 November 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-zw-opsawg-mcp-network-mgmt-00">https://datatracker.ietf.org/doc/html/draft-zw-opsawg-mcp-network-mgmt-00</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="ICON">[ICON]</dt>
+        <dd>
+<span class="refTitle">"Observability, Intervention and Control of Network Management Agent"</span>, <time datetime="2026" class="refDate">2026</time>, <span>&lt;<a href="https://github.com/billwuqin/Agent-Observability-Intervention-Control">https://github.com/billwuqin/Agent-Observability-Intervention-Control</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8990">[RFC8990]</dt>
+      <dd>
+<span class="refAuthor">Bormann, C.</span>, <span class="refAuthor">Carpenter, B., Ed.</span>, and <span class="refAuthor">B. Liu, Ed.</span>, <span class="refTitle">"GeneRic Autonomic Signaling Protocol (GRASP)"</span>, <span class="seriesInfo">RFC 8990</span>, <span class="seriesInfo">DOI 10.17487/RFC8990</span>, <time datetime="2021-05" class="refDate">May 2021</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8990">https://www.rfc-editor.org/rfc/rfc8990</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+</dl>
+</section>
+</div>
 </section>
 </div>
 <div id="iana-considerations">
