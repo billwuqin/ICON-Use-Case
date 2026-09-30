@@ -139,9 +139,6 @@ optimal performance and reliability of many network environments. The applicabil
 of Artificial Intelligence is well-established, and the use cases are outlined
 in this document.
 
-Editors note: Future versions of this document will include prior
-IRTF and IETF work.
-
 ## Prior and Related IETF and IRTF Work
 
    The IETF has already standardized an autonomic networking
@@ -315,7 +312,7 @@ resources across different network layers, such as IP and optical layers.
    This draft introduces the term “Operational Benefit”, which
    encompasses the comprehensive suite of tools and methodologies that
    facilitate the efficient management, debugging, troubleshooting,
-   monitoring, configuration, and optimizing of IP Optical networks.
+   monitoring, configuration, and optimization of IP Optical networks.
    These operational benefits might include network management systems,
    automated diagnostic tools, performance monitoring and telemetry
    systems, configuration management platforms, and optimization
@@ -330,7 +327,7 @@ resources across different network layers, such as IP and optical layers.
    provides a detailed explanation of the various operational benefits
    offered by AINetOp.
 
-   {{fig2}} shows the relationship between AINetOPS.
+   {{fig2}} shows the definition of AINetOPS.
 
 ~~~~
     |------------|    |--------------|     |-----------------------|
@@ -340,7 +337,7 @@ resources across different network layers, such as IP and optical layers.
     |            |    |  Rule-based  |     |                       |
     |            |    |              |     |                       |
     |------------|    |--------------|     |-----------------------|
-                                               AINetOPS provides
+                                               AINetOps provides
                                                Operational Benefits
       Big Data: Historical or Real-time data
                (e.g., time series PM, Alarm, Topology, Log,
@@ -435,9 +432,9 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    with advanced technology, leading to smarter and more proactive
    network operations.
 
-## Network Active and Reactive assurance
+## Network Active and Reactive Assurance
 
-   Network active and reactive assurance and troubleshooting, both at the single-
+   Network Active and Reactive Assurance and troubleshooting, both at the single-
    layer (IP or Optical) and multi-layer (IP over Optical), are critical
    components in maintaining the health and stability of modern IP,
    Optical, and IPoDWDM networks.  This process involves the
@@ -482,7 +479,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
 
 ### Root Cause Analysis
 
-   In the context of "Network Active and Reactive assurance," Root Cause Analysis
+   In the context of "Network Active and Reactive Assurance," Root Cause Analysis
    (RCA) is a critical aspect that extends the reactive troubleshooting
    process to uncover the underlying reasons behind network issues.
    When an issue is detected in the network, RCA leverages advanced
@@ -552,7 +549,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
 ### Proactive Network Assurance and Monitoring (Health Check)
 
    Proactive Network Assurance and Monitoring represents a paradigm
-   shift from the Network Active and Reactive assurance discussed in Section 5.2.
+   shift from the Network Active and Reactive Assurance discussed in Section 5.2.
    Instead of waiting for issues to arise and then addressing them,
    proactive network assurance involves anticipating potential problems
    and implementing measures to prevent them from occurring.  This
@@ -1076,7 +1073,7 @@ For every use case described, the following dimensions are examined to provide a
 
 ## Network Active and Reactive Assurance
 
-   Network active and reactive assurance, both at the single-
+   Network Active and Reactive Assurance, both at the single-
    layer (IP or Optical) and multi-layer (IP over Optical), are critical
    components in maintaining the health and stability of modern IP,
    Optical, and IPoDWDM networks.  This process involves the
@@ -1096,7 +1093,7 @@ For every use case described, the following dimensions are examined to provide a
    where an issue in the optical layer affects the IP layer.
 
 
-As illustrated in {{figure-reactive-assurance}}, reactive assurance assumes
+As illustrated in {{figure-reactive-assurance}}, Reactive Assurance assumes
 that a fault occurs in the IP/Optical network (Step A) and is subsequently
 detected by the operator through various means (Step B). Detection methods
 may include alarm monitoring, performance telemetry data analysis, or customer
