@@ -321,11 +321,11 @@ resources across different network layers, such as IP and optical layers.
    ultimately enhancing service delivery and reducing operational costs.
    The integration of these operational benefits is crucial for
    maintaining seamless network operations and achieving strategic
-   business objectives
+   business objectives.
 
    Section 5 expands the operational benefits shown in Figure 2 and
    provides a detailed explanation of the various operational benefits
-   offered by AINetOp.
+   offered by AINetOps.
 
    {{fig2}} shows the definition of AINetOPS.
 
@@ -1039,7 +1039,7 @@ mechanisms to advertise their presence and more important their capabilities wil
 The second aspect to consider is the interworking between them. As of today the way we
 interact with agents is mostly based on LLMs, but would that be the best way for
 interacting between them as well? Probably a more machine oriented type of language,
-encoding and protocols would have better performances.
+encoding and protocols would have better performance.
 
 Note that agent discovery and inter-agent communication are the
 subject of dedicated IETF activities: the DAWN (Discovery of Agents,
@@ -1059,13 +1059,13 @@ This section further expands Section 5 by exploring scenarios and use cases for 
 
 For every use case described, the following dimensions are examined to provide a comprehensive understanding of its implications and requirements.
 
-* Architecture: The high-level architecture necessary to support the use case, including control-plane and data-plane interactions, as well as integration points for AI-driven systems
+* Architecture: The high-level architecture necessary to support the use case, including control-plane and data-plane interactions, as well as integration points for AI-driven systems.
 
-* Interfaces and APIs: The key interfaces between AI systems and network elements, including management APIs (e.g., NETCONF, RESTCONF, gNMI) and telemetry interfaces
+* Interfaces and APIs: The key interfaces between AI systems and network elements, including management APIs (e.g., NETCONF, RESTCONF, gNMI) and telemetry interfaces.
 
 * Protocols: IETF protocols involved in enabling the use case, and potential extensions to existing protocols to accommodate AI-driven operations.
 
-* Data Models: The data models required to represent network state, telemetry, policies, and configurations
+* Data Models: The data models required to represent network state, telemetry, policies, and configurations.
 
 * Processes and Procedures: Workflow considerations for integrating AI systems into existing operational practices, including training, validation, and deployment.
 
