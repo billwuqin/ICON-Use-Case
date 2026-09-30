@@ -1592,7 +1592,7 @@ Table of Contents
    In a RAG based architecture, a knowledge base is created by using an
    embedding model capable of splitting and transforming the content of
    different documents into numerical representations (vectors), and
-   storing them in a database, also known as Vector DataBase.  The
+   storing them in a database, also known as a Vector Database.  The
    general process executed by the system every time a query is made by
    a user can be summarized in the following steps:
 
@@ -2018,8 +2018,8 @@ Table of Contents
       The training process therefore requires a mechanism to extract
       important features from the stream of incoming real-time network
       data and outside world events.  These extracted features are then
-      fed to the training process for adjusting model's parameters in a
-      dynamic manner.
+      fed to the training process for adjusting the model's parameters
+      in a dynamic manner.
 
       IETF/IRTF can work to standardize the mechanisms to identify
       important features and implement the above-mentioned required
@@ -2100,7 +2100,7 @@ Table of Contents
    Agentic networks.  In a distributed version of Agentic networks, each
    node is accompanied by an AI agent.  Once trained, these agents work
    together to address flow placement, traffic steering/engineering, and
-   other network related tasks such as traffic management, network
+   other network-related tasks such as traffic management, network
    resource defragmentation, and even routing.
 
    While being different from networks managed by a set of interworking
@@ -2524,8 +2524,8 @@ Table of Contents
       optimize green energy use and predictive models for renewable
       availability.  Optimization runs continuously, shifting VNFs to
       green PoDs/datacenters or adjusting traffic when viable, with
-      operator oversight via an AINetOps- Assistant (similar to 6.8).
-      Post-optimization, the AI assesses sustainability gains against
+      operator oversight via an AIOps-Assistant (similar to 6.8).  Post-
+      optimization, the AI assesses sustainability gains against
       performance, updating policies and retraining.  Closed-loop
       automation adjusts configurations, validated by telemetry,
       following Section 6.18 workflow.

@@ -2949,7 +2949,7 @@ Collaboration with these groups ensures that the anomaly detection system integr
         </ul>
 <p id="section-6.7-6">In a RAG based architecture, a knowledge base is created by using an embedding model capable of splitting and
 transforming the content of different documents into numerical representations (vectors), and storing them in
-a database, also known as Vector DataBase. The general process executed by the system every time a query is
+a database, also known as a Vector Database. The general process executed by the system every time a query is
 made by a user can be summarized in the following steps:<a href="#section-6.7-6" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-6.7-7">
 <li id="section-6.7-7.1">
@@ -3330,7 +3330,7 @@ Online training takes a more real-time approach. Here model training is based on
 <p id="section-6.16.1-6.1.3">
 A traffic management AI model under online training uses the same input sources as it does in offline training. However, unlike offline training, the data here is not stored in a repository but streamed into the training process. As such, the ground truth for model performance evaluation in online training is derived from observation of actual real time world events and network behavior, rather than stored data.<a href="#section-6.16.1-6.1.3" class="pilcrow">¶</a></p>
 <p id="section-6.16.1-6.1.4">
-The training process therefore requires a mechanism to extract important features from the stream of incoming real-time network data and outside world events. These extracted features are then fed to the training process for adjusting model's parameters in a dynamic manner.<a href="#section-6.16.1-6.1.4" class="pilcrow">¶</a></p>
+The training process therefore requires a mechanism to extract important features from the stream of incoming real-time network data and outside world events. These extracted features are then fed to the training process for adjusting the model's parameters in a dynamic manner.<a href="#section-6.16.1-6.1.4" class="pilcrow">¶</a></p>
 <p id="section-6.16.1-6.1.5">
 IETF/IRTF can work to standardize the mechanisms to identify important features and implement the above-mentioned required real-time data delivery and feature extraction.<a href="#section-6.16.1-6.1.5" class="pilcrow">¶</a></p>
 </li>
@@ -3429,7 +3429,7 @@ IETF/IRTF can work to standardize the mechanisms to identify important features 
 <p id="section-6.16.3-1">Over time, the full integration of AI models and network elements will transform networks
 from their current state into agent-based or Agentic networks. In a distributed version of
 Agentic networks, each node is accompanied by an AI agent. Once trained, these agents work
-together to address flow placement, traffic steering/engineering, and other network related
+together to address flow placement, traffic steering/engineering, and other network-related
 tasks such as traffic management, network resource defragmentation, and even routing.<a href="#section-6.16.3-1" class="pilcrow">¶</a></p>
 <p id="section-6.16.3-2">While being different from networks managed by a set of interworking multi-agents, the Agentic
 networks face some of the same challenges outlined in the multi-agent interworking section of
@@ -3895,8 +3895,8 @@ The process starts with AI training on historical traffic, latency, and
  energy source data, using reinforcement learning to optimize green
  energy use and predictive models for renewable availability.
  Optimization runs continuously, shifting VNFs to green PoDs/datacenters
- or adjusting traffic when viable, with operator oversight via an AINetOps-
- Assistant (similar to 6.8). Post-optimization, the AI assesses
+ or adjusting traffic when viable, with operator oversight via an
+ AIOps-Assistant (similar to 6.8). Post-optimization, the AI assesses
  sustainability gains against performance, updating policies and
  retraining. Closed-loop automation adjusts configurations, validated by
  telemetry, following <a href="#energy_efficiency_optimization" class="auto internal xref">Section 6.18</a> workflow.<a href="#section-6.19-5.4.2" class="pilcrow">¶</a></p>
