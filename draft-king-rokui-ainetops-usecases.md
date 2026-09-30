@@ -200,6 +200,19 @@ IRTF and IETF work.
    IETF technologies takes place on the AINETOPS non-working-group
    mailing list (ainetops@ietf.org).
 
+## Scope
+
+   This document describes use cases and identifies associated
+   requirements.  It is intended to scope, ground, and prioritize
+   subsequent normative work, such as YANG data models, protocol
+   extensions, and operational guidance, rather than to serve as a
+   standalone endpoint.
+
+   The specification of AI and ML algorithms, model architectures, and
+   training methodologies is out of scope for this document.  The use
+   cases and requirements described here are intentionally agnostic to
+   any particular AI technique or implementation.
+
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
@@ -282,7 +295,7 @@ resources across different network layers, such as IP and optical layers.
           |   |-----------------------------|   |
           |-------------------------------------|
 ~~~~
-{: #fig1 title="Figure 1: Relationship between AI, ML, Deep Learning, and Gen-AI" artwork-align="center"}
+{: #fig1 title="Relationship between AI, ML, Deep Learning, and Gen-AI" artwork-align="center"}
 
 # Definition of AINetOps
 
@@ -300,7 +313,7 @@ resources across different network layers, such as IP and optical layers.
    more resilient and reliable network operations.
 
    This draft introduces the term “Operational Benefit”, which
-   encompasses the comprehensive suite of tools, and methodologies that
+   encompasses the comprehensive suite of tools and methodologies that
    facilitate the efficient management, debugging, troubleshooting,
    monitoring, configuration, and optimizing of IP Optical networks.
    These operational benefits might include network management systems,
@@ -313,12 +326,11 @@ resources across different network layers, such as IP and optical layers.
    maintaining seamless network operations and achieving strategic
    business objectives
 
-   Section 5 expands the Operational benefits shown in Figure 2 and
+   Section 5 expands the operational benefits shown in Figure 2 and
    provides a detailed explanation of the various operational benefits
    offered by AINetOp.
 
-   {{fig2}} shows the relationship between AI, ML, Deep Learning, and
-   Gen-AI.
+   {{fig2}} shows the relationship between AINetOPS.
 
 ~~~~
     |------------|    |--------------|     |-----------------------|
@@ -334,7 +346,7 @@ resources across different network layers, such as IP and optical layers.
                (e.g., time series PM, Alarm, Topology, Log,
                 OAM data, product content/documentation etc.)
 ~~~~
-{: #fig2 title="Figure 2: Definition of AINetOp" artwork-align="center"}
+{: #fig2 title="Definition of AINetOp" artwork-align="center"}
 
 # Operational Benefits Provided by AINetOps
 
@@ -351,7 +363,7 @@ resources across different network layers, such as IP and optical layers.
 
 * Section 5.1 "Operator Network Assistance"
 
-* Section 5.2 "Network active and reactive assurance".  This area is also
+* Section 5.2 "Network Active and Reactive Assurance".  This area is also
 related to "Root Cause Analysis" Section 5.2.1
 
 * Section 5.3 "Predictive Analytics" which includes "Proactive
@@ -360,14 +372,14 @@ related to "Root Cause Analysis" Section 5.2.1
    Section 5.3.3, "Predictive Maintenance" Section 5.3.4 and "Network
    Capacity Planning" Section 5.3.5
 
-* Section 5.4 "Network Operational Insight".  This area can be
+* Section 5.4 "Network Operational Insights".  This area can be
 grouped into "Operational Insights Requiring No Further Analysis "
 Section 5.4.1 and "Operational Insights Requiring Further Analysis
 " Section 5.4.2
 
 * Section 5.5 "Network Configuration Management"
 
-* Section 5.6 "IP/Optical multi-layer Planning"
+* Section 5.6 "IP/Optical Multi-Layer Planning"
 
 * Section 5.7 "Cross-Layer and Multi-Layer Optimization"
 
@@ -381,12 +393,12 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
 
 * Section 5.12 "AI-Driven Security Monitoring"
 
-* Section 5.13 "Multi Agent Interworking"
+* Section 5.13 "Multi-Agent Interworking"
 
 ## Operator Network Assistance
 
    Powered by Gen-AI, the operator network assistant functions as a
-   virtual network engineer, providing a real-time recommendations,
+   virtual network engineer, providing real-time recommendations,
    insights, and automated solutions.  These systems use NLP for
    interface interaction, deep learning for anomaly classification, and
    contextual understanding to enhance operator decision-making.
@@ -402,7 +414,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    technical expertise.
 
    In addition to NLP, Operator Assistance can integrate other AINetOps
-   functions to solve operators scenarios and use-cases.  This
+   functions to solve operator scenarios and use-cases.  This
    capability allows the system to provide timely alerts and
    recommendations, helping operators to address issues before they
    escalate into major disruptions.  The deep learning models
@@ -423,7 +435,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    with advanced technology, leading to smarter and more proactive
    network operations.
 
-## Network active and reactive assurance
+## Network Active and Reactive assurance
 
    Network active and reactive assurance and troubleshooting, both at the single-
    layer (IP or Optical) and multi-layer (IP over Optical), are critical
@@ -470,7 +482,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
 
 ### Root Cause Analysis
 
-   In the context of "Network active and reactive assurance," Root Cause Analysis
+   In the context of "Network Active and Reactive assurance," Root Cause Analysis
    (RCA) is a critical aspect that extends the reactive troubleshooting
    process to uncover the underlying reasons behind network issues.
    When an issue is detected in the network, RCA leverages advanced
@@ -512,7 +524,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    time network data, statistical algorithms, and ML techniques to
    identify the likelihood of future outcomes based on past data.  In
    the context of network operations, predictive analytics involves the
-   use of these methodologies in following areas to anticipate network
+   use of these methodologies in the following areas to anticipate network
    issues, optimize performance, and improve operational efficiency.  By
    examining patterns and trends in historical network data, predictive
    analytics can potentially forecast network problems before they
@@ -534,13 +546,13 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    foresee and address potential issues before they impact the network.
    This approach leads to more efficient, reliable, and secure network
    operations, ultimately enhancing the overall performance and user
-   experience.  The AINetOps can address the following operator's
+   experience.  AINetOps can address the following operator
    scenarios.
 
 ### Proactive Network Assurance and Monitoring (Health Check)
 
    Proactive Network Assurance and Monitoring represents a paradigm
-   shift from the Network active and reactive assurance discussed in Section 5.2.
+   shift from the Network Active and Reactive assurance discussed in Section 5.2.
    Instead of waiting for issues to arise and then addressing them,
    proactive network assurance involves anticipating potential problems
    and implementing measures to prevent them from occurring.  This
@@ -548,8 +560,8 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    network issues before they impact service quality.
 
    In single-layer proactive assurance, the focus is on continuously
-   monitoring and analyzing the health of a specific layer IP or Optical
-   layer of the network to identify early warning signs of potential
+   monitoring and analyzing the health of a specific layer (IP or Optical)
+   of the network to identify early warning signs of potential
    issues.  For instance, in an IP network, this might involve analyzing
    traffic patterns to detect anomalies that could indicate an impending
    routing problem or hardware failure.  ML algorithms can be employed
@@ -577,7 +589,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    enhances the user experience by ensuring consistent network
    performance but also reduces operational costs associated with
    emergency troubleshooting and repairs.  Furthermore, the use of
-   advanced analytics and machine learning in AIOps allows for
+   advanced analytics and machine learning in AINetOps allows for
    continuous learning and improvement, enabling networks to become more
    resilient and adaptive over time.
 
@@ -585,7 +597,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    network assurance and monitoring is one of the operational benefits
    provided by AINetOps and are essential for staying ahead of potential
    issues and maintaining a competitive edge.  By leveraging the power
-   of AINetOp, network operators can transform their approach from
+   of AINetOps, network operators can transform their approach from
    reactive to proactive, ensuring that their networks are not only
    robust and resilient but also capable of delivering the high-quality
    service that users expect.  This shift towards proactive assurance
@@ -663,8 +675,8 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
 ### Predictive Maintenance
 
    Predictive maintenance in the context of single-layer or multi-layer
-   IP optical networks is other aspect of predictive analytics, offering
-   substantial operational benefits through AINeetOps.  In single-layer
+   IP optical networks is another aspect of predictive analytics, offering
+   substantial operational benefits through AINetOps.  In single-layer
    networks, such as purely IP or optical networks, predictive
    maintenance involves using historical and real-time data to forecast
    when network components might fail or degrade.  For instance, in an
@@ -709,7 +721,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
 
 ### Traffic Optimization
 
-   Referring to Section 5.8 for details of AINetOps "Traffic
+   Refer to Section 5.8 for details of AINetOps "Traffic
    Optimization".
 
    If "Traffic Optimization" is based on prediction of the traffic
@@ -733,7 +745,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    efficiency.  This insight is particularly valuable in multi-layer IP/
    Optical networks, where the interplay between different network
    layers can be complex. {{!RFC5557}} provides examples of the PCE
-   being using to optimize resource allocation.
+   being used to optimize resource allocation.
 
    By leveraging these insights, operators can
    ensure that both the IP and optical layers are operating
@@ -760,7 +772,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    systems that continuously track network performance and health
    metrics.  For example, showing the Network Element (NE) with the
    highest alarms or displaying the current alarm table for a specific
-   NE (e.g., NE 1.1.1.1) can provide immediate visibility into potential
+   NE (e.g., NE 192.0.2.1) can provide immediate visibility into potential
    issues.  Similarly, identifying the NEs with the highest problems
    during the last hour or plotting the Bit Error Rate (BER) for the 10
    worst modems in a specific region (e.g., Northeast) allows operators
@@ -829,7 +841,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    errors that can occur during manual configuration, leading to a more
    robust and efficient network infrastructure.
 
-   Furthermore, AINetOps can play a role on validation of network
+   Furthermore, AINetOps can play a role in validation of network
    configuration, i.e., "network configuration audit".  AINetOps plays a
    crucial role in validating configurations against predefined network
    configuration, ensuring that all network setups comply with intent
@@ -851,7 +863,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    Multi-layer planning is an approach that integrates the planning of
    IP and optical networks based on traffic patterns, network
    simulations, and capacity planning.  By analyzing these factors, IP
-   optical network can be designed to optimize resource allocation,
+   optical networks can be designed to optimize resource allocation,
    enhance network efficiency, and ensure the network can handle current
    and future demands, resulting in a more resilient and scalable
    infrastructure.
@@ -881,7 +893,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
 
 ## Traffic Optimization
 
-   Another AINetOps operational benefits is "Traffic Optimization" where
+   Another AINetOps operational benefit is "Traffic Optimization" where
    IP/Optical network traffic flows can be monitored and appropriate
    adjustments to network protocols, network topology, network
    configuration, load balancing, bandwidth allocation and so on can be
@@ -912,7 +924,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    networks to be more resilient, responsive, and capable of delivering
    consistent high-quality service.
 
-   Note that "Traffic Optimization" AINetOps operational benefits is
+   Note that "Traffic Optimization" AINetOps operational benefit is
    closely related to "Predictive Analytics" covered in Section 5.3.
 
 ## Closed-Loop Automation
@@ -947,7 +959,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
    broader management layer, including OSS/BSS.  By developing robust
    and versatile APIs, network operators can ensure smooth communication
    and coordination between different network management systems,
-   thereby enhancing overall network efficiency and performance
+   thereby enhancing overall network efficiency and performance.
 
    The APIs developed for network controllers serve as a bridge,
    enabling the OSS to interact with the underlying network
@@ -975,7 +987,7 @@ Section 5.4.1 and "Operational Insights Requiring Further Analysis
 
 AI is becoming a cornerstone of modern network security, enabling
 proactive, adaptive, and intelligent measures to safeguard network
-operations against a rapidly evolving threats. By leveraging AI, network
+operations against rapidly evolving threats. By leveraging AI, network
 operators can enhance their ability to detect, prevent, and respond to
 threats in real-time while automating complex     security processes.
 This section details the key areas where AI drives security enhancements
@@ -1012,7 +1024,7 @@ devices and applications to prioritize enforcement, and ensures
 compliance with regulatory standards by monitoring for deviations and
 recommending corrective actions.
 
-## Multi Agent Interworking
+## Multi-Agent Interworking
 
 As seen in the use cases above, the usage of agents introduces various challenges,
 spanning from the definition of APIs that can be used by the various agent to the
@@ -1028,9 +1040,19 @@ of AI based architectures with more and more agents being part of the architectu
 mechanisms to advertise their presence and more important their capabilities will be required.
 
 The second aspect to consider is the interworking between them. As of today the way we
-interact with agents is mostly based on LLM, but would that be the best way for
+interact with agents is mostly based on LLMs, but would that be the best way for
 interacting between them as well? Probably a more machine oriented type of language,
 encoding and protocols would have better performances.
+
+Note that agent discovery and inter-agent communication are the
+subject of dedicated IETF activities: the DAWN (Discovery of Agents,
+Workloads, and Named Entities) effort addresses the discovery of
+agents and their capabilities, and the AGENTPROTO (Agent
+Communication Protocols) effort addresses end-to-end protocols for
+agent-to-agent communication.  Work on the discovery and interworking
+aspects described in this section should be coordinated with those
+activities, and with the GRASP-based rendezvous mechanism described
+in {{?I-D.carpenter-anima-grasp-rendezvous}}.
 
 # AINetOps Scenarios and Use-cases
 
@@ -1073,9 +1095,19 @@ For every use case described, the following dimensions are examined to provide a
    across multiple layers of the network.  This could include problems
    where an issue in the optical layer affects the IP layer.
 
-   In both reactive and active assurance, network faults have already occurred. These faults may include impairments such as optical fiber cuts, IP packet drops, IP link latency issues, or Threshold Crossing Alarms (TCA), among others.
 
-   As illustrated in {{figure-reactive-assurance}}, reactive assurance assumes that a fault occurs in the IP/Optical network (Step A) and is subsequently detected by the operator through various means (Step B). Detection methods may include alarm monitoring, performance telemetry data analysis, or customer reports indicating service disruptions. To initiate troubleshooting, the operator can launch the AIOps-Assistant, which acts as the front-end interface for AINetOps (Step C). The assistant then utilizes the backend assurance and troubleshooting mechanisms, leveraging a Gen-AI multi-agent framework. In Step D, a dynamic workflow is executed to diagnose the issue and identify potential root causes. Optionally, at Step E, the Gen-AI dynamic workflow can recommend remedial actions to resolve the issue and implement these actions in a closed-loop fashion, ensuring automated network recovery.
+As illustrated in {{figure-reactive-assurance}}, reactive assurance assumes
+that a fault occurs in the IP/Optical network (Step A) and is subsequently
+detected by the operator through various means (Step B). Detection methods
+may include alarm monitoring, performance telemetry data analysis, or customer
+reports indicating service disruptions. To initiate troubleshooting, the operator
+can launch the AIOps-Assistant, which acts as the front-end interface for
+AINetOps (Step C). The assistant then utilizes the backend assurance and
+troubleshooting mechanisms, leveraging a Gen-AI multi-agent framework. In
+Step D, a dynamic workflow is executed to diagnose the issue and identify
+potential root causes. Optionally, at Step E, the Gen-AI dynamic workflow
+can recommend remedial actions to resolve the issue and implement these
+actions in a closed-loop fashion, ensuring automated network recovery.
 
 ~~~~
 
@@ -1331,7 +1363,7 @@ For every use case described, the following dimensions are examined to provide a
 
 ## Generate Node Configuration
 
-   Generate node config with certain customer requirement (e.g., certain QOS, policy, ACL, tunnels, …)
+   Generate node config with certain customer requirement (e.g., certain QoS, policy, ACL, tunnels, …)
 
    More to be added.
 
@@ -1466,7 +1498,9 @@ More to be added.
 
 ## Multi Agent Interworking
 
-   As briefly introduced in chapter 5, effectively deploying multiple AI agents for network management introduces significant interworking challenges that must be addressed for successful and reliable operation. These challenges span several key areas:
+As briefly introduced in chapter 5, effectively deploying multiple AI agents for network management
+introduces significant interworking challenges that must be addressed for successful and reliable
+operation. These challenges span several key areas:
 
 1. Communication and Coordination:  Multiple agents operating in a shared network environment
   need to communicate effectively to coordinate their actions.  This includes sharing information
@@ -2386,6 +2420,101 @@ To be added.
 * Alignment with IETF
 
 To be added.
+
+# Agent Observability, Intervention, and Control
+
+   The considerations in this section are cross-cutting: they apply to
+   several of the operational benefits and use cases described in this
+   document rather than constituting a single use case.  In particular,
+   closed-loop automation (Section 5.9), the Gen-AI multi-agent dynamic
+   workflows of Section 6.1 and Section 6.2, the multi-agent
+   architectures of Section 6.15, and the agentic networks described in
+   Section 6.16.3 all rely on increasing levels of agent autonomy.
+   Because AI-native operations may be non-deterministic, network
+   management agents can misbehave or deviate from expected behavior.
+   Static AI guardrails, operating at the input/output or pre-action
+   filter level, are insufficient for the full operational lifecycle:
+   they often cannot detect, interrupt, or recover from unanticipated
+   behaviors occurring at machine speed.
+
+   This section therefore addresses the continuous observability of
+   network management agent behavior, the ability of human operators to
+   intervene when an agent goes wrong (e.g., task suspension, rollback
+   to a last known safe state, or termination), and the control of what
+   an agent is permitted to do before and during action execution.  The
+   ICON effort {{?ICON}} is exploring the use cases, requirements, and
+   solutions in this space; the key challenges identified include:
+
+   *  Limited transparency in agent planning and decision-making.
+
+   *  Difficulty attributing accountability to a specific agent entity
+      or human.
+
+   *  Lack of a standardized way to benchmark network management agents.
+
+   *  Lack of human oversight of long-running autonomous workflows.
+
+   *  Lack of rollback and termination commands, and of a bidirectional
+      interaction channel between the human operator and the network
+      management agent.
+
+   The following aspects apply across the use cases identified above:
+
+   *  Architecture
+
+      Observability, evaluation, intervention, and control components
+      attach to the agents introduced in the use cases above (e.g., the
+      AIOps-Assistant front-end and the Gen-AI multi-agent dynamic
+      workflows).  Agent behavior is captured as trajectory records:
+      structured traces of the reasoning sequence, actions, and
+      observations an agent follows to reach its conclusion.  A human
+      oversight channel allows operators to monitor these records,
+      inject policy, and take corrective action.
+
+   *  Interfaces and APIs
+
+      Two interoperability interfaces are identified: a telemetry
+      interface carrying the traces, logs, and metrics that characterize
+      agent behavior and operational state, and a human-agent
+      interaction interface through which operators intervene in and
+      control agent operation.
+
+   *  Protocols
+
+      Telemetry protocol extensions are needed for agent behavior
+      observability.  Where possible, solutions should be built in a
+      modular way using existing IETF protocols (e.g., NETCONF {{?RFC6241}}
+      or RESTCONF {{?RFC8040}} for provisioning intervention and control
+      policies), with protocol choices made only after the functional
+      requirements have been agreed.  Coordination with the
+      OpenTelemetry community is also anticipated.
+
+   *  Data Models
+
+      A common schema and information model for agent observability is a
+      key gap: trace, log, and metric structures for agent behavior,
+      trajectory records supporting auditability and accountability, and
+      policy elements for intervention and for control.  Such models
+      would complement the AI agent audit log and governance parameters
+      proposed in {{?I-D.smith-opsawg-ai-network-governance}}.
+
+   *  Processes and Procedures
+
+      Human operators retain authority for monitoring, policy injection,
+      emergency interruption, and corrective actions, consistent with
+      the human-in-the-loop framework of {{?I-D.irtf-nmrg-llm-nm}}.
+      Evaluation processes use trajectory records to assess how an agent
+      solved a problem and whether it operated within its permitted
+      boundaries.
+
+   *  Alignment with IETF
+
+      This work aligns with the ICON effort {{?ICON}}, discussed at an IETF
+      126 side meeting, and with the AINETOPS mailing list activity
+      described in Section 1.2.  Agent discovery, trust and
+      authorization, and agent-to-agent communication are explicitly out
+      of scope of ICON; those aspects are addressed by the DAWN and
+      AGENTPROTO activities discussed in Section 5.13.
 
 # Security Considerations
 
