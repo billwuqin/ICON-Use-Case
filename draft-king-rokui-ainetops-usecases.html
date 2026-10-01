@@ -2548,9 +2548,9 @@ in <span>[<a href="#I-D.carpenter-anima-grasp-rendezvous" class="cite xref">I-D.
    |            +-------v-------+             |
    |            |   P-PNC(s),   |  (F)  +-----+--------+
    +------------+   O-PNC(s),   |------&gt;|Observability |
-                                |   MDSC        |       | Process      |
-                                +-------^-------+       +--------------+
-                                        (A) |
+                |   MDSC        |       |   Process    |
+                +-------^-------+       +--------------+
+                                            |(A)
                                                 |
                           +---------+-----------+
                           |                     |
@@ -2629,9 +2629,9 @@ in <span>[<a href="#I-D.carpenter-anima-grasp-rendezvous" class="cite xref">I-D.
        |  &amp;Refinement    +----------------V--+
        +-----------------+                   |
                          |  Network Anomaly (B)Network Policy
-           |-----------&gt;|  Detection Agent  |------------|
-           | A)Network  |                   |            |
-           | Telemetry  +-------------------+            |
+           +-----------&gt; |  Detection Agent  |-----------+
+           | A)Network   |                   |           |
+           | Telemetry   +-------------------+           |
            |                                             |
 +----------+---------------------------------------------+--------+
 | +--------|----------+       MCP Server      +----------|------+ |
