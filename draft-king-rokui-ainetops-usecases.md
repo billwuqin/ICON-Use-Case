@@ -1150,7 +1150,7 @@ For every use case described, the following dimensions are examined to provide a
      (E) Optional remedial actions
 	 (F) Telemetry for agent behavior visibility
 	 (G) Evaluate operational anomalies or performance drifts
-	 (H) The Agent management plane notifies Human Operator 
+	 (H) The Agent management plane notifies Human Operator
 	 (I) The human Operator uses AI guardrail Assistant to intervene or control Network Agent.
 
 {: #assurance-guardrail title=" Multi-layer Active Assurance Using Network Agent and AI Guardrail" artwork-align="center"}
