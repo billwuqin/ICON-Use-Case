@@ -1133,13 +1133,14 @@ For every use case described, the following dimensions are examined to provide a
    +------------+   O-PNC(s),   |------>|Observability |
                 |   MDSC        |       |   Process    |
                 +-------^-------+       +--------------+
-					    |(A)
-						|
-			  +---------+-----------+
-			  |                     |
-			  |  IP/Optical Network |
-			  |                     |
-			  +---------------------+
+                        |(A)
+                        |
+              +---------+------------+
+              |                      |
+              | IP/Optical Network   |
+              |                      |
+              +----------------------+
+
      Legend:
      (A) A fault happened in the network
          (e.g., Fiber cut, IP packet drop, TCA crossing etc.)
