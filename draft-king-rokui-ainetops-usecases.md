@@ -1254,7 +1254,6 @@ For every use case described, the following dimensions are examined to provide a
    for sensitive data, or ensure that network configurations align with
    GDPR requirements. If violations are detected, AI Guardrail can automatically
    remediate issues or alert operators for manual intervention.
-   
    AI Guardrails generally operate at three distinct operational levels to enforce
    policy and ensure :
    - Input Guardrails (Prompt Shielding)
