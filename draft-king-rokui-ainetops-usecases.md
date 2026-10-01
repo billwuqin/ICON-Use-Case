@@ -1177,7 +1177,6 @@ For every use case described, the following dimensions are examined to provide a
    suppressing the alarm),perform detailed postmortem analysis of Problems
    with the objective to identify useful adjustments to the prevention and detection
    mechanisms.
-   
    After the adjustments are generated, it will be sent to AI Guardrail  Assistant and
    the AI Guardrail  Assistant apply adjustments to the Network Anomaly Detection Agent,
    the cycle starts again. Alternatively,  Any remediation action flagged as "high-impact"
