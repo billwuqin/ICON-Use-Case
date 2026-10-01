@@ -1327,7 +1327,6 @@ For every use case described, the following dimensions are examined to provide a
    policies) and retests. And then Network Agent Behavior related to Tools Excution, Reason
    can be collected and report to the AI Guardrail. The AI Guardrail can use Evaluate process
    to Evaluate how well the Fault management Network Agent are run to support Network resilience test.
-   
             +--------------------------------------+
             |Network Management AI Guardrail       |
             |    +--------------+    +-----------+ |
