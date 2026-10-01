@@ -1153,8 +1153,8 @@ For every use case described, the following dimensions are examined to provide a
 	 (G) Evaluate operational anomalies or performance drifts
 	 (H) The Agent management plane notifies Human Operator
 	 (I) The human Operator uses AI guardrail Assistant to intervene or control Network Agent.
-~~~~
 
+~~~~
 {: #assurance-guardrail title=" Multi-layer Active Assurance Using Network Agent and AI Guardrail" artwork-align="center"}
 
 ##   Network Anomaly Detection with AI Guardrail Support
@@ -1231,9 +1231,9 @@ For every use case described, the following dimensions are examined to provide a
 	 (D) Generate adjustments to the Network Anomaly Detection Agent
 	 (E) AI Guardrail Assistant optimizes the Detection Agent based on Adjustment policy
 	     or Detection Agent requests Human-in-the-Loop Escalation from AI Guardrail Assistant
-~~~~
 
-{: #fault-guardrail title=" network anomaly detection optimization using AI Guardrail" artwork-align="center"}
+~~~~
+{: #fault-guardrail title="Network anomaly detection optimization using AI Guardrail" artwork-align="center"}
 
 ## AI-Driven Policy Enforcement and Compliance Auditing using AI Guardrail
 
@@ -1298,9 +1298,9 @@ For every use case described, the following dimensions are examined to provide a
    (A) Policy enforcement commands (e.g., block traffic, adjust QoS)
    (B) Agent Observability Information Feedback
    (C) Compliance reports and alerts
-~~~~
 
-{: #audit-guardrail title="  AI-Driven Policy Enforcement and Compliance Auditing using AI Guardrail" artwork-align="center"}
+~~~~
+{: #audit-guardrail title="AI-Driven Policy Enforcement and Compliance Auditing using AI Guardrail" artwork-align="center"}
 
 ## Agentic AI-Driven Resilience Testing using AI Guardrail
 
@@ -1363,8 +1363,8 @@ For every use case described, the following dimensions are examined to provide a
   (C  Recovery actions (e.g., reroute traffic, adjust optical parameters)
   (D) Agent Telemetry Collection (e.g., tool invoking success rate, Task Success rate)
   (E) Agent Resilience Test Performance Evaluation
-~~~~
 
+~~~~
 {: #resilience-guardrail title="Agentic AI-Driven Resilience Testing using AI Guardrail" artwork-align="center"}
 
 # Agent Observability, Intervention, and Control
