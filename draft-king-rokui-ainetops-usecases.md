@@ -1118,21 +1118,21 @@ For every use case described, the following dimensions are examined to provide a
 
 ~~~~
 |------------|   |-------------------|
-|    AIOps   |(C)|  Domain Specific  | (I)|------------|
-| Assistant  +--->  Network Agent    <----+AI Guardrail|
+|    AIOps   |(C)|  Domain Specific  | (I)|------------+
+| Assistant  +--->  Network Agent    <----|AI Guardrail|
 |-----^------|   |    (D)            |    | Assistant  |
-   |             |-------------------|    |---^--------|
+   |             |-------------------|    |---^--------+
    |                    |                     |(H)
-   |                    |               |-----+------|
+   |                    |               |-----+------+
    |                    |               | Evaluation |
    |                    |(E)            | Process    |
-   | (B)                |               |-----^------|
+   | (B)                |               |-----^------+
    |                    |                     |(G)
-   |            |-------v-------|             |
-   |            |   P-PNC(s),   |  (F)  |-----+-----|
-   +------------+   O-PNC(s),   |------>Observabiltiy
-				|   MDSC        |       | Process   |
-				|---------------|       |-----------|
+   |            +-------v-------+             |
+   |            |   P-PNC(s),   |  (F)  |-----+--------+
+   +------------+   O-PNC(s),   |------>|Observabilitiy|
+				|   MDSC        |       | Process      |
+				+---------------+       |--------------+
 					(A) ^
 						|
 			  +---------+-----------+
@@ -1140,7 +1140,6 @@ For every use case described, the following dimensions are examined to provide a
 			  |  IP/Optical Network |
 			  |                     |
 			  +---------------------+
-
 
      Legend:
      (A) A fault happened in the network
