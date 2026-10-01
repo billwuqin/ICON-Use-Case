@@ -1264,7 +1264,6 @@ For every use case described, the following dimensions are examined to provide a
   - Continuous Auditing (Logging & Analytics)
      - Goal: Provide a transparent audit trail for compliance officers and regulators.
 	 - Key Enforcements: Maintaining detailed logs of inputs, safety violations, system interventions, and Agent Behavior drift over time.
-   
          +-----------+       +-------------+
          | Evaluation+-------> AI Guardrail|
          | Process   |       |  Assistant  |
