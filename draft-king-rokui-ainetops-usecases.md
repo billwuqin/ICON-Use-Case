@@ -1117,29 +1117,29 @@ For every use case described, the following dimensions are examined to provide a
    to operational anomalies or performance drifts.
 
 ~~~~
-	|------------|   |-------------------|
-	|    AIOps   |(C)|  Domain Specific  | (I)|------------|
-	| Assistant  +--->  Network Agent    <----+AI Guardrail|
-	|-----^------|   |    (D)            |    | Assistant  |
-	   |             |-------------------|    |---^--------|
-	   |                    |                     |(H)
-	   |                    |               |-----+------|
-	   |                    |               | Evaluation |
-	   |                    |(E)            | Process    |
-	   | (B)                |               |-----^------|
-	   |                    |                     |(G)
-	   |            |-------v-------|             |
-	   |            |   P-PNC(s),   |  (F)  |-----+-----|
-	   +------------+   O-PNC(s),   |------>Observabiltiy
-					|   MDSC        |       | Process   |
-					|---------------|       |-----------|
-						(A) ^
-							|
-				  +---------+-----------+
-				  |                     |
-				  |  IP/Optical Network |
-				  |                     |
-				  +---------------------+
+|------------|   |-------------------|
+|    AIOps   |(C)|  Domain Specific  | (I)|------------|
+| Assistant  +--->  Network Agent    <----+AI Guardrail|
+|-----^------|   |    (D)            |    | Assistant  |
+   |             |-------------------|    |---^--------|
+   |                    |                     |(H)
+   |                    |               |-----+------|
+   |                    |               | Evaluation |
+   |                    |(E)            | Process    |
+   | (B)                |               |-----^------|
+   |                    |                     |(G)
+   |            |-------v-------|             |
+   |            |   P-PNC(s),   |  (F)  |-----+-----|
+   +------------+   O-PNC(s),   |------>Observabiltiy
+				|   MDSC        |       | Process   |
+				|---------------|       |-----------|
+					(A) ^
+						|
+			  +---------+-----------+
+			  |                     |
+			  |  IP/Optical Network |
+			  |                     |
+			  +---------------------+
 
 
      Legend:
