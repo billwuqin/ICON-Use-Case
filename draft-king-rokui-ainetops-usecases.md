@@ -1165,7 +1165,6 @@ For every use case described, the following dimensions are examined to provide a
    methods are often insufficient.  The integration of machine learning techniques
    into network anomaly detection system offers a more
    dynamic and adaptive approach to detecting anomalies in real-time.
-   
    The lifecycle of a network anomaly can be articulated in three
    stages, structured as a loop: Detection, Validation, Refinement.
    The Network Anomaly Detection stage is performed by the Agent while
