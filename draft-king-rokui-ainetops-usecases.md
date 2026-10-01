@@ -1141,17 +1141,16 @@ For every use case described, the following dimensions are examined to provide a
               |                      |
               +----------------------+
 
-     Legend:
-     (A) A fault happened in the network
-         (e.g., Fiber cut, IP packet drop, TCA crossing etc.)
-     (B) The higher layer Controller notifies Operator
-     (C) To start troubleshooting, AIOps-Assistant starts automatically
-     (D) Start troubleshooting using Gen-AI multi-agent dynamic workflow
-     (E) Optional remedial actions
-	 (F) Telemetry for agent behavior visibility
-	 (G) Evaluate operational anomalies or performance drifts
-	 (H) The Agent management plane notifies Human Operator
-	 (I) The human Operator uses AI guardrail Assistant to intervene or control Network Agent.
+Legend:
+(A) A fault happened in the network (e.g., Fiber cut, IP packet drop, TCA crossing etc.)
+(B) The higher layer Controller notifies Operator
+(C) To start troubleshooting, AIOps-Assistant starts automatically
+(D) Start troubleshooting using Gen-AI multi-agent dynamic workflow
+(E) Optional remedial actions
+(F) Telemetry for agent behavior visibility
+(G) Evaluate operational anomalies or performance drifts
+(H) The Agent management plane notifies Human Operator
+(I) The human Operator uses AI guardrail Assistant to intervene or control Network Agent.
 
 ~~~~
 {: #assurance-guardrail title=" Multi-layer Active Assurance Using Network Agent and AI Guardrail" artwork-align="center"}
@@ -1223,13 +1222,13 @@ For every use case described, the following dimensions are examined to provide a
                       | Endpoints, etc.)  |
                       +-------------------+
 
-     Legend:
-     (A) Network Telemetry Information Collection
-	 (B) Resolve the problem with the Network Policy
-	 (C) Evaluate the network anomalies and identify useful adjustments
-	 (D) Generate adjustments to the Network Anomaly Detection Agent
-	 (E) AI Guardrail Assistant optimizes the Detection Agent based on Adjustment policy
-	     or Detection Agent requests Human-in-the-Loop Escalation from AI Guardrail Assistant
+Legend:
+(A) Network Telemetry Information Collection
+(B) Resolve the problem with the Network Policy
+(C) Evaluate the network anomalies and identify useful adjustments
+(D) Generate adjustments to the Network Anomaly Detection Agent
+(E) AI Guardrail Assistant optimizes the Detection Agent based on Adjustment policy
+    or Detection Agent requests Human-in-the-Loop Escalation from AI Guardrail Assistant
 
 ~~~~
 {: #fault-guardrail title="Network anomaly detection optimization using AI Guardrail" artwork-align="center"}
@@ -1356,12 +1355,12 @@ For every use case described, the following dimensions are examined to provide a
   |                                                       |
   +-------------------------------------------------------+
 
-  Legend
-  (A) Fault injection commands (e.g., disable link, drop packets, degrade signal)
-  (B) Telemetry feedback (e.g., latency, packet loss, BER)
-  (C  Recovery actions (e.g., reroute traffic, adjust optical parameters)
-  (D) Agent Telemetry Collection (e.g., tool invoking success rate, Task Success rate)
-  (E) Agent Resilience Test Performance Evaluation
+Legend
+(A) Fault injection commands (e.g., disable link, drop packets, degrade signal)
+(B) Telemetry feedback (e.g., latency, packet loss, BER)
+(C)  Recovery actions (e.g., reroute traffic, adjust optical parameters)
+(D) Agent Telemetry Collection (e.g., tool invoking success rate, Task Success rate)
+(E) Agent Resilience Test Performance Evaluation
 
 ~~~~
 {: #resilience-guardrail title="Agentic AI-Driven Resilience Testing using AI Guardrail" artwork-align="center"}
