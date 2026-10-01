@@ -1116,6 +1116,7 @@ For every use case described, the following dimensions are examined to provide a
    In step G, these information will be further fed into evaluation process
    to operational anomalies or performance drifts.
 
+~~~~
 	|------------|   |-------------------|
 	|    AIOps   |(C)|  Domain Specific  | (I)|------------|
 	| Assistant  +--->  Network Agent    <----+AI Guardrail|
@@ -1152,8 +1153,10 @@ For every use case described, the following dimensions are examined to provide a
 	 (G) Evaluate operational anomalies or performance drifts
 	 (H) The Agent management plane notifies Human Operator
 	 (I) The human Operator uses AI guardrail Assistant to intervene or control Network Agent.
+~~~~
 
 {: #assurance-guardrail title=" Multi-layer Active Assurance Using Network Agent and AI Guardrail" artwork-align="center"}
+
 ##   Network Anomaly Detection with AI Guardrail Support
 
    Network anomaly detection is a critical component of modern network
@@ -1187,7 +1190,7 @@ For every use case described, the following dimensions are examined to provide a
    has drifted or been poisoned by bad telemetry, the AI guardrail can switch the network back to
    traditional, static threshold-based detection.
 
-
+~~~~
 +----------------------------+
 |     Agent Observability    |(D)Optimization
 |+----------+   +----------+ |
@@ -1221,8 +1224,6 @@ For every use case described, the following dimensions are examined to provide a
                       | Endpoints, etc.)  |
                       +-------------------+
 
-
-
      Legend:
      (A) Network Telemetry Information Collection
 	 (B) Resolve the problem with the Network Policy
@@ -1230,10 +1231,11 @@ For every use case described, the following dimensions are examined to provide a
 	 (D) Generate adjustments to the Network Anomaly Detection Agent
 	 (E) AI Guardrail Assistant optimizes the Detection Agent based on Adjustment policy
 	     or Detection Agent requests Human-in-the-Loop Escalation from AI Guardrail Assistant
+~~~~
 
 {: #fault-guardrail title=" network anomaly detection optimization using AI Guardrail" artwork-align="center"}
 
-  ## AI-Driven Policy Enforcement and Compliance Auditing using AI Guardrail
+## AI-Driven Policy Enforcement and Compliance Auditing using AI Guardrail
 
    This use case leverages Network Change AI Agent to automate the enforcement of network
    policies and auditing of compliance with regulatory standards,ethical, and organizational boundaries and
@@ -1263,6 +1265,8 @@ For every use case described, the following dimensions are examined to provide a
   - Continuous Auditing (Logging & Analytics)
      - Goal: Provide a transparent audit trail for compliance officers and regulators.
 	 - Key Enforcements: Maintaining detailed logs of inputs, safety violations, system interventions, and Agent Behavior drift over time.
+
+~~~~
          +-----------+       +-------------+
          | Evaluation+-------> AI Guardrail|
          | Process   |       |  Assistant  |
@@ -1294,6 +1298,7 @@ For every use case described, the following dimensions are examined to provide a
    (A) Policy enforcement commands (e.g., block traffic, adjust QoS)
    (B) Agent Observability Information Feedback
    (C) Compliance reports and alerts
+~~~~
 
 {: #audit-guardrail title="  AI-Driven Policy Enforcement and Compliance Auditing using AI Guardrail" artwork-align="center"}
 
@@ -1321,6 +1326,8 @@ For every use case described, the following dimensions are examined to provide a
    policies) and retests. And then Network Agent Behavior related to Tools Excution, Reason
    can be collected and report to the AI Guardrail. The AI Guardrail can use Evaluate process
    to Evaluate how well the Fault management Network Agent are run to support Network resilience test.
+
+~~~~
             +--------------------------------------+
             |Network Management AI Guardrail       |
             |    +--------------+    +-----------+ |
@@ -1356,6 +1363,7 @@ For every use case described, the following dimensions are examined to provide a
   (C  Recovery actions (e.g., reroute traffic, adjust optical parameters)
   (D) Agent Telemetry Collection (e.g., tool invoking success rate, Task Success rate)
   (E) Agent Resilience Test Performance Evaluation
+~~~~
 
 {: #resilience-guardrail title="Agentic AI-Driven Resilience Testing using AI Guardrail" artwork-align="center"}
 
