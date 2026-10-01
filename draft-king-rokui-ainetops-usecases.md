@@ -1154,7 +1154,6 @@ For every use case described, the following dimensions are examined to provide a
 	 (I) The human Operator uses AI guardrail Assistant to intervene or control Network Agent.
 
 {: #assurance-guardrail title=" Multi-layer Active Assurance Using Network Agent and AI Guardrail" artwork-align="center"}
- 
 ##   Network Anomaly Detection with AI Guardrail Support
 
    Network anomaly detection is a critical component of modern network
