@@ -1186,7 +1186,6 @@ For every use case described, the following dimensions are examined to provide a
    by the Network Anomaly Detection Agent is put into a correction queue and escalated to
    AI Guardrail Assistant, requiring manual administrative approval via an external management
    console before execution.
-   
    If consecutive-point monitoring in the Agent Observability Module flags that the AI baseline
    has drifted or been poisoned by bad telemetry, the AI guardrail can switch the network back to
    traditional, static threshold-based detection.
