@@ -1131,9 +1131,9 @@ For every use case described, the following dimensions are examined to provide a
    |            +-------v-------+             |
    |            |   P-PNC(s),   |  (F)  +-----+--------+
    +------------+   O-PNC(s),   |------>|Observability |
-				|   MDSC        |       | Process      |
-				+-------^-------+       +--------------+
-					(A) |
+                |   MDSC        |       |   Process    |
+                +-------^-------+       +--------------+
+					    |(A)
 						|
 			  +---------+-----------+
 			  |                     |
@@ -1202,9 +1202,9 @@ For every use case described, the following dimensions are examined to provide a
        |  &Refinement    +----------------V--+
        +-----------------+                   |
                          |  Network Anomaly (B)Network Policy
-           |----------->|  Detection Agent  |------------|
-           | A)Network  |                   |            |
-           | Telemetry  +-------------------+            |
+           +-----------> |  Detection Agent  |-----------+
+           | A)Network   |                   |           |
+           | Telemetry   +-------------------+           |
            |                                             |
 +----------+---------------------------------------------+--------+
 | +--------|----------+       MCP Server      +----------|------+ |
