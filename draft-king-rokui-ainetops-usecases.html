@@ -2535,21 +2535,21 @@ in <span>[<a href="#I-D.carpenter-anima-grasp-rendezvous" class="cite xref">I-D.
           <div class="alignCenter art-text artwork" id="section-6.1-5.1">
 <pre>
 |------------|   |-------------------|
-|    AIOps   |(C)|  Domain Specific  | (I)|------------|
-| Assistant  +---&gt;  Network Agent    &lt;----+AI Guardrail|
+|    AIOps   |(C)|  Domain Specific  | (I)|------------+
+| Assistant  +---&gt;  Network Agent    &lt;----|AI Guardrail|
 |-----^------|   |    (D)            |    | Assistant  |
-   |             |-------------------|    |---^--------|
+   |             |-------------------|    |---^--------+
    |                    |                     |(H)
-   |                    |               |-----+------|
+   |                    |               |-----+------+
    |                    |               | Evaluation |
    |                    |(E)            | Process    |
-   | (B)                |               |-----^------|
+   | (B)                |               |-----^------+
    |                    |                     |(G)
-   |            |-------v-------|             |
-   |            |   P-PNC(s),   |  (F)  |-----+-----|
-   +------------+   O-PNC(s),   |------&gt;Observabiltiy
-                                |   MDSC        |       | Process   |
-                                |---------------|       |-----------|
+   |            +-------v-------+             |
+   |            |   P-PNC(s),   |  (F)  |-----+--------+
+   +------------+   O-PNC(s),   |------&gt;|Observabilitiy|
+                                |   MDSC        |       | Process      |
+                                +---------------+       |--------------+
                                         (A) ^
                                                 |
                           +---------+-----------+
@@ -2557,7 +2557,6 @@ in <span>[<a href="#I-D.carpenter-anima-grasp-rendezvous" class="cite xref">I-D.
                           |  IP/Optical Network |
                           |                     |
                           +---------------------+
-
 
      Legend:
      (A) A fault happened in the network

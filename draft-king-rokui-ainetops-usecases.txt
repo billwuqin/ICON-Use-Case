@@ -1172,21 +1172,21 @@ Table of Contents
    to operational anomalies or performance drifts.
 
 |------------|   |-------------------|
-|    AIOps   |(C)|  Domain Specific  | (I)|------------|
-| Assistant  +--->  Network Agent    <----+AI Guardrail|
+|    AIOps   |(C)|  Domain Specific  | (I)|------------+
+| Assistant  +--->  Network Agent    <----|AI Guardrail|
 |-----^------|   |    (D)            |    | Assistant  |
-   |             |-------------------|    |---^--------|
+   |             |-------------------|    |---^--------+
    |                    |                     |(H)
-   |                    |               |-----+------|
+   |                    |               |-----+------+
    |                    |               | Evaluation |
    |                    |(E)            | Process    |
-   | (B)                |               |-----^------|
+   | (B)                |               |-----^------+
    |                    |                     |(G)
-   |            |-------v-------|             |
-   |            |   P-PNC(s),   |  (F)  |-----+-----|
-   +------------+   O-PNC(s),   |------>Observabiltiy
-                                |   MDSC        |       | Process   |
-                                |---------------|       |-----------|
+   |            +-------v-------+             |
+   |            |   P-PNC(s),   |  (F)  |-----+--------+
+   +------------+   O-PNC(s),   |------>|Observabilitiy|
+                                |   MDSC        |       | Process      |
+                                +---------------+       |--------------+
                                         (A) ^
                                                 |
                           +---------+-----------+
@@ -1194,7 +1194,6 @@ Table of Contents
                           |  IP/Optical Network |
                           |                     |
                           +---------------------+
-
 
      Legend:
      (A) A fault happened in the network
