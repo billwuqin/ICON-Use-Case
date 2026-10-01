@@ -2550,13 +2550,14 @@ in <span>[<a href="#I-D.carpenter-anima-grasp-rendezvous" class="cite xref">I-D.
    +------------+   O-PNC(s),   |------&gt;|Observability |
                 |   MDSC        |       |   Process    |
                 +-------^-------+       +--------------+
-                                            |(A)
-                                                |
-                          +---------+-----------+
-                          |                     |
-                          |  IP/Optical Network |
-                          |                     |
-                          +---------------------+
+                        |(A)
+                        |
+              +---------+------------+
+              |                      |
+              | IP/Optical Network   |
+              |                      |
+              +----------------------+
+
      Legend:
      (A) A fault happened in the network
          (e.g., Fiber cut, IP packet drop, TCA crossing etc.)
