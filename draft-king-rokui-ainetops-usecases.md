@@ -1117,30 +1117,29 @@ For every use case described, the following dimensions are examined to provide a
    to operational anomalies or performance drifts.
 
 ~~~~
-|------------|   |-------------------|
++------------+   +-------------------+
 |    AIOps   |(C)|  Domain Specific  | (I)|------------+
 | Assistant  +--->  Network Agent    <----|AI Guardrail|
-|-----^------|   |    (D)            |    | Assistant  |
-   |             |-------------------|    |---^--------+
++--^---------+   |    (D)            |    | Assistant  |
+   |             +-------------------+    +---^--------+
    |                    |                     |(H)
-   |                    |               |-----+------+
+   |                    |               +-----+------+
    |                    |               | Evaluation |
    |                    |(E)            | Process    |
-   | (B)                |               |-----^------+
+   | (B)                |               +-----^------+
    |                    |                     |(G)
    |            +-------v-------+             |
-   |            |   P-PNC(s),   |  (F)  |-----+--------+
-   +------------+   O-PNC(s),   |------>|Observabilitiy|
+   |            |   P-PNC(s),   |  (F)  +-----+--------+
+   +------------+   O-PNC(s),   |------>|Observability |
 				|   MDSC        |       | Process      |
-				+---------------+       |--------------+
-					(A) ^
+				+-------^-------+       +--------------+
+					(A) |
 						|
 			  +---------+-----------+
 			  |                     |
 			  |  IP/Optical Network |
 			  |                     |
 			  +---------------------+
-
      Legend:
      (A) A fault happened in the network
          (e.g., Fiber cut, IP packet drop, TCA crossing etc.)
