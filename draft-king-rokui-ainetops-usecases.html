@@ -16,8 +16,11 @@ requirements for IETF protocols and architectures. AINetOps applies AI/ML
 techniques to automate and optimize network operations, enabling use
 cases such as reactive troubleshooting, proactive assurance, closed-loop
 optimization, misconfiguration detection, and virtual operator
-assistance. 
-       The document addresses AINetOps for both single-layer IP or Optical
+assistance. In addition, AINetOps also introduces network management agents
+which make AI native operations non-deterministic, therefore constraining
+the behavior of AI agents within operational and compliance boundaries become
+extremely important. 
+       The document addresses AINetOps challenges for both single-layer IP or Optical
 networks and multi-layer IP/Optical networks. It defines the concept of
 AINetOps for networking and provides its operational benefits such as
 network assurance, predictive analytics, network optimization,
@@ -1063,7 +1066,7 @@ svg {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Rokui, et al.</td>
-<td class="center">Expires 4 April 2027</td>
+<td class="center">Expires 5 April 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1076,12 +1079,12 @@ svg {
 <dd class="internet-draft">draft-king-rokui-ainetops-usecases-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-10-01" class="published">1 October 2026</time>
+<time datetime="2026-10-02" class="published">2 October 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2027-04-04">4 April 2027</time></dd>
+<dd class="expires"><time datetime="2027-04-05">5 April 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1112,8 +1115,11 @@ requirements for IETF protocols and architectures. AINetOps applies AI/ML
 techniques to automate and optimize network operations, enabling use
 cases such as reactive troubleshooting, proactive assurance, closed-loop
 optimization, misconfiguration detection, and virtual operator
-assistance.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
-<p id="section-abstract-2">The document addresses AINetOps for both single-layer IP or Optical
+assistance. In addition, AINetOps also introduces network management agents
+which make AI native operations non-deterministic, therefore constraining
+the behavior of AI agents within operational and compliance boundaries become
+extremely important.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-2">The document addresses AINetOps challenges for both single-layer IP or Optical
 networks and multi-layer IP/Optical networks. It defines the concept of
 AINetOps for networking and provides its operational benefits such as
 network assurance, predictive analytics, network optimization,
@@ -1147,7 +1153,7 @@ protocols to support AINetOps-driven network management.<a href="#section-abstra
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 4 April 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 5 April 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1359,7 +1365,7 @@ and to identify gaps that may require new or extended solutions. This
 document aims to outline key AINetOps use cases, highlight associated
 technical challenges, and propose requirements for protocols and
 architectures to address these challenges effectively.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">The use cases considered in this document span multiple aspects of
+<p id="section-1-3">The use cases considered in this document span across multiple phases of
 network operations, including reactive troubleshooting, proactive
 assurance (e.g., anomaly detection, predictive maintenance), closed-loop
 optimization, and misconfiguration detection. Emerging capabilities, such
@@ -1370,7 +1376,8 @@ these use cases, encompassing IP, optical, and cross-layer optimization,
 underscores the complexity of integrating AINetOps into existing
 networks.<a href="#section-1-3" class="pilcrow">¶</a></p>
 <p id="section-1-4">This document provides a foundation for advancing IETF protocols and
-architectures to enable AINetOps-driven network operations by exploring
+architectures to enable AINetOps-driven network operations and prevent
+non-deterministic outcome introduced by AINetOPs by exploring
 these use cases, the requirements, and their implications.<a href="#section-1-4" class="pilcrow">¶</a></p>
 <div id="background">
 <section id="section-1.1">
@@ -1459,7 +1466,7 @@ deployment experience.<a href="#section-1.2-4.6.1" class="pilcrow">¶</a></p>
    subsequent normative work, such as YANG data models, protocol
    extensions, and operational guidance, rather than to serve as a
    standalone endpoint.<a href="#section-1.3-1" class="pilcrow">¶</a></p>
-<p id="section-1.3-2">The specification of AI and ML algorithms, model architectures, and
+<p id="section-1.3-2">The specification of AI and ML algorithms, AI model architectures, and
    training methodologies is out of scope for this document.  The use
    cases and requirements described here are intentionally agnostic to
    any particular AI technique or implementation.<a href="#section-1.3-2" class="pilcrow">¶</a></p>
@@ -1555,6 +1562,9 @@ resources across different network layers, such as IP and optical layers.<a href
 </li>
         <li class="normal" id="section-2-3.9">
           <p id="section-2-3.9.1">O-PNC: Optical Provisioning Network Controllers<a href="#section-2-3.9.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-2-3.10">
+          <p id="section-2-3.10.1">MDSC: Multi-Domain Service Coordinator<a href="#section-2-3.10.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
@@ -1675,14 +1685,14 @@ resources across different network layers, such as IP and optical layers.<a href
 <a href="#section-5" class="section-number selfRef">5. </a><a href="#name-operational-benefits-provid" class="section-name selfRef">Operational Benefits Provided by AINetOps</a>
       </h2>
 <p id="section-5-1">AINetOps has the potential to revolutionize network operations by
-   addressing the inherent complexity, scale, and dynamic nature of
-   modern networks.  By applying various AI/ML/Gen-AI techniques,
-   network operators can transition from traditional manual or rule-
-   based operations to intelligent, automated systems capable of real-
-   time adaptation, predictive insights, and optimized decision-making.<a href="#section-5-1" class="pilcrow">¶</a></p>
+addressing the inherent complexity, scale, and dynamic nature of
+modern networks.  By applying various AI/ML/Gen-AI techniques,
+network operators can transition from traditional manual or rule-
+based operations to intelligent, automated systems capable of real-
+time adaptation, predictive insights, and optimized decision-making.<a href="#section-5-1" class="pilcrow">¶</a></p>
 <p id="section-5-2">This section outlines the following key areas where AINetOps can be
-   applied effectively in network operations, leveraging both data-
-   driven models and domain-specific knowledge.<a href="#section-5-2" class="pilcrow">¶</a></p>
+applied effectively in network operations, leveraging both data-
+driven models and domain-specific knowledge.<a href="#section-5-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-5-3.1">
           <p id="section-5-3.1.1">Section 5.1 "Operator Network Assistance"<a href="#section-5-3.1.1" class="pilcrow">¶</a></p>
@@ -2464,26 +2474,35 @@ in <span>[<a href="#I-D.carpenter-anima-grasp-rendezvous" class="cite xref">I-D.
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-ainetops-scenarios-and-use-" class="section-name selfRef">AINetOps Scenarios and Use-cases</a>
       </h2>
 <p id="section-6-1">{Editor's note: This is a work in progress. More use cases will be added, and existing ones will be revised.}<a href="#section-6-1" class="pilcrow">¶</a></p>
-<p id="section-6-2">This section further expands Section 5 by exploring scenarios and use cases for applying AINetOps in network operations, focusing on their architectural, procedural, and protocol-level requirements.  Each use case highlights how AINetOps can be leveraged to address challenges in network management and optimization, while identifying the relevant IETF protocols, interfaces, and data models that are evolved or need enhancement.<a href="#section-6-2" class="pilcrow">¶</a></p>
-<p id="section-6-3">For every use case described, the following dimensions are examined to provide a comprehensive understanding of its implications and requirements.<a href="#section-6-3" class="pilcrow">¶</a></p>
+<p id="section-6-2">This section further expands Section 5 by exploring scenarios and use cases for applying AINetOps in network
+operations, focusing on their architectural, procedural, and protocol-level requirements.  Each use case
+highlights how AINetOps can be leveraged to address challenges in network management and optimization, while
+identifying the relevant IETF protocols, interfaces, and data models that are evolved or need enhancement.<a href="#section-6-2" class="pilcrow">¶</a></p>
+<p id="section-6-3">For every use case described, the following dimensions are examined to provide a comprehensive understanding
+of its implications and requirements.<a href="#section-6-3" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-6-4.1">
-          <p id="section-6-4.1.1">Architecture: The high-level architecture necessary to support the use case, including control-plane and data-plane interactions, as well as integration points for AI-driven systems.<a href="#section-6-4.1.1" class="pilcrow">¶</a></p>
+          <p id="section-6-4.1.1">Architecture: The high-level architecture necessary to support the use case, including control-plane and
+              data-plane interactions, as well as integration points for AI-driven systems.<a href="#section-6-4.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-6-4.2">
-          <p id="section-6-4.2.1">Interfaces and APIs: The key interfaces between AI systems and network elements, including management APIs (e.g., NETCONF, RESTCONF, gNMI) and telemetry interfaces.<a href="#section-6-4.2.1" class="pilcrow">¶</a></p>
+          <p id="section-6-4.2.1">Interfaces and APIs: The key interfaces between AI systems and network elements, including management APIs
+                      (e.g., NETCONF, RESTCONF, gNMI) and telemetry interfaces.<a href="#section-6-4.2.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-6-4.3">
-          <p id="section-6-4.3.1">Protocols: IETF protocols involved in enabling the use case, and potential extensions to existing protocols to accommodate AI-driven operations.<a href="#section-6-4.3.1" class="pilcrow">¶</a></p>
+          <p id="section-6-4.3.1">Protocols: IETF protocols involved in enabling the use case, and potential extensions to existing protocols
+           to accommodate AI-driven operations.<a href="#section-6-4.3.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-6-4.4">
           <p id="section-6-4.4.1">Data Models: The data models required to represent network state, telemetry, policies, and configurations.<a href="#section-6-4.4.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-6-4.5">
-          <p id="section-6-4.5.1">Processes and Procedures: Workflow considerations for integrating AI systems into existing operational practices, including training, validation, and deployment.<a href="#section-6-4.5.1" class="pilcrow">¶</a></p>
+          <p id="section-6-4.5.1">Processes and Procedures: Workflow considerations for integrating AI systems into existing operational practices,
+                          including training, validation, and deployment.<a href="#section-6-4.5.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-6-4.6">
-          <p id="section-6-4.6.1">Alignment with IETF Standards: Analysis of how existing IETF standards can be leveraged or extended to support the use case.<a href="#section-6-4.6.1" class="pilcrow">¶</a></p>
+          <p id="section-6-4.6.1">Alignment with IETF Standards: Analysis of how existing IETF standards can be leveraged or extended to support the
+                               use case.<a href="#section-6-4.6.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <div id="network-active-assurance-with-network-ai-agent-and-ai-guardrail-support">
@@ -2529,7 +2548,11 @@ in <span>[<a href="#I-D.carpenter-anima-grasp-rendezvous" class="cite xref">I-D.
    as Agent Fabric Gateway Collect log, trace, metric information and report
    them to the Observabiltiy process to establish Agent behavior visibility.
    In step G, these information will be further fed into evaluation process
-   to operational anomalies or performance drifts.<a href="#section-6.1-4" class="pilcrow">¶</a></p>
+   to identify operational anomalies or performance drifts. In Step H,
+   these operational anomalies and performance drifts will be captured
+   by AI Guardrail Assistant, so that human operator can use captured information
+   and AI Guardrial Assitant to check and validate user input,tools invocation,
+   agent output, interrupt, and rollover from unanticipated behaviors.<a href="#section-6.1-4" class="pilcrow">¶</a></p>
 <span id="name-multi-layer-active-assuranc"></span><div id="assurance-guardrail">
 <figure id="figure-3">
           <div class="alignCenter art-text artwork" id="section-6.1-5.1">
@@ -2568,7 +2591,6 @@ Legend:
 (G) Evaluate operational anomalies or performance drifts
 (H) The Agent management plane notifies Human Operator
 (I) The human Operator uses AI guardrail Assistant to intervene or control Network Agent.
-
 </pre>
 </div>
 <figcaption><a href="#figure-3" class="selfRef">Figure 3</a>:
@@ -2672,7 +2694,7 @@ Legend:
         </h3>
 <p id="section-6.3-1">This use case leverages Network Change AI Agent to automate the enforcement of network
    policies and auditing of compliance with regulatory standards,ethical, and organizational boundaries and
-   internal guidelines.  By continuously monitoring network AI Agent Behavior, AI
+   internal guidelines. By continuously monitoring network AI Agent Behavior, AI
    Guardrail ensures that policies are consistently applied and compliance requirements are
    met.  This use case addresses both single-layer (e.g., IP) and multi-
    layer (e.g., IP over optical) scenarios, as well as cross-domain
@@ -2747,26 +2769,26 @@ Legend:
 <a href="#section-6.4" class="section-number selfRef">6.4. </a><a href="#name-agentic-ai-driven-resilienc" class="section-name selfRef">Agentic AI-Driven Resilience Testing using AI Guardrail</a>
         </h3>
 <p id="section-6.4-1">This use case leverages AI to design and execute fault injection
-   scenarios that test the resilience of IP/optical networks under
-   simulated failure conditions.  By proactively introducing controlled
-   disruptions-such as packet drops, latency spikes, or optical signal
-   degradation- AI Guardrail system assesses the network Agent 's ability to detect, respond to,
-   and recover from faults.  This approach enhances network robustness
-   by identifying weaknesses and validating automated recovery
-   mechanisms before real failures occur, addressing both single-layer
-   (IP or optical) and multi-layer (IP over optical) scenarios.<a href="#section-6.4-1" class="pilcrow">¶</a></p>
+scenarios that test the resilience of IP/optical networks under
+simulated failure conditions.  By proactively introducing controlled
+disruptions-such as packet drops, latency spikes, or optical signal
+degradation- AI Guardrail system assesses the network Agent 's ability to detect, respond to,
+and recover from faults.  This approach enhances network robustness
+by identifying weaknesses and validating automated recovery
+mechanisms before real failures occur, addressing both single-layer
+(IP or optical) and multi-layer (IP over optical) scenarios.<a href="#section-6.4-1" class="pilcrow">¶</a></p>
 <p id="section-6.4-2">The Fault management AI Agent analyzes historical failure data (e.g., fiber cuts,
-   equipment outages), real-time telemetry (e.g., latency, BER), and
-   external factors (e.g., weather events, traffic surges) to model
-   probable failure points.  It then trigger AI Fault Inject Engine to
-   inject faults, monitors the network's response, and refines recovery
-   strategies, potentially in a closed-loop manner.  For example, an Fault management AI Agent
-   might predict a high-risk optical link based on trending attenuation, simulate a fiber
-   cut, and evaluate whether IP-layer rerouting maintains SLAs.  If
-   recovery is suboptimal, it suggests adjustments (e.g., updating TE
-   policies) and retests. And then Network Agent Behavior related to Tools Excution, Reason
-   can be collected and report to the AI Guardrail. The AI Guardrail can use Evaluate process
-   to Evaluate how well the Fault management Network Agent are run to support Network resilience test.<a href="#section-6.4-2" class="pilcrow">¶</a></p>
+equipment outages), real-time telemetry (e.g., latency, BER), and
+external factors (e.g., weather events, traffic surges) to model
+probable failure points.  It then trigger AI Fault Inject Engine to
+inject faults, monitors the network's response, and refines recovery
+strategies, potentially in a closed-loop manner.  For example, an Fault management AI Agent
+might predict a high-risk optical link based on trending attenuation, simulate a fiber
+cut, and evaluate whether IP-layer rerouting maintains SLAs.  If
+recovery is suboptimal, it suggests adjustments (e.g., updating TE
+policies) and retests. And then Network Agent Behavior related to Tools Excution, Reason
+can be collected and report to the AI Guardrail. The AI Guardrail can use Evaluate process
+to Evaluate how well the Fault management Network Agent are run to support Network resilience test.<a href="#section-6.4-2" class="pilcrow">¶</a></p>
 <span id="name-agentic-ai-driven-resilience"></span><div id="resilience-guardrail">
 <figure id="figure-6">
           <div class="alignCenter art-text artwork" id="section-6.4-3.1">

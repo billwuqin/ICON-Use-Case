@@ -5,11 +5,11 @@
 Network Working Group                                           R. Rokui
 Internet-Draft                                                     Ciena
 Intended status: Informational                                   D. King
-Expires: 4 April 2027                               Lancaster University
+Expires: 5 April 2027                               Lancaster University
                                                                    C. Li
                                                                    Q. Wu
                                                                   Huawei
-                                                          1 October 2026
+                                                          2 October 2026
 
 
           Artificial Intelligence (AI) for Network Operations
@@ -23,14 +23,19 @@ Abstract
    applies AI/ML techniques to automate and optimize network operations,
    enabling use cases such as reactive troubleshooting, proactive
    assurance, closed-loop optimization, misconfiguration detection, and
-   virtual operator assistance.
+   virtual operator assistance.  In addition, AINetOps also introduces
+   network management agents which make AI native operations non-
+   deterministic, therefore constraining the behavior of AI agents
+   within operational and compliance boundaries become extremely
+   important.
 
-   The document addresses AINetOps for both single-layer IP or Optical
-   networks and multi-layer IP/Optical networks.  It defines the concept
-   of AINetOps for networking and provides its operational benefits such
-   as network assurance, predictive analytics, network optimization,
-   multi-layer planning, and more.  It aims to guide the evolution of
-   IETF protocols to support AINetOps-driven network management.
+   The document addresses AINetOps challenges for both single-layer IP
+   or Optical networks and multi-layer IP/Optical networks.  It defines
+   the concept of AINetOps for networking and provides its operational
+   benefits such as network assurance, predictive analytics, network
+   optimization, multi-layer planning, and more.  It aims to guide the
+   evolution of IETF protocols to support AINetOps-driven network
+   management.
 
 Discussion Venues
 
@@ -54,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 April 2027.
+   This Internet-Draft will expire on 5 April 2027.
 
 Copyright Notice
 
@@ -145,8 +150,8 @@ Table of Contents
    for protocols and architectures to address these challenges
    effectively.
 
-   The use cases considered in this document span multiple aspects of
-   network operations, including reactive troubleshooting, proactive
+   The use cases considered in this document span across multiple phases
+   of network operations, including reactive troubleshooting, proactive
    assurance (e.g., anomaly detection, predictive maintenance), closed-
    loop optimization, and misconfiguration detection.  Emerging
    capabilities, such as generative AI for operational insights and
@@ -157,8 +162,9 @@ Table of Contents
    integrating AINetOps into existing networks.
 
    This document provides a foundation for advancing IETF protocols and
-   architectures to enable AINetOps-driven network operations by
-   exploring these use cases, the requirements, and their implications.
+   architectures to enable AINetOps-driven network operations and
+   prevent non-deterministic outcome introduced by AINetOPs by exploring
+   these use cases, the requirements, and their implications.
 
 1.1.  Background
 
@@ -233,10 +239,10 @@ Table of Contents
    extensions, and operational guidance, rather than to serve as a
    standalone endpoint.
 
-   The specification of AI and ML algorithms, model architectures, and
-   training methodologies is out of scope for this document.  The use
-   cases and requirements described here are intentionally agnostic to
-   any particular AI technique or implementation.
+   The specification of AI and ML algorithms, AI model architectures,
+   and training methodologies is out of scope for this document.  The
+   use cases and requirements described here are intentionally agnostic
+   to any particular AI technique or implementation.
 
 2.  Conventions and Definitions
 
@@ -280,6 +286,8 @@ Table of Contents
    *  P-PNC: Packet Provisioning Network Controllers
 
    *  O-PNC: Optical Provisioning Network Controllers
+
+   *  MDSC: Multi-Domain Service Coordinator
 
 3.  AI, ML, Deep Learning and Gen-AI
 
@@ -1169,7 +1177,12 @@ Table of Contents
    Gateway Collect log, trace, metric information and report them to the
    Observabiltiy process to establish Agent behavior visibility.  In
    step G, these information will be further fed into evaluation process
-   to operational anomalies or performance drifts.
+   to identify operational anomalies or performance drifts.  In Step H,
+   these operational anomalies and performance drifts will be captured
+   by AI Guardrail Assistant, so that human operator can use captured
+   information and AI Guardrial Assitant to check and validate user
+   input,tools invocation, agent output, interrupt, and rollover from
+   unanticipated behaviors.
 
 +------------+   +-------------------+
 |    AIOps   |(C)|  Domain Specific  | (I)|------------+
