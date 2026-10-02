@@ -1290,23 +1290,23 @@ at three distinct operational levels to enforce policy and ensure :
                |                v
      +------------------------------------+
      |     Domain Specific Network        |
-     |            Change Agent            | 
+     |            Change Agent            |
      |    (Policy Enforcement&Compliance) |
-     |----------------^-------------------|
+     +----------------^-------------------+
                    (A)|
-  |-------------------v---------------------|
+  +-------------------v---------------------+
   |  packet controller (P-PNC),             |
   |  optical controller (O-PNC),            |
   |  and/or higher layer controllers (MDSC) |
-  |-----------------------------------------|
+  +-----------------------------------------+
                       ^
                  (A)  |
                       v
-        |-----------------------------|
+        +-----------------------------+
         |                             |
         |       IP/Optical Network    |
         |                             |
-        |-----------------------------|
+        +-----------------------------+
 
    Legend:
    (A) Policy enforcement commands (e.g., block traffic, adjust QoS)
