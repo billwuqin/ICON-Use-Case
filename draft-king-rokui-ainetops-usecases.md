@@ -1185,8 +1185,8 @@ Legend:
    dynamic and adaptive approach to detecting anomalies in real-time.
    The lifecycle of a network anomaly can be articulated in three
    stages, structured as a loop: Detection, Validation, Refinement.
-   The Network Anomaly Detection stage is performed by the Agent while
-   Network Anomaly Validation and refinement is performed by Agent
+   The Network Anomaly Detection stage is performed by the network anomaly
+   detection Agent while Network Anomaly Validation and refinement is performed by Agent
    Observability module and AI Guardrail Assistant. The Network Anomaly
    Detection stage is about the continuous monitoring of the network
    through Network Telemetry {{?RFC9232}} and the identification of Symptoms.
@@ -1253,34 +1253,31 @@ Legend:
 
 ## AI-Driven Policy Enforcement and Compliance Auditing using AI Guardrail
 
-   This use case leverages Network Change AI Agent to automate the enforcement of network
-   policies and auditing of compliance with regulatory standards,ethical, and organizational boundaries and
-   internal guidelines. By continuously monitoring network AI Agent Behavior, AI
-   Guardrail ensures that policies are consistently applied and compliance requirements are
-   met.  This use case addresses both single-layer (e.g., IP) and multi-
-   layer (e.g., IP over optical) scenarios, as well as cross-domain
-   environments.
+This use case leverages Network Change AI Agent to automate the enforcement of network policies and
+auditing of compliance with regulatory standards,ethical, and organizational boundaries and internal
+guidelines. By continuously monitoring network Change AI Agent Behavior, AI Guardrail ensures that policies
+are consistently applied and compliance requirements are met. This use case addresses both single-layer
+(e.g., IP) and multi-layer (e.g., IP over optical) scenarios, as well as cross-domain environments.
 
-   The AI Guardrail system analyzes real-time telemetry (e.g., trace, logs, metrics, audit information),
-   historical data, and external inputs (e.g., regulatory updates, threat intelligence) to enforce
-   policies and audit compliance.  For example, AI Guardrail can detect
-   unauthorized changes to firewall rules, enforce encryption standards
-   for sensitive data, or ensure that network configurations align with
-   GDPR requirements. If violations are detected, AI Guardrail can automatically
-   remediate issues or alert operators for manual intervention.
-   AI Guardrails generally operate at three distinct operational levels to enforce
-   policy and ensure :
-   - Input Guardrails (Prompt Shielding)
-      - Goal: Detect and block malicious user behavior from the intent request before it reaches the network AI Agent.
-	  - Key Enforcements: Preventing prompt injections, filtering out Personally Identifiable Information (PII),
-      	                  blocking hate speech, and stopping jailbreak attempts.
-   - Output Guardrails (Response Validation)
-     - Goal: Verify that the generated configurations or policy is accurate, compliant, and safe for the end-user.
-	 - Key Enforcements: Preventing hallucinations (fact-checking against internal knowledge bases), blocking
-    	                 toxic or biased outputs, and ensuring intellectual property (IP) compliance.
-  - Continuous Auditing (Logging & Analytics)
-     - Goal: Provide a transparent audit trail for compliance officers and regulators.
-	 - Key Enforcements: Maintaining detailed logs of inputs, safety violations, system interventions, and Agent Behavior drift over time.
+The AI Guardrail system analyzes real-time telemetry (e.g., trace, logs, metrics, audit information),
+historical data, and external inputs (e.g., regulatory updates, threat intelligence) to enforce
+policies and audit compliance. For example, AI Guardrail can detect unauthorized changes to firewall
+rules, enforce encryption standards for sensitive data, or ensure that network configurations align with
+policy/compliance requirements such as GDPR requirements. If violations are detected, AI Guardrail can
+automatically remediate issues or alert operators for manual intervention. AI Guardrails generally operate
+at three distinct operational levels to enforce policy and ensure :
+- Input Guardrails (Prompt Shielding)
+  - Goal: Detect and block malicious user behavior from the intent request before it reaches the network AI Agent.
+  - Key Enforcements: Preventing prompt injections, filtering out Personally Identifiable Information (PII),
+                      blocking hate speech, and stopping jailbreak attempts.
+- Output Guardrails (Response Validation)
+  - Goal: Verify that the generated configurations or policy is accurate, compliant, and safe for the end-user.
+  - Key Enforcements: Preventing hallucinations (fact-checking against internal knowledge bases), blocking
+                      toxic or biased outputs, and ensuring intellectual property (IP) compliance.
+- Continuous Auditing (Logging & Analytics)
+  - Goal: Provide a transparent audit trail for compliance officers and regulators.
+  - Key Enforcements: Maintaining detailed logs of inputs, safety violations, system interventions, and
+                      Agent Behavior drift over time.
 
 ~~~~
          +-----------+       +-------------+
@@ -1291,9 +1288,10 @@ Legend:
                ^                |
            (B) |                | (C)
                |                v
-     |------------------------------------|
+     +------------------------------------+
      |     Domain Specific Network        |
-     | Policy Enforcement&Compliance Agent|
+     |            Change Agent            | 
+     |    (Policy Enforcement&Compliance) |
      |----------------^-------------------|
                    (A)|
   |-------------------v---------------------|
