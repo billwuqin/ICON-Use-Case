@@ -256,7 +256,7 @@ resources across different network layers, such as IP and optical layers.
 
 * MDSC: Multi-Domain Service Coordinator
 
-# AI, ML, Deep Learning and Gen-AI
+# AI, ML, Deep Learning, Gen-AI, Agentic AI
 
    Artificial Intelligence (AI) is the broad field dedicated to creating
    systems that can perform tasks typically requiring human
@@ -279,6 +279,11 @@ resources across different network layers, such as IP and optical layers.
    and realistic outputs, pushing the boundaries of what AI can achieve
    in terms of creativity and innovation.
 
+   agentic AI autonomously plans and executes multi-step workflows to
+   achieve a specific goal. Generative AI focuses on creation (text,
+   images, code). Agentic AI focuses on action, decision-making, and
+   problem-solving.
+
    {{fig1}} shows the relationship between AI, ML, Deep Learning, and
    Gen-AI.
 
@@ -291,19 +296,21 @@ resources across different network layers, such as IP and optical layers.
           |   |   |    Deep Learning    |   |   |
           |   |   |   |-------------|   |   |   |
           |   |   |   |   Gen-AI    |   |   |   |
-          |   |   |   |             |   |   |   |
-          |   |   |   |             |   |   |   |
-          |   |   |   |-------------|   |   |   |
+          |   |   |   | +--------+  |   |   |   |
+          |   |   |   | | Agentic|  |   |   |   |
+          |   |   |   | |   AI   |  |   |   |   |
+          |   |   |   | +--------+  |   |   |   |
+          |   |   |   +-------------+   |   |   |
           |   |   |---------------------|   |   |
           |   |-----------------------------|   |
           |-------------------------------------|
 ~~~~
-{: #fig1 title="Relationship between AI, ML, Deep Learning, and Gen-AI" artwork-align="center"}
+{: #fig1 title="Relationship between AI, ML, Deep Learning, Gen-AI, Agentic AI" artwork-align="center"}
 
 # Definition of AINetOps
 
    Figure 2 illustrates the concept of AI for Network Operations
-   (AINetOps), which leverages AI, ML, Gen-AI techniques and rule-based
+   (AINetOps), which leverages AI, ML, Gen-AI, Agentic AI techniques and rule-based
    systems to enhance and automate network operations.  By integrating
    both historical and real-time streaming data, AINetOps employs
    advanced data analytics to uncover hidden patterns, establish data
@@ -315,7 +322,7 @@ resources across different network layers, such as IP and optical layers.
    address potential issues before they impact users, thereby ensuring
    more resilient and reliable network operations.
 
-   This draft introduces the term "Operational Benefit", which
+   This document introduces the term "Operational Benefit", which
    encompasses the comprehensive suite of tools and methodologies that
    facilitate the efficient management, debugging, troubleshooting,
    monitoring, configuration, and optimization of IP Optical networks.
@@ -340,6 +347,7 @@ resources across different network layers, such as IP and optical layers.
     |            |    |  AI /        |     |                       |
     |    Big     |    |  ML /        |     |                       |
     |    Data    |  + |  Gen-AI/     |  =  |        AINetOps       |
+    |            |    |  Agentic AI/ |     |                       |
     |            |    |  Rule-based  |     |                       |
     |            |    |              |     |                       |
     |------------|    |--------------|     |-----------------------|
