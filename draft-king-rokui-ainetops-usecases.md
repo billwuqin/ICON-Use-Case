@@ -375,25 +375,6 @@ enforce governance policies, and intervene only for exceptional or
 high-risk situations. With Human on the loop,  uncertain or ambiguous
 network operations or tasks can be tackled.
 
-Key interaction modes between Human operators and agents include:
-
-• Intent Input (initiates the loop): Human operators submit high-level
-  IP network intents (e.g., "deploy a low-latency L3VPN for 4G backhaul")
-  via copilot or structured workflows.
-
-• Decision Approval: The IP Network AI Agent escalates critical tasks
-  (e.g., core route changes, bulk configuration deletions) to human operators
-  for approval, providing context such as data simulation results and risk
-  assessments.
-
-• Intervention & Guidance: Human Operators intervene in ongoing tasks
-  (e.g., correcting a fault diagnosis) or providing expert guidance
-  (e.g., updating troubleshooting rules) to Agents.
-
-• Feedback Provision: Human Operators submit feedback on Agent
-  performance (e.g., incorrect configuration suggestions) to drive
-  continuous improvement
-
 This section outlines the following key areas where AINetOps can be
 applied effectively in network operations, leveraging both data-
 driven models and domain-specific knowledge.
@@ -1091,6 +1072,41 @@ aspects described in this section should be coordinated with those
 activities, and with the GRASP-based rendezvous mechanism described
 in {{?I-D.carpenter-anima-grasp-rendezvous}}.
 
+## Human on the Loop
+
+human on the Loop has been integrated  into the AI-driven IP network
+management and operation loop, providing safeguards for critical decisions and
+enabling human-Agent collaboration.
+
+Interaction with the system is typically provided through natural language
+interfaces that allow operators to review decisions, request explanations, and
+provide guidance when necessary.
+
+Implementation shall support conversational interaction via chat copilot
+platforms (for natural language) and structured APIs (such as A2A-T, for
+workflowbased operations). It shall also maintain comprehensive audit logs
+of all humanAgent interactions to ensure accountability, including intent
+submissions, approvals, and interventions.
+
+Key interaction modes between Human operators and agents include:
+
+• Intent Input (initiates the loop): Human operators submit high-level
+  IP network intents (e.g., "deploy a low-latency L3VPN for 4G backhaul")
+  via copilot or structured workflows.
+
+• Decision Approval: The IP Network AI Agent escalates critical tasks
+  (e.g., core route changes, bulk configuration deletions) to human operators
+  for approval, providing context such as data simulation results and risk
+  assessments.
+
+• Intervention & Guidance: Human Operators intervene in ongoing tasks
+  (e.g., correcting a fault diagnosis) or providing expert guidance
+  (e.g., updating troubleshooting rules) to Agents.
+
+• Feedback Provision: Human Operators submit feedback on Agent
+  performance (e.g., incorrect configuration suggestions) to drive
+  continuous improvement
+  
 # AINetOps Scenarios and Use-cases
 
 {Editor's note: This is a work in progress. More use cases will be added, and existing ones will be revised.}
