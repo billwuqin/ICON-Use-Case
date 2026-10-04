@@ -2674,19 +2674,20 @@ Legend:
    action) or if they are to be treated as false positives (a.k.a.
    suppressing the alarm),perform detailed postmortem analysis of Problems
    with the objective to identify useful adjustments to the prevention and detection
-   mechanisms.
-   After the adjustments are generated, it will be sent to AI Guardrail  Assistant and
-   the AI Guardrail  Assistant apply adjustments to the Network Anomaly Detection Agent,
-   the cycle starts again. Alternatively,  Any remediation action flagged as "high-impact"
-   by the Network Anomaly Detection Agent is put into a correction queue and escalated to
-   AI Guardrail Assistant, requiring manual administrative approval via an external management
-   console before execution.
-   If consecutive-point monitoring in the Agent Observability Module flags that the AI baseline
-   has drifted or been poisoned by bad telemetry, the AI guardrail can switch the network back to
-   traditional, static threshold-based detection.<a href="#section-6.2-1" class="pilcrow">¶</a></p>
+   mechanisms.<a href="#section-6.2-1" class="pilcrow">¶</a></p>
+<p id="section-6.2-2">After the adjustments are generated, it will be sent to AI Guardrail
+   Assistant and the AI Guardrail  Assistant apply adjustments to the Network
+   Anomaly Detection Agent, the cycle starts again. Alternatively,  Any
+   remediation action flagged as "high-impact" by the Network Anomaly Detection
+   Agent is put into a correction queue and escalated to AI Guardrail Assistant,
+   requiring manual administrative approval via an external management console
+   before execution. If consecutive-point monitoring in the Agent Observability
+   Module flags that the AI baseline has drifted or been poisoned by bad telemetry,
+   the AI guardrail can switch the network back to traditional, static
+   threshold-based detection.<a href="#section-6.2-2" class="pilcrow">¶</a></p>
 <span id="name-network-anomaly-detection-o"></span><div id="fault-guardrail">
 <figure id="figure-4">
-          <div class="alignCenter art-text artwork" id="section-6.2-2.1">
+          <div class="alignCenter art-text artwork" id="section-6.2-3.1">
 <pre>
 +----------------------------+
 |     Agent Observability    |(D)Optimization
@@ -2726,8 +2727,9 @@ Legend:
 (B) Resolve the problem with the Network Policy
 (C) Evaluate the network anomalies and identify useful adjustments
 (D) Generate adjustments to the Network Anomaly Detection Agent
-(E) AI Guardrail Assistant optimizes the Detection Agent based on Adjustment policy
-    or Detection Agent requests Human-in-the-Loop Escalation from AI Guardrail Assistant
+(E) AI Guardrail Assistant optimizes the Detection Agent based on
+    Adjustment policy or Detection Agent requests Human-in-the-Loop
+    Escalation from AI Guardrail Assistant
 
 </pre>
 </div>
