@@ -368,6 +368,28 @@ network operators can transition from traditional manual or rule-
 based operations to intelligent, automated systems capable of real-
 time adaptation, predictive insights, and optimized decision-making.
 
+In addition, human on the loop has been integrated into the AI-driven
+IP network management and operation loop, which allow the system execute
+network operations autonomously while human operators monitor outcomes,
+enforce governance policies, and intervene only for exceptional or
+high-risk situations. With Human on the loop,  uncertain or ambiguous
+network operations or tasks can be tackled.
+
+Key interaction modes between Human operators and agents include:
+• Intent Input (initiates the loop): Human operators submit high-level
+  IP network intents (e.g., "deploy a low-latency L3VPN for 4G backhaul")
+  via copilot or structured workflows.
+• Decision Approval: The IP Network AI Agent escalates critical tasks
+  (e.g., core route changes, bulk configuration deletions) to human operators
+  for approval, providing context such as data simulation results and risk
+  assessments.
+• Intervention & Guidance: Human Operators intervene in ongoing tasks
+  (e.g., correcting a fault diagnosis) or providing expert guidance
+  (e.g., updating troubleshooting rules) to Agents.
+• Feedback Provision: Human Operators submit feedback on Agent
+  performance (e.g., incorrect configuration suggestions) to drive
+  continuous improvement
+
 This section outlines the following key areas where AINetOps can be
 applied effectively in network operations, leveraging both data-
 driven models and domain-specific knowledge.
@@ -375,7 +397,7 @@ driven models and domain-specific knowledge.
 * Section 5.1 "Operator Network Assistance"
 
 * Section 5.2 "Network Active and Reactive Assurance".  This area is also
-related to "Root Cause Analysis" Section 5.2.1
+   related to "Root Cause Analysis" Section 5.2.1
 
 * Section 5.3 "Predictive Analytics" which includes "Proactive
    Network Assurance and Monitoring" Section 5.3.1, "Anomaly
@@ -384,9 +406,9 @@ related to "Root Cause Analysis" Section 5.2.1
    Capacity Planning" Section 5.3.5
 
 * Section 5.4 "Network Operational Insights".  This area can be
-grouped into "Operational Insights Requiring No Further Analysis"
-Section 5.4.1 and "Operational Insights Requiring Further Analysis"
-Section 5.4.2
+   grouped into "Operational Insights Requiring No Further Analysis"
+   Section 5.4.1 and "Operational Insights Requiring Further Analysis"
+   Section 5.4.2
 
 * Section 5.5 "Network Configuration Management"
 
