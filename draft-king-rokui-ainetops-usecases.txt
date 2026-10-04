@@ -5,11 +5,11 @@
 Network Working Group                                           R. Rokui
 Internet-Draft                                                     Ciena
 Intended status: Informational                                   D. King
-Expires: 6 April 2027                               Lancaster University
+Expires: 7 April 2027                               Lancaster University
                                                                    C. Li
                                                                    Q. Wu
                                                                   Huawei
-                                                          3 October 2026
+                                                          4 October 2026
 
 
           Artificial Intelligence (AI) for Network Operations
@@ -59,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 April 2027.
+   This Internet-Draft will expire on 7 April 2027.
 
 Copyright Notice
 
@@ -399,6 +399,27 @@ Table of Contents
    network operators can transition from traditional manual or rule-
    based operations to intelligent, automated systems capable of real-
    time adaptation, predictive insights, and optimized decision-making.
+
+   In addition, human on the loop has been integrated into the AI-driven
+   IP network management and operation loop, which allow the system
+   execute network operations autonomously while human operators monitor
+   outcomes, enforce governance policies, and intervene only for
+   exceptional or high-risk situations.  With Human on the loop,
+   uncertain or ambiguous network operations or tasks can be tackled.
+
+   Key interaction modes between Human operators and agents include: •
+   Intent Input (initiates the loop): Human operators submit high-level
+   IP network intents (e.g., "deploy a low-latency L3VPN for 4G
+   backhaul") via copilot or structured workflows. • Decision Approval:
+   The IP Network AI Agent escalates critical tasks (e.g., core route
+   changes, bulk configuration deletions) to human operators for
+   approval, providing context such as data simulation results and risk
+   assessments. • Intervention & Guidance: Human Operators intervene in
+   ongoing tasks (e.g., correcting a fault diagnosis) or providing
+   expert guidance (e.g., updating troubleshooting rules) to Agents. •
+   Feedback Provision: Human Operators submit feedback on Agent
+   performance (e.g., incorrect configuration suggestions) to drive
+   continuous improvement
 
    This section outlines the following key areas where AINetOps can be
    applied effectively in network operations, leveraging both data-
