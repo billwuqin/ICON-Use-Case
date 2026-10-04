@@ -1191,7 +1191,8 @@ of its implications and requirements.
               +----------------------+
 
 Legend:
-(A) A fault happened in the network (e.g., Fiber cut, IP packet drop, TCA crossing etc.)
+(A) A fault happened in the network (e.g., Fiber cut, IP packet drop,
+    TCA crossing etc.)
 (B) The higher layer Controller notifies Operator
 (C) To start troubleshooting, AIOps-Assistant starts automatically
 (D) Start troubleshooting using Gen-AI multi-agent dynamic workflow
@@ -1199,7 +1200,8 @@ Legend:
 (F) Telemetry for agent behavior visibility
 (G) Evaluate operational anomalies or performance drifts
 (H) The Agent management plane notifies Human Operator
-(I) The human Operator uses AI guardrail Assistant to intervene or control Network Agent.
+(I) The human Operator uses AI guardrail Assistant to intervene or
+     control Network Agent.
 ~~~~
 {: #assurance-guardrail title=" Multi-layer Active Assurance Using Network Agent and AI Guardrail" artwork-align="center"}
 
