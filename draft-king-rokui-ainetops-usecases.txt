@@ -1214,43 +1214,45 @@ Table of Contents
    input,tools invocation, agent output, interrupt, and rollover from
    unanticipated behaviors.
 
-+------------+   +-------------------+
-|    AIOps   |(C)|  Domain Specific  | (I)|------------+
-| Assistant  +--->  Network Agent    <----|AI Guardrail|
-+--^---------+   |    (D)            |    | Assistant  |
-   |             +-------------------+    +---^--------+
-   |                    |                     |(H)
-   |                    |               +-----+------+
-   |                    |               | Evaluation |
-   |                    |(E)            | Process    |
-   | (B)                |               +-----^------+
-   |                    |                     |(G)
-   |            +-------v-------+             |
-   |            |   P-PNC(s),   |  (F)  +-----+--------+
-   +------------+   O-PNC(s),   |------>|Observability |
-                |   MDSC        |       |   Process    |
-                +-------^-------+       +--------------+
-                        |(A)
-                        |
-              +---------+------------+
-              |                      |
-              | IP/Optical Network   |
-              |                      |
-              +----------------------+
+   +------------+   +-------------------+
+   |    AIOps   |(C)|  Domain Specific  | (I)|------------+
+   | Assistant  +--->  Network Agent    <----|AI Guardrail|
+   +--^---------+   |    (D)            |    | Assistant  |
+      |             +-------------------+    +---^--------+
+      |                    |                     |(H)
+      |                    |               +-----+------+
+      |                    |               | Evaluation |
+      |                    |(E)            | Process    |
+      | (B)                |               +-----^------+
+      |                    |                     |(G)
+      |            +-------v-------+             |
+      |            |   P-PNC(s),   |  (F)  +-----+--------+
+      +------------+   O-PNC(s),   |------>|Observability |
+                   |   MDSC        |       |   Process    |
+                   +-------^-------+       +--------------+
+                           |(A)
+                           |
+                 +---------+------------+
+                 |                      |
+                 | IP/Optical Network   |
+                 |                      |
+                 +----------------------+
 
-Legend:
-(A) A fault happened in the network (e.g., Fiber cut, IP packet drop, TCA crossing etc.)
-(B) The higher layer Controller notifies Operator
-(C) To start troubleshooting, AIOps-Assistant starts automatically
-(D) Start troubleshooting using Gen-AI multi-agent dynamic workflow
-(E) Optional remedial actions
-(F) Telemetry for agent behavior visibility
-(G) Evaluate operational anomalies or performance drifts
-(H) The Agent management plane notifies Human Operator
-(I) The human Operator uses AI guardrail Assistant to intervene or control Network Agent.
+   Legend:
+   (A) A fault happened in the network (e.g., Fiber cut, IP packet drop,
+       TCA crossing etc.)
+   (B) The higher layer Controller notifies Operator
+   (C) To start troubleshooting, AIOps-Assistant starts automatically
+   (D) Start troubleshooting using Gen-AI multi-agent dynamic workflow
+   (E) Optional remedial actions
+   (F) Telemetry for agent behavior visibility
+   (G) Evaluate operational anomalies or performance drifts
+   (H) The Agent management plane notifies Human Operator
+   (I) The human Operator uses AI guardrail Assistant to intervene or
+        control Network Agent.
 
-  Figure 3: Multi-layer Active Assurance Using Network Agent and AI
-                              Guardrail
+     Figure 3: Multi-layer Active Assurance Using Network Agent and AI
+                                 Guardrail
 
 6.2.  Network Anomaly Detection with AI Guardrail Support
 
