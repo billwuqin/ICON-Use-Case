@@ -1248,15 +1248,17 @@ Legend:
    suppressing the alarm),perform detailed postmortem analysis of Problems
    with the objective to identify useful adjustments to the prevention and detection
    mechanisms.
-   After the adjustments are generated, it will be sent to AI Guardrail  Assistant and
-   the AI Guardrail  Assistant apply adjustments to the Network Anomaly Detection Agent,
-   the cycle starts again. Alternatively,  Any remediation action flagged as "high-impact"
-   by the Network Anomaly Detection Agent is put into a correction queue and escalated to
-   AI Guardrail Assistant, requiring manual administrative approval via an external management
-   console before execution.
-   If consecutive-point monitoring in the Agent Observability Module flags that the AI baseline
-   has drifted or been poisoned by bad telemetry, the AI guardrail can switch the network back to
-   traditional, static threshold-based detection.
+   
+   After the adjustments are generated, it will be sent to AI Guardrail
+   Assistant and the AI Guardrail  Assistant apply adjustments to the Network
+   Anomaly Detection Agent, the cycle starts again. Alternatively,  Any
+   remediation action flagged as "high-impact" by the Network Anomaly Detection
+   Agent is put into a correction queue and escalated to AI Guardrail Assistant,
+   requiring manual administrative approval via an external management console
+   before execution. If consecutive-point monitoring in the Agent Observability
+   Module flags that the AI baseline has drifted or been poisoned by bad telemetry,
+   the AI guardrail can switch the network back to traditional, static
+   threshold-based detection.
 
 ~~~~
 +----------------------------+
@@ -1297,8 +1299,9 @@ Legend:
 (B) Resolve the problem with the Network Policy
 (C) Evaluate the network anomalies and identify useful adjustments
 (D) Generate adjustments to the Network Anomaly Detection Agent
-(E) AI Guardrail Assistant optimizes the Detection Agent based on Adjustment policy
-    or Detection Agent requests Human-in-the-Loop Escalation from AI Guardrail Assistant
+(E) AI Guardrail Assistant optimizes the Detection Agent based on
+    Adjustment policy or Detection Agent requests Human-in-the-Loop
+    Escalation from AI Guardrail Assistant
 
 ~~~~
 {: #fault-guardrail title="Network anomaly detection optimization using AI Guardrail" artwork-align="center"}
