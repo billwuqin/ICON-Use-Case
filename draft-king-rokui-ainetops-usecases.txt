@@ -111,18 +111,18 @@ Table of Contents
        5.12.2.  Intrusion Detection and Prevention
        5.12.3.  Security Policy Automation
      5.13. Multi-Agent Interworking
-   6.  AINetOps Scenarios and Use-cases
-     6.1.  Network Active Assurance with Network AI Agent and AI
-           Guardrail Support
-     6.2.  Network Anomaly Detection with AI Guardrail Support
-     6.3.  AI-Driven Policy Enforcement and Compliance Auditing using
-           AI Guardrail
-     6.4.  Agentic AI-Driven Resilience Testing using AI Guardrail
-   7.  Agent Observability, Intervention, and Control
-   8.  Security Considerations
-   9.  References
-     9.1.  Normative References
-     9.2.  Informative References
+     5.14. Human on the Loop
+     5.15. Network Active Assurance with Network AI Agent and AI
+            Guardrail Support
+     5.16. Network Anomaly Detection with AI Guardrail Support
+     5.17. AI-Driven Policy Enforcement and Compliance Auditing using
+            AI Guardrail
+     5.18. Agentic AI-Driven Resilience Testing using AI Guardrail
+   6.  Agent Observability, Intervention, and Control
+   7.  Security Considerations
+   8.  References
+     8.1.  Normative References
+     8.2.  Informative References
    Appendix A.  IANA Considerations
    Acknowledgments
    Contributors
@@ -406,25 +406,6 @@ Table of Contents
    outcomes, enforce governance policies, and intervene only for
    exceptional or high-risk situations.  With Human on the loop,
    uncertain or ambiguous network operations or tasks can be tackled.
-
-   Key interaction modes between Human operators and agents include:
-
-   • Intent Input (initiates the loop): Human operators submit high-
-   level IP network intents (e.g., "deploy a low-latency L3VPN for 4G
-   backhaul") via copilot or structured workflows.
-
-   • Decision Approval: The IP Network AI Agent escalates critical tasks
-   (e.g., core route changes, bulk configuration deletions) to human
-   operators for approval, providing context such as data simulation
-   results and risk assessments.
-
-   • Intervention & Guidance: Human Operators intervene in ongoing tasks
-   (e.g., correcting a fault diagnosis) or providing expert guidance
-   (e.g., updating troubleshooting rules) to Agents.
-
-   • Feedback Provision: Human Operators submit feedback on Agent
-   performance (e.g., incorrect configuration suggestions) to drive
-   continuous improvement
 
    This section outlines the following key areas where AINetOps can be
    applied effectively in network operations, leveraging both data-
@@ -1128,7 +1109,41 @@ Table of Contents
    activities, and with the GRASP-based rendezvous mechanism described
    in [I-D.carpenter-anima-grasp-rendezvous].
 
-6.  AINetOps Scenarios and Use-cases
+5.14.  Human on the Loop
+
+   human on the Loop has been integrated into the AI-driven IP network
+   management and operation loop, providing safeguards for critical
+   decisions and enabling human-Agent collaboration.
+
+   Interaction with the system is typically provided through natural
+   language interfaces that allow operators to review decisions, request
+   explanations, and provide guidance when necessary.
+
+   Implementation shall support conversational interaction via chat
+   copilot platforms (for natural language) and structured APIs (such as
+   A2A-T, for workflowbased operations).  It shall also maintain
+   comprehensive audit logs of all humanAgent interactions to ensure
+   accountability, including intent submissions, approvals, and
+   interventions.
+
+   Key interaction modes between Human operators and agents include:
+
+   • Intent Input (initiates the loop): Human operators submit high-
+   level IP network intents (e.g., "deploy a low-latency L3VPN for 4G
+   backhaul") via copilot or structured workflows.
+
+   • Decision Approval: The IP Network AI Agent escalates critical tasks
+   (e.g., core route changes, bulk configuration deletions) to human
+   operators for approval, providing context such as data simulation
+   results and risk assessments.
+
+   • Intervention & Guidance: Human Operators intervene in ongoing tasks
+   (e.g., correcting a fault diagnosis) or providing expert guidance
+   (e.g., updating troubleshooting rules) to Agents.
+
+   • Feedback Provision: Human Operators submit feedback on Agent
+   performance (e.g., incorrect configuration suggestions) to drive
+   continuous improvement # AINetOps Scenarios and Use-cases
 
    {Editor's note: This is a work in progress.  More use cases will be
    added, and existing ones will be revised.}
@@ -1167,8 +1182,8 @@ Table of Contents
    *  Alignment with IETF Standards: Analysis of how existing IETF
       standards can be leveraged or extended to support the use case.
 
-6.1.  Network Active Assurance with Network AI Agent and AI Guardrail
-      Support
+5.15.  Network Active Assurance with Network AI Agent and AI Guardrail
+       Support
 
    Network active and reactive assurance, both at the single- layer (IP
    or Optical) and multi-layer (IP over Optical), are critical
@@ -1259,7 +1274,7 @@ Table of Contents
      Figure 3: Multi-layer Active Assurance Using Network Agent and AI
                                  Guardrail
 
-6.2.  Network Anomaly Detection with AI Guardrail Support
+5.16.  Network Anomaly Detection with AI Guardrail Support
 
    Network anomaly detection is a critical component of modern network
    security and management, aimed at identifying deviations from normal
@@ -1337,8 +1352,8 @@ Legend:
 
  Figure 4: Network anomaly detection optimization using AI Guardrail
 
-6.3.  AI-Driven Policy Enforcement and Compliance Auditing using AI
-      Guardrail
+5.17.  AI-Driven Policy Enforcement and Compliance Auditing using AI
+       Guardrail
 
    This use case leverages Network Change AI Agent to automate the
    enforcement of network policies and auditing of compliance with
@@ -1411,7 +1426,7 @@ Legend:
        Figure 5: AI-Driven Policy Enforcement and Compliance Auditing
                              using AI Guardrail
 
-6.4.  Agentic AI-Driven Resilience Testing using AI Guardrail
+5.18.  Agentic AI-Driven Resilience Testing using AI Guardrail
 
    This use case leverages AI to design and execute fault injection
    scenarios that test the resilience of IP/optical networks under
@@ -1477,7 +1492,7 @@ Legend
 
   Figure 6: Agentic AI-Driven Resilience Testing using AI Guardrail
 
-7.  Agent Observability, Intervention, and Control
+6.  Agent Observability, Intervention, and Control
 
    The considerations in this section are cross-cutting: they apply to
    several of the operational benefits and use cases described in this
@@ -1572,13 +1587,13 @@ Legend
       of scope of ICON; those aspects are addressed by the DAWN and
       AGENTPROTO activities discussed in Section 5.13.
 
-8.  Security Considerations
+7.  Security Considerations
 
    To be discussed in future versions of this document.
 
-9.  References
+8.  References
 
-9.1.  Normative References
+8.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -1595,7 +1610,7 @@ Legend
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-9.2.  Informative References
+8.2.  Informative References
 
    [I-D.carpenter-anima-grasp-rendezvous]
               Carpenter, B. E., "Using GRASP as an Agent Rendezvous
