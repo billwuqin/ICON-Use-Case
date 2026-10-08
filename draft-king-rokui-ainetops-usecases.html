@@ -1066,7 +1066,7 @@ svg {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Rokui, et al.</td>
-<td class="center">Expires 7 April 2027</td>
+<td class="center">Expires 11 April 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1079,12 +1079,12 @@ svg {
 <dd class="internet-draft">draft-king-rokui-ainetops-usecases-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-10-04" class="published">4 October 2026</time>
+<time datetime="2026-10-08" class="published">8 October 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2027-04-07">7 April 2027</time></dd>
+<dd class="expires"><time datetime="2027-04-11">11 April 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1153,7 +1153,7 @@ protocols to support AINetOps-driven network management.<a href="#section-abstra
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 7 April 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 11 April 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -2755,22 +2755,48 @@ policies and audit compliance. For example, AI Guardrail can detect unauthorized
 rules, enforce encryption standards for sensitive data, or ensure that network configurations align with
 policy/compliance requirements such as GDPR requirements. If violations are detected, AI Guardrail can
 automatically remediate issues or alert operators for manual intervention. AI Guardrails generally operate
-at three distinct operational levels to enforce policy and ensure :
-- Input Guardrails (Prompt Shielding)
-  - Goal: Detect and block malicious user behavior from the intent request before it reaches the network AI Agent.
-  - Key Enforcements: Preventing prompt injections, filtering out Personally Identifiable Information (PII),
-                      blocking hate speech, and stopping jailbreak attempts.
-- Output Guardrails (Response Validation)
-  - Goal: Verify that the generated configurations or policy is accurate, compliant, and safe for the end-user.
-  - Key Enforcements: Preventing hallucinations (fact-checking against internal knowledge bases), blocking
-                      toxic or biased outputs, and ensuring intellectual property (IP) compliance.
-- Continuous Auditing (Logging &amp; Analytics)
-  - Goal: Provide a transparent audit trail for compliance officers and regulators.
-  - Key Enforcements: Maintaining detailed logs of inputs, safety violations, system interventions, and
-                      Agent Behavior drift over time.<a href="#section-6.3-2" class="pilcrow">¶</a></p>
+at three distinct operational levels to enforce policy and ensure :<a href="#section-6.3-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.3-3.1">
+            <p id="section-6.3-3.1.1">Input Guardrails (Prompt Shielding)<a href="#section-6.3-3.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.3-3.1.2.1">
+                <p id="section-6.3-3.1.2.1.1">Goal: Detect and block malicious user behavior from the intent request before it reaches the network AI Agent.<a href="#section-6.3-3.1.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-6.3-3.1.2.2">
+                <p id="section-6.3-3.1.2.2.1">Key Enforcements: Preventing prompt injections, filtering out Personally Identifiable Information (PII),
+                  blocking hate speech, and stopping jailbreak attempts.<a href="#section-6.3-3.1.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-6.3-3.2">
+            <p id="section-6.3-3.2.1">Output Guardrails (Response Validation)<a href="#section-6.3-3.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.3-3.2.2.1">
+                <p id="section-6.3-3.2.2.1.1">Goal: Verify that the generated configurations or policy is accurate, compliant, and safe for the end-user.<a href="#section-6.3-3.2.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-6.3-3.2.2.2">
+                <p id="section-6.3-3.2.2.2.1">Key Enforcements: Preventing hallucinations (fact-checking against internal knowledge bases), blocking
+                  toxic or biased outputs, and ensuring intellectual property (IP) compliance.<a href="#section-6.3-3.2.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-6.3-3.3">
+            <p id="section-6.3-3.3.1">Continuous Auditing (Logging &amp; Analytics)<a href="#section-6.3-3.3.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.3-3.3.2.1">
+                <p id="section-6.3-3.3.2.1.1">Goal: Provide a transparent audit trail for compliance officers and regulators.<a href="#section-6.3-3.3.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-6.3-3.3.2.2">
+                <p id="section-6.3-3.3.2.2.1">Key Enforcements: Maintaining detailed logs of inputs, safety violations, system interventions, and
+                  Agent Behavior drift over time.<a href="#section-6.3-3.3.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
+</li>
+        </ul>
 <span id="name-ai-driven-policy-enforcement"></span><div id="audit-guardrail">
 <figure id="figure-5">
-          <div class="alignCenter art-text artwork" id="section-6.3-3.1">
+          <div class="alignCenter art-text artwork" id="section-6.3-4.1">
 <pre>
          +-----------+       +-------------+
          | Evaluation+-------&gt; AI Guardrail|
