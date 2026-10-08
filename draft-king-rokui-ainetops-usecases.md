@@ -1321,19 +1321,27 @@ rules, enforce encryption standards for sensitive data, or ensure that network c
 policy/compliance requirements such as GDPR requirements. If violations are detected, AI Guardrail can
 automatically remediate issues or alert operators for manual intervention. AI Guardrails generally operate
 at three distinct operational levels to enforce policy and ensure :
+
 - Input Guardrails (Prompt Shielding)
+
   - Goal: Detect and block malicious user behavior from the intent request before it reaches the network AI Agent.
+
   - Key Enforcements: Preventing prompt injections, filtering out Personally Identifiable Information (PII),
                       blocking hate speech, and stopping jailbreak attempts.
+
 - Output Guardrails (Response Validation)
+
   - Goal: Verify that the generated configurations or policy is accurate, compliant, and safe for the end-user.
+
   - Key Enforcements: Preventing hallucinations (fact-checking against internal knowledge bases), blocking
                       toxic or biased outputs, and ensuring intellectual property (IP) compliance.
+
 - Continuous Auditing (Logging & Analytics)
+
   - Goal: Provide a transparent audit trail for compliance officers and regulators.
+
   - Key Enforcements: Maintaining detailed logs of inputs, safety violations, system interventions, and
                       Agent Behavior drift over time.
-
 ~~~~
          +-----------+       +-------------+
          | Evaluation+-------> AI Guardrail|
